@@ -30,7 +30,7 @@ namespace MainForm29._08._17
                 btnNum[i].Left = 110*i+10;
                 btnNum[i].Text = i.ToString();
                 btnNum[i].BackColor = Color.AliceBlue;
-
+               //Test
             }
         }
     }
