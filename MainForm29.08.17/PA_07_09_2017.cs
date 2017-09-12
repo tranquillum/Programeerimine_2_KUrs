@@ -13,6 +13,9 @@ namespace MainForm29._08._17
     public partial class PA_07_09_2017 : Form
     {
         Button[] btnNum = new Button[12];
+        double arv1;
+        double arv2;
+        string tehe = "";
         public PA_07_09_2017()
         {
             InitializeComponent();
@@ -176,11 +179,48 @@ namespace MainForm29._08._17
                 btnNum[i].Left = (int)(vn * dx + (vn+1) * dxx);
             }
         }
+
+
+
         private void btnNum_Click(object sender, EventArgs e)
         {
             int bln = Array.IndexOf(btnNum, (Button)sender);
-            PA_Ekraan.Text = btnNum[bln].Text;
 
+            if (PA_Ekraan.Text == "0")
+            PA_Ekraan.Text = "";
+            PA_Ekraan.Text += btnNum[bln].Text;
+
+        }
+
+        private void PA_buttonKustALL_Click(object sender, EventArgs e)
+        {
+
+            PA_Ekraan.Text = "0";
+            arv1 = 0;
+            arv2 = 0;
+        }
+
+        private void PA_buttonKust1_Click(object sender, EventArgs e)
+        {
+            string t = PA_Ekraan.Text;
+            if (PA_Ekraan.Text == "Viga")
+            {
+                PA_Ekraan.Text = "0";
+
+            }
+            else
+            {
+                if (PA_Ekraan.Text != "")
+                {
+
+                    t = PA_Ekraan.Text.Remove(t.Length - 1, 1);
+                    PA_Ekraan.Text = t;
+                }
+                if (PA_Ekraan.Text == "")
+                {
+                    PA_Ekraan.Text = "0";
+                }
+            }
         }
     }
 }
