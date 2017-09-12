@@ -31,14 +31,15 @@
             this.PA_groupBox = new System.Windows.Forms.GroupBox();
             this.PA_Numbrit = new System.Windows.Forms.Button();
             this.Numbrit2 = new System.Windows.Forms.Button();
+            this.PA_Ekraan = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PA_groupBox
             // 
             this.PA_groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.PA_groupBox.Location = new System.Drawing.Point(-2, 28);
+            this.PA_groupBox.Location = new System.Drawing.Point(-2, 214);
             this.PA_groupBox.Name = "PA_groupBox";
-            this.PA_groupBox.Size = new System.Drawing.Size(309, 483);
+            this.PA_groupBox.Size = new System.Drawing.Size(309, 453);
             this.PA_groupBox.TabIndex = 0;
             this.PA_groupBox.TabStop = false;
             // 
@@ -63,11 +64,24 @@
             this.Numbrit2.UseVisualStyleBackColor = true;
             this.Numbrit2.Click += new System.EventHandler(this.Numbrit2_Click);
             // 
+            // PA_Ekraan
+            // 
+            this.PA_Ekraan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PA_Ekraan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PA_Ekraan.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.PA_Ekraan.Location = new System.Drawing.Point(17, 87);
+            this.PA_Ekraan.Name = "PA_Ekraan";
+            this.PA_Ekraan.Size = new System.Drawing.Size(279, 65);
+            this.PA_Ekraan.TabIndex = 2;
+            this.PA_Ekraan.Text = "0";
+            this.PA_Ekraan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // PA_07_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 509);
+            this.ClientSize = new System.Drawing.Size(307, 671);
+            this.Controls.Add(this.PA_Ekraan);
             this.Controls.Add(this.Numbrit2);
             this.Controls.Add(this.PA_Numbrit);
             this.Controls.Add(this.PA_groupBox);
@@ -85,5 +99,6 @@
         private System.Windows.Forms.GroupBox PA_groupBox;
         private System.Windows.Forms.Button PA_Numbrit;
         private System.Windows.Forms.Button Numbrit2;
+        private System.Windows.Forms.Label PA_Ekraan;
     }
 }

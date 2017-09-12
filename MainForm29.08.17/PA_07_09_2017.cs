@@ -141,34 +141,46 @@ namespace MainForm29._08._17
                 btnNum[i].Width = (int)dx;
                 btnNum[i].Height = (int)dy;
                 btnNum[i].BackColor = Color.Bisque;
+                btnNum[i].Click += new EventHandler(btnNum_Click);
+                int rn = 3, vn = 0;
 
                 if (i == 0 || i > 9)
                 {
-                    btnNum[i].Top = (int)(3 * dy + 4 * dyy);
+                    
                     if (i == 0)
                     {
                         btnNum[i].Text = "0";
-                        btnNum[i].Left = (int)(dx + 2 * dxx);
+                        vn = 1;
                     }
                     else if (i == 10)
                     {
                         btnNum[i].Text = "+/-";
-                        btnNum[i].Left = (int)(dxx);
+                        vn = 0;
                     }
                     else
                     {
                         btnNum[i].Text = ",";
-                        btnNum[i].Left = (int)(2 * dx + 3 * dxx);
+                        vn = 2;
                     }
                 }
                 else
                 {
-
+                    btnNum[i].Text = i.ToString();
+                    rn = (9 - i) / 3;
+                    vn = (i - 1) % 3;
 
 
                     //1-9
                 }
+                btnNum[i].Top = (int)(rn * dy + (rn+1) * dyy);
+                btnNum[i].Left = (int)(vn * dx + (vn+1) * dxx);
             }
+        }
+        private void btnNum_Click(object sender, EventArgs e)
+        {
+            int bln = Array.IndexOf(btnNum, (Button)sender);
+            PA_Ekraan.Text = btnNum[bln].Text;
+
         }
     }
 }
