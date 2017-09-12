@@ -30,6 +30,7 @@
         {
             this.PA_groupBox = new System.Windows.Forms.GroupBox();
             this.PA_Numbrit = new System.Windows.Forms.Button();
+            this.Numbrit2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PA_groupBox
@@ -52,11 +53,22 @@
             this.PA_Numbrit.UseVisualStyleBackColor = false;
             this.PA_Numbrit.Click += new System.EventHandler(this.PA_Numbrit_Click);
             // 
+            // Numbrit2
+            // 
+            this.Numbrit2.Location = new System.Drawing.Point(97, 1);
+            this.Numbrit2.Name = "Numbrit2";
+            this.Numbrit2.Size = new System.Drawing.Size(88, 27);
+            this.Numbrit2.TabIndex = 1;
+            this.Numbrit2.Text = "numbrit2";
+            this.Numbrit2.UseVisualStyleBackColor = true;
+            this.Numbrit2.Click += new System.EventHandler(this.Numbrit2_Click);
+            // 
             // PA_07_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 509);
+            this.Controls.Add(this.Numbrit2);
             this.Controls.Add(this.PA_Numbrit);
             this.Controls.Add(this.PA_groupBox);
             this.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
@@ -72,5 +84,6 @@
 
         private System.Windows.Forms.GroupBox PA_groupBox;
         private System.Windows.Forms.Button PA_Numbrit;
+        private System.Windows.Forms.Button Numbrit2;
     }
 }

@@ -34,6 +34,12 @@ namespace MainForm29._08._17
 
             //} 
 
+
+
+
+
+
+
             if (showNumbers)
             {
                 showNumbers = false;
@@ -120,6 +126,49 @@ namespace MainForm29._08._17
                 }
             
 
+            }
+
+        private void Numbrit2_Click(object sender, EventArgs e)
+        {
+            float dx = PA_groupBox.Width / 4F;
+            float dxx = dx / 4;
+            float dy = PA_groupBox.Height / 5F;
+            float dyy = dy / 5;
+            for (int i = 0; i < 12; i++)
+            {
+                btnNum[i] = new Button();
+                PA_groupBox.Controls.Add(btnNum[i]);
+                btnNum[i].Width = (int)dx;
+                btnNum[i].Height = (int)dy;
+                btnNum[i].BackColor = Color.Bisque;
+
+                if (i == 0 || i > 9)
+                {
+                    btnNum[i].Top = (int)(3 * dy + 4 * dyy);
+                    if (i == 0)
+                    {
+                        btnNum[i].Text = "0";
+                        btnNum[i].Left = (int)(dx + 2 * dxx);
+                    }
+                    else if (i == 10)
+                    {
+                        btnNum[i].Text = "+/-";
+                        btnNum[i].Left = (int)(dxx);
+                    }
+                    else
+                    {
+                        btnNum[i].Text = ",";
+                        btnNum[i].Left = (int)(2 * dx + 3 * dxx);
+                    }
+                }
+                else
+                {
+
+
+
+                    //1-9
+                }
+            }
         }
     }
 }
