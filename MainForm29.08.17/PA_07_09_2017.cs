@@ -32,7 +32,7 @@ namespace MainForm29._08._17
             //    btnNum[i].Text = i.ToString();
             //    btnNum[i].BackColor = Color.AliceBlue;
 
-            //}
+            //} 
 
             if (showNumbers)
             {
