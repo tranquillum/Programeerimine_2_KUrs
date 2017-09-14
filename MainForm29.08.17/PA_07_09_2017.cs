@@ -226,11 +226,11 @@ namespace MainForm29._08._17
 
         private void PA_Tehed_Click(object sender, EventArgs e)
         {
-            float dx = PA_groupBoxTehed.Width / 1F;
-            float dxx = dx / 1;
-            float dy = PA_groupBoxTehed.Height / 5F;
-            float dyy = dy / 5;
-            for (int i = 0; i < 5; i++)
+            float dx = PA_groupBoxTehed.Width / 1.5F;
+            float dxx = dx / 5;
+            float dy = PA_groupBoxTehed.Height / 6F;
+            float dyy = dy / 6;
+            for (int i = 0; i < btnTehe.Length; i++)
             {
                 btnTehe[i] = new Button();
                 PA_groupBoxTehed.Controls.Add(btnTehe[i]);
@@ -238,45 +238,41 @@ namespace MainForm29._08._17
                 btnTehe[i].Height = (int)dy;
                 btnTehe[i].BackColor = Color.Bisque;
                 btnTehe[i].Click += new EventHandler(btnTehe_Click);
-                
-
-                if (i == 0||i>5)
-                {
-                    btnTehe[i].Top = (int)(3 * dy + 4 * dyy);
-                    
+                int rn = 0, vn = 0;
 
                     if (i == 0)
                     {
                         btnTehe[i].Text = "=";
-                        
 
+                        rn = 4;
                     }
                     else if (i == 1)
                     {
                         btnTehe[i].Text = "+";
-                        
+                        rn = 3;
 
                     }
                     else if (i == 2)
                     {
                         btnTehe[i].Text = "-";
-                        
+                        rn = 2;
                     }
                     else if (i == 3)
                     {
                         btnTehe[i].Text = "*";
-                        
+                        rn = 1;
                     }
-                    else  
+                    else if (i == 4)
                     {
                         btnTehe[i].Text = "/";
-                        
+                        rn = 0;
                     }
 
 
-
-                }
-               
+                    btnTehe[i].Top = (int)(rn * dy + (rn + 1) * dyy);
+                    btnTehe[i].Left = (int)(vn * dx + (vn + 1) * dxx);
+                
+              
 
                 
             }
