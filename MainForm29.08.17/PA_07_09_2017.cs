@@ -420,7 +420,7 @@ namespace MainForm29._08._17
 
 
             }
-
+            //arv =+ tulemus boolean uus = true;
 
 
 
