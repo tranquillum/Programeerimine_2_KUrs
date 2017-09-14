@@ -20,6 +20,9 @@ namespace MainForm29._08._17
         public PA_07_09_2017()
         {
             InitializeComponent();
+            PA_buttonKustALL.Visible = false;
+            PA_buttonKust1.Visible = false;
+            PA_Ekraan.Text = "";
         }
 
         bool showNumbers = false;
@@ -48,12 +51,18 @@ namespace MainForm29._08._17
             {
                 showNumbers = false;
                 ClearNumbers();
+                PA_buttonKustALL.Visible = false;
+                PA_buttonKust1.Visible = false;
+                PA_Ekraan.Text = "";
                 return;
             }
             else
             {
                 showNumbers = true;
                 SpawnNumbers();
+                PA_buttonKustALL.Visible = true;
+                PA_buttonKust1.Visible = true;
+                PA_Ekraan.Text = "0";
             }
         }
 
@@ -74,66 +83,127 @@ namespace MainForm29._08._17
                 {
                     PA_groupBox.Controls.Clear();
                 }
+
+
+                for (int i = 0; i < btnTehe.Length; i++)
+                {
+                PA_groupBoxTehed.Controls.Clear();
+                }
             }
+
+
+
             private void SpawnNumbers()
             {
 
-                int buttonsPerLine = 3;
-                int buttonsPerRow = 4;
+            //numbrit
+            float dx = PA_groupBox.Width / 4F;
+            float dxx = dx / 4;
+            float dy = PA_groupBox.Height / 5F;
+            float dyy = dy / 5;
+            for (int i = 0; i < 12; i++)
+            {
+                btnNum[i] = new Button();
+                PA_groupBox.Controls.Add(btnNum[i]);
+                btnNum[i].Width = (int)dx;
+                btnNum[i].Height = (int)dy;
+                btnNum[i].BackColor = Color.Bisque;
+                btnNum[i].Click += new EventHandler(btnNum_Click);
+                int rn = 3, vn = 0;
 
-                int frameWidth = PA_groupBox.Width;
-                int frameHeight = PA_groupBox.Height;
-
-                int j = 0;
-                double buttonWidht = frameWidth / buttonsPerLine;
-                buttonWidht = Math.Floor(buttonWidht);
-
-                double buttonHeight = frameHeight / buttonsPerRow;
-                buttonHeight = Math.Floor(buttonHeight);
-
-                int topAmount = frameHeight - Convert.ToInt32(buttonHeight);
-                int leftAmount = Convert.ToInt32(buttonWidht);
-
-                double widthAmount = (frameWidth / buttonWidht);
-                double heightAmount = (frameHeight / buttonHeight);
-                widthAmount = Math.Floor(widthAmount);
-
-                for (int i = 0; i < 12; i++)
+                if (i == 0 || i > 9)
                 {
 
-                    if (j >= widthAmount)
+                    if (i == 0)
                     {
-                        topAmount -= Convert.ToInt32(buttonHeight);
-                        j = 0;
+                        btnNum[i].Text = "0";
+                        vn = 1;
                     }
-                    btnNum[i] = new Button()
+                    else if (i == 10)
                     {
-                        Width = Convert.ToInt32(buttonWidht),
-                        Height = Convert.ToInt32(buttonHeight),
-                        Top = topAmount,
-                        Left = leftAmount * j,
-                        BackColor = Color.DimGray
-                    };
-                    PA_groupBox.Controls.Add(btnNum[i]);
-                    j++;
+                        btnNum[i].Text = "+/-";
+                        vn = 0;
+                    }
+                    else
+                    {
+                        btnNum[i].Text = ",";
+                        vn = 2;
+                    }
+                }
+                else
+                {
+                    btnNum[i].Text = i.ToString();
+                    rn = (9 - i) / 3;
+                    vn = (i - 1) % 3;
+
+
 
                 }
-                for (int i = 0; btnNum.Length > i; i++)
+                btnNum[i].Top = (int)(rn * dy + (rn + 1) * dyy);
+                btnNum[i].Left = (int)(vn * dx + (vn + 1) * dxx);
+            }
+            //tehed
+
+            float dxt = PA_groupBoxTehed.Width / 1.5F;
+            float dxxt = dx / 5;
+            float dyt = PA_groupBoxTehed.Height / 6F;
+            float dyyt = dy / 6;
+            for (int i = 0; i < btnTehe.Length; i++)
+            {
+                btnTehe[i] = new Button();
+                PA_groupBoxTehed.Controls.Add(btnTehe[i]);
+                btnTehe[i].Width = (int)dxt;
+                btnTehe[i].Height = (int)dyt;
+                btnTehe[i].BackColor = Color.Bisque;
+                btnTehe[i].Click += new EventHandler(btnTehe_Click);
+                int rn = 0, vn = 0;
+
+                if (i == 0)
                 {
-                    if (i >= 3)
-                    {
-                        btnNum[i].Text = (i - 2).ToString();
-                    }
-                    btnNum[0].Text = "+/-";
-                    btnNum[1].Text = "0";
-                    btnNum[2].Text = ",";
+                    btnTehe[i].Text = "=";
+
+                    rn = 4;
                 }
-            
+                else if (i == 1)
+                {
+                    btnTehe[i].Text = "+";
+                    rn = 3;
+
+                }
+                else if (i == 2)
+                {
+                    btnTehe[i].Text = "-";
+                    rn = 2;
+                }
+                else if (i == 3)
+                {
+                    btnTehe[i].Text = "*";
+                    rn = 1;
+                }
+                else if (i == 4)
+                {
+                    btnTehe[i].Text = "/";
+                    rn = 0;
+                }
+
+
+                btnTehe[i].Top = (int)(rn * dyt + (rn + 1) * dyyt);
+                btnTehe[i].Left = (int)(vn * dxt + (vn + 1) * dxxt);
+
+
+
 
             }
 
+
+
+
+        }
+
         private void Numbrit2_Click(object sender, EventArgs e)
         {
+            PA_Ekraan.Text = "0";
+
             float dx = PA_groupBox.Width / 4F;
             float dxx = dx / 4;
             float dy = PA_groupBox.Height / 5F;
@@ -379,6 +449,17 @@ namespace MainForm29._08._17
 
         }
 
+        private void PA_ON_OF_Click(object sender, EventArgs e)
+        {
 
+            
+
+
+
+
+
+
+
+        }
     }
 }

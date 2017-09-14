@@ -56,18 +56,19 @@
             this.PA_Numbrit.Name = "PA_Numbrit";
             this.PA_Numbrit.Size = new System.Drawing.Size(87, 32);
             this.PA_Numbrit.TabIndex = 0;
-            this.PA_Numbrit.Text = "Numbrit";
+            this.PA_Numbrit.Text = "ON/OFF";
             this.PA_Numbrit.UseVisualStyleBackColor = false;
             this.PA_Numbrit.Click += new System.EventHandler(this.PA_Numbrit_Click);
             // 
             // Numbrit2
             // 
-            this.Numbrit2.Location = new System.Drawing.Point(97, 1);
+            this.Numbrit2.Location = new System.Drawing.Point(378, 45);
             this.Numbrit2.Name = "Numbrit2";
             this.Numbrit2.Size = new System.Drawing.Size(88, 27);
             this.Numbrit2.TabIndex = 1;
             this.Numbrit2.Text = "numbrit2";
             this.Numbrit2.UseVisualStyleBackColor = true;
+            this.Numbrit2.Visible = false;
             this.Numbrit2.Click += new System.EventHandler(this.Numbrit2_Click);
             // 
             // PA_Ekraan
@@ -130,12 +131,13 @@
             // 
             // PA_Tehed
             // 
-            this.PA_Tehed.Location = new System.Drawing.Point(207, 3);
+            this.PA_Tehed.Location = new System.Drawing.Point(378, 12);
             this.PA_Tehed.Name = "PA_Tehed";
             this.PA_Tehed.Size = new System.Drawing.Size(88, 27);
             this.PA_Tehed.TabIndex = 5;
             this.PA_Tehed.Text = "Tehed";
             this.PA_Tehed.UseVisualStyleBackColor = true;
+            this.PA_Tehed.Visible = false;
             this.PA_Tehed.Click += new System.EventHandler(this.PA_Tehed_Click);
             // 
             // PA_07_09_2017
