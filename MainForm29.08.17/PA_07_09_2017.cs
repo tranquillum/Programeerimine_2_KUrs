@@ -421,6 +421,9 @@ namespace MainForm29._08._17
 
             }
 
+
+
+
             else
             {
                 arv2 = Convert.ToDouble(PA_Ekraan.Text);
