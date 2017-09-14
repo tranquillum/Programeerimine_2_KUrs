@@ -186,10 +186,35 @@ namespace MainForm29._08._17
         private void btnNum_Click(object sender, EventArgs e)
         {
             int bln = Array.IndexOf(btnNum, (Button)sender);
+            if (btnNum[bln].Text!= "+/-"|| btnNum[bln].Text != ",")
+            {
 
-            if (PA_Ekraan.Text == "0")
-            PA_Ekraan.Text = "";
-            PA_Ekraan.Text += btnNum[bln].Text;
+                if (PA_Ekraan.Text == "0")
+                    PA_Ekraan.Text = "";
+                PA_Ekraan.Text += btnNum[bln].Text;
+
+            }
+            else
+            {
+                if (btnNum[bln].Text == ",")
+                {
+                    if (!PA_Ekraan.Text.Contains(","))
+                    {
+                        PA_Ekraan.Text += ",";
+                    }
+
+                }
+                else if (btnNum[bln].Text == "+/-")
+                {
+                    double arv = Convert.ToDouble(PA_Ekraan.Text);
+                    PA_Ekraan.Text = (-arv).ToString();
+                }
+
+
+
+            }
+
+            
 
         }
 
@@ -281,9 +306,76 @@ namespace MainForm29._08._17
         private void btnTehe_Click(object sender, EventArgs e)
         {
             int bln = Array.IndexOf(btnTehe, (Button)sender);
+            double t;
+            if (btnTehe[bln].Text=="+"|| btnTehe[bln].Text == "-" || btnTehe[bln].Text == "*" || btnTehe[bln].Text == "/")
+            {
+
+                if (btnTehe[bln].Text == "+")
+                {
+                    arv1= Convert.ToDouble(PA_Ekraan.Text);
+                    tehe = "+";
+                    PA_Ekraan.Text = "0";
+                }
+                if (btnTehe[bln].Text == "-")
+                {
+                    arv1 = Convert.ToDouble(PA_Ekraan.Text);
+                    tehe = "-";
+                    PA_Ekraan.Text = "0";
+                }
+                if (btnTehe[bln].Text == "*")
+                {
+                    arv1 = Convert.ToDouble(PA_Ekraan.Text);
+                    tehe = "*";
+                    PA_Ekraan.Text = "0";
+                }
+                if (btnTehe[bln].Text == "/")
+                {
+                    arv1 = Convert.ToDouble(PA_Ekraan.Text);
+                    tehe = "/";
+                    PA_Ekraan.Text = "0";
+                }
+
+
+            }
+
+            else
+            {
+                arv2 = Convert.ToDouble(PA_Ekraan.Text);
+                if (tehe == "*")
+                {
+                    t = arv1 * arv2;
+                    PA_Ekraan.Text = Convert.ToString(t);
+
+                }
+                if (tehe == "+")
+                {
+                    t = arv1 + arv2;
+                    PA_Ekraan.Text = Convert.ToString(t);
+
+                }
+                if (tehe == "-")
+                {
+                    t = arv1 - arv2;
+                    PA_Ekraan.Text = Convert.ToString(t);
+
+                }
+                if (tehe == "/")
+                {
+                    if (arv2 == 0)
+                    {
+                        PA_Ekraan.Text = "Viga";
+                    }
+                    else
+                    {
+                        t = arv1 / arv2;
+                        PA_Ekraan.Text = Convert.ToString(t);
+                    }
+
+                }
+            }
+            
 
             
-            PA_Ekraan.Text += btnTehe[bln].Text;
 
         }
 
