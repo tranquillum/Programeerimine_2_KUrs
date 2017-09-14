@@ -13,6 +13,7 @@ namespace MainForm29._08._17
     public partial class PA_07_09_2017 : Form
     {
         Button[] btnNum = new Button[12];
+        Button[] btnTehe = new Button[5];
         double arv1;
         double arv2;
         string tehe = "";
@@ -222,5 +223,72 @@ namespace MainForm29._08._17
                 }
             }
         }
+
+        private void PA_Tehed_Click(object sender, EventArgs e)
+        {
+            float dx = PA_groupBoxTehed.Width / 1F;
+            float dxx = dx / 1;
+            float dy = PA_groupBoxTehed.Height / 5F;
+            float dyy = dy / 5;
+            for (int i = 0; i < 5; i++)
+            {
+                btnTehe[i] = new Button();
+                PA_groupBoxTehed.Controls.Add(btnTehe[i]);
+                btnTehe[i].Width = (int)dx;
+                btnTehe[i].Height = (int)dy;
+                btnTehe[i].BackColor = Color.Bisque;
+                btnTehe[i].Click += new EventHandler(btnTehe_Click);
+                int rn = 3, vn = 0;
+
+                if (i == 0||i>5)
+                {
+
+
+                    if (i == 0)
+                    {
+                        btnTehe[i].Text = "=";
+                        //rn = 0;
+                    }
+                    else if (i == 1)
+                    {
+                        btnTehe[i].Text = "+";
+                        //rn = 1;
+                    }
+                    else if (i == 2)
+                    {
+                        btnTehe[i].Text = "-";
+                        //rn = 2;
+                    }
+                    else if (i == 3)
+                    {
+                        btnTehe[i].Text = "*";
+                        //rn = 3;
+                    }
+                    else if (i == 4)
+                    {
+                        btnTehe[i].Text = "/";
+                        //rn = 4;
+                    }
+
+
+
+                }
+
+
+                btnTehe[i].Top = (int)(rn * dy + (rn + 1) * dyy);
+                //btnTehe[i].Left = (int)(vn * dx + (vn + 1) * dxx);
+            }
+        }
+
+        private void btnTehe_Click(object sender, EventArgs e)
+        {
+            int bln = Array.IndexOf(btnTehe, (Button)sender);
+
+            
+            PA_Ekraan.Text += btnTehe[bln].Text;
+
+        }
+
+
     }
 }
