@@ -256,7 +256,7 @@ namespace MainForm29._08._17
         private void btnNum_Click(object sender, EventArgs e)
         {
             int bln = Array.IndexOf(btnNum, (Button)sender);
-            if (btnNum[bln].Text!= "+/-"|| btnNum[bln].Text != ",")
+            if (btnNum[bln].Text!= "+/-" || btnNum[bln].Text != ",")
             {
 
                 if (PA_Ekraan.Text == "0")
@@ -264,8 +264,7 @@ namespace MainForm29._08._17
                 PA_Ekraan.Text += btnNum[bln].Text;
 
             }
-            else
-            {
+
                 if (btnNum[bln].Text == ",")
                 {
                     if (!PA_Ekraan.Text.Contains(","))
@@ -274,6 +273,8 @@ namespace MainForm29._08._17
                     }
 
                 }
+
+
                 else if (btnNum[bln].Text == "+/-")
                 {
                     double arv = Convert.ToDouble(PA_Ekraan.Text);
@@ -282,7 +283,7 @@ namespace MainForm29._08._17
 
 
 
-            }
+            
 
             
 
@@ -290,7 +291,7 @@ namespace MainForm29._08._17
 
         private void PA_buttonKustALL_Click(object sender, EventArgs e)
         {
-
+            PA_Text.Text = "";
             PA_Ekraan.Text = "0";
             arv1 = 0;
             arv2 = 0;
@@ -384,24 +385,35 @@ namespace MainForm29._08._17
                 {
                     arv1= Convert.ToDouble(PA_Ekraan.Text);
                     tehe = "+";
+                    
+                    PA_Text.Text += PA_Ekraan.Text;
+                    PA_Text.Text += tehe;
                     PA_Ekraan.Text = "0";
+                    
                 }
                 if (btnTehe[bln].Text == "-")
                 {
                     arv1 = Convert.ToDouble(PA_Ekraan.Text);
                     tehe = "-";
+                   
+                    PA_Text.Text += PA_Ekraan.Text;
+                    PA_Text.Text += tehe;
                     PA_Ekraan.Text = "0";
                 }
                 if (btnTehe[bln].Text == "*")
                 {
                     arv1 = Convert.ToDouble(PA_Ekraan.Text);
                     tehe = "*";
+                    PA_Text.Text += PA_Ekraan.Text;
+                    PA_Text.Text += tehe;
                     PA_Ekraan.Text = "0";
                 }
                 if (btnTehe[bln].Text == "/")
                 {
                     arv1 = Convert.ToDouble(PA_Ekraan.Text);
                     tehe = "/";
+                    PA_Text.Text += PA_Ekraan.Text;
+                    PA_Text.Text += tehe;
                     PA_Ekraan.Text = "0";
                 }
 
@@ -414,18 +426,21 @@ namespace MainForm29._08._17
                 if (tehe == "*")
                 {
                     t = arv1 * arv2;
+                    PA_Text.Text = "";
                     PA_Ekraan.Text = Convert.ToString(t);
 
                 }
                 if (tehe == "+")
                 {
                     t = arv1 + arv2;
+                    PA_Text.Text = "";
                     PA_Ekraan.Text = Convert.ToString(t);
 
                 }
                 if (tehe == "-")
                 {
                     t = arv1 - arv2;
+                    PA_Text.Text = "";
                     PA_Ekraan.Text = Convert.ToString(t);
 
                 }
@@ -438,6 +453,7 @@ namespace MainForm29._08._17
                     else
                     {
                         t = arv1 / arv2;
+                        PA_Text.Text = "";
                         PA_Ekraan.Text = Convert.ToString(t);
                     }
 
@@ -459,6 +475,11 @@ namespace MainForm29._08._17
 
 
 
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
