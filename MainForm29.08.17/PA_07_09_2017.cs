@@ -146,7 +146,7 @@ namespace MainForm29._08._17
                 btnNum[i].Height = (int)dy;
                 btnNum[i].BackColor = Color.Bisque;
                 btnNum[i].Click += new EventHandler(btnNum_Click);
-                int rn = 3, vn = 0;
+                int rn = 3 , vn = 0;
 
                 if (i == 0 || i > 9)
                 {
@@ -174,7 +174,7 @@ namespace MainForm29._08._17
                     vn = (i - 1) % 3;
 
 
-                    //1-9
+                    
                 }
                 btnNum[i].Top = (int)(rn * dy + (rn+1) * dyy);
                 btnNum[i].Left = (int)(vn * dx + (vn+1) * dxx);
@@ -238,45 +238,47 @@ namespace MainForm29._08._17
                 btnTehe[i].Height = (int)dy;
                 btnTehe[i].BackColor = Color.Bisque;
                 btnTehe[i].Click += new EventHandler(btnTehe_Click);
-                int rn = 3, vn = 0;
+                
 
                 if (i == 0||i>5)
                 {
-
+                    btnTehe[i].Top = (int)(3 * dy + 4 * dyy);
+                    
 
                     if (i == 0)
                     {
                         btnTehe[i].Text = "=";
-                        //rn = 0;
+                        
+
                     }
                     else if (i == 1)
                     {
                         btnTehe[i].Text = "+";
-                        //rn = 1;
+                        
+
                     }
                     else if (i == 2)
                     {
                         btnTehe[i].Text = "-";
-                        //rn = 2;
+                        
                     }
                     else if (i == 3)
                     {
                         btnTehe[i].Text = "*";
-                        //rn = 3;
+                        
                     }
-                    else if (i == 4)
+                    else  
                     {
                         btnTehe[i].Text = "/";
-                        //rn = 4;
+                        
                     }
 
 
 
                 }
+               
 
-
-                btnTehe[i].Top = (int)(rn * dy + (rn + 1) * dyy);
-                //btnTehe[i].Left = (int)(vn * dx + (vn + 1) * dxx);
+                
             }
         }
 
