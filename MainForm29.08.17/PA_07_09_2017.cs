@@ -16,6 +16,7 @@ namespace MainForm29._08._17
         Button[] btnTehe = new Button[5];
         double arv1;
         double arv2;
+        double arv3;
         string tehe = "";
         public PA_07_09_2017()
         {
@@ -377,7 +378,7 @@ namespace MainForm29._08._17
         private void btnTehe_Click(object sender, EventArgs e)
         {
             int bln = Array.IndexOf(btnTehe, (Button)sender);
-            double t;
+            
             if (btnTehe[bln].Text=="+"|| btnTehe[bln].Text == "-" || btnTehe[bln].Text == "*" || btnTehe[bln].Text == "/")
             {
 
@@ -425,23 +426,23 @@ namespace MainForm29._08._17
                 arv2 = Convert.ToDouble(PA_Ekraan.Text);
                 if (tehe == "*")
                 {
-                    t = arv1 * arv2;
+                    arv1 = arv1 * arv2;
                     PA_Text.Text = "";
-                    PA_Ekraan.Text = Convert.ToString(t);
+                    PA_Ekraan.Text = Convert.ToString(arv1);
 
                 }
                 if (tehe == "+")
                 {
-                    t = arv1 + arv2;
+                    arv1 = arv1 + arv2;
                     PA_Text.Text = "";
-                    PA_Ekraan.Text = Convert.ToString(t);
+                    PA_Ekraan.Text = Convert.ToString(arv1);
 
                 }
                 if (tehe == "-")
                 {
-                    t = arv1 - arv2;
+                    arv1 = arv1 - arv2;
                     PA_Text.Text = "";
-                    PA_Ekraan.Text = Convert.ToString(t);
+                    PA_Ekraan.Text = Convert.ToString(arv1);
 
                 }
                 if (tehe == "/")
@@ -452,9 +453,9 @@ namespace MainForm29._08._17
                     }
                     else
                     {
-                        t = arv1 / arv2;
+                        arv1 = arv1 / arv2;
                         PA_Text.Text = "";
-                        PA_Ekraan.Text = Convert.ToString(t);
+                        PA_Ekraan.Text = Convert.ToString(arv1);
                     }
 
                 }
