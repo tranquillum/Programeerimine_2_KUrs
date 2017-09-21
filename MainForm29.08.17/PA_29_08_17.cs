@@ -190,6 +190,7 @@ namespace MainForm29._08._17
             PA_kordmark.ForeColor = System.Drawing.Color.Black;
             arv1 = Convert.ToDouble(PA_Arv.Text);
             tehe = "*";
+
             PA_Arv.Text = "0";
         }
 
@@ -224,24 +225,24 @@ namespace MainForm29._08._17
             PA_kordmark.ForeColor = System.Drawing.Color.White;
             PA_lahmark.ForeColor = System.Drawing.Color.White;
             PA_liitmark.ForeColor = System.Drawing.Color.White;
-            double t;
+            
             arv2 = Convert.ToDouble(PA_Arv.Text);
             if (tehe == "*")
             {
-                t = arv1 * arv2;
-                PA_Arv.Text = Convert.ToString(t);
+                arv1 = arv1 * arv2;
+                PA_Arv.Text = Convert.ToString(arv1);
                 
             }
             if (tehe == "+")
             {
-                t = arv1 + arv2;
-                PA_Arv.Text = Convert.ToString(t);
+                arv1 = arv1 + arv2;
+                PA_Arv.Text = Convert.ToString(arv1);
 
             }
             if (tehe == "-")
             {
-                t = arv1 - arv2;
-                PA_Arv.Text = Convert.ToString(t);
+                arv1 = arv1 - arv2;
+                PA_Arv.Text = Convert.ToString(arv1);
 
             }
             if (tehe == "/")
@@ -252,8 +253,8 @@ namespace MainForm29._08._17
                 }
                 else
                 {
-                    t = arv1 / arv2;
-                    PA_Arv.Text = Convert.ToString(t);
+                    arv1 = arv1 / arv2;
+                    PA_Arv.Text = Convert.ToString(arv1);
                 }
 
             }
