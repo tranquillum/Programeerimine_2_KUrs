@@ -18,6 +18,7 @@ namespace MainForm29._08._17
         double arv2;
         double arv3;
         string tehe = "";
+        int kord = 0;
         public PA_07_09_2017()
         {
             InitializeComponent();
@@ -381,12 +382,12 @@ namespace MainForm29._08._17
             
             if (btnTehe[bln].Text=="+"|| btnTehe[bln].Text == "-" || btnTehe[bln].Text == "*" || btnTehe[bln].Text == "/")
             {
-
+                
+                if (kord ==0)
                 if (btnTehe[bln].Text == "+")
                 {
                     arv1= Convert.ToDouble(PA_Ekraan.Text);
-                    tehe = "+";
-                    
+                    tehe = "+";                  
                     PA_Text.Text += PA_Ekraan.Text;
                     PA_Text.Text += tehe;
                     PA_Ekraan.Text = "0";
@@ -411,16 +412,17 @@ namespace MainForm29._08._17
                 }
                 if (btnTehe[bln].Text == "/")
                 {
+
                     arv1 = Convert.ToDouble(PA_Ekraan.Text);
                     tehe = "/";
                     PA_Text.Text += PA_Ekraan.Text;
                     PA_Text.Text += tehe;
-                    PA_Ekraan.Text = "0";
+                    
                 }
 
 
             }
-            //arv =+ tulemus boolean uus = true;
+            
 
 
 
@@ -429,23 +431,24 @@ namespace MainForm29._08._17
                 arv2 = Convert.ToDouble(PA_Ekraan.Text);
                 if (tehe == "*")
                 {
-                    arv1 = arv1 * arv2;
-                    PA_Text.Text = "";
-                    PA_Ekraan.Text = Convert.ToString(arv1);
+                    arv3 = arv1 * arv2;
+                    
+                    PA_Ekraan.Text = Convert.ToString(arv3);
+
 
                 }
                 if (tehe == "+")
                 {
-                    arv1 = arv1 + arv2;
-                    PA_Text.Text = "";
-                    PA_Ekraan.Text = Convert.ToString(arv1);
+                    arv3 = arv1 + arv2;
+                    
+                    PA_Ekraan.Text = Convert.ToString(arv3);
 
                 }
                 if (tehe == "-")
                 {
-                    arv1 = arv1 - arv2;
-                    PA_Text.Text = "";
-                    PA_Ekraan.Text = Convert.ToString(arv1);
+                    arv3 = arv1 - arv2;
+                    
+                    PA_Ekraan.Text = Convert.ToString(arv3);
 
                 }
                 if (tehe == "/")
@@ -456,8 +459,8 @@ namespace MainForm29._08._17
                     }
                     else
                     {
-                        arv1 = arv1 / arv2;
-                        PA_Text.Text = "";
+                        arv3 = arv1 / arv2;
+                        
                         PA_Ekraan.Text = Convert.ToString(arv1);
                     }
 
