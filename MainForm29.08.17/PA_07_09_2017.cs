@@ -17,6 +17,8 @@ namespace MainForm29._08._17
         double arv1;
         double arv2;
         double arv3;
+        double arv;
+        double tulemus;
         string tehe = "";
         public PA_07_09_2017()
         {
@@ -29,25 +31,6 @@ namespace MainForm29._08._17
         bool showNumbers = false;
         private void PA_Numbrit_Click(object sender, EventArgs e)
         {
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    btnNum[i] = new Button();
-            //    PA_groupBox.Controls.Add(btnNum[i]);
-            //    btnNum[i].Width = 100;
-            //    btnNum[i].Height = 100;
-            //    btnNum[i].Top = 100;
-            //    btnNum[i].Left = 110*i+10;
-            //    btnNum[i].Text = i.ToString();
-            //    btnNum[i].BackColor = Color.AliceBlue;
-
-            //} 
-
-
-
-
-
-
-
             if (showNumbers)
             {
                 showNumbers = false;
@@ -67,35 +50,35 @@ namespace MainForm29._08._17
             }
         }
 
-            private void PA_groupBox_ResizeEnd(object sender, EventArgs e)
+        private void PA_groupBox_ResizeEnd(object sender, EventArgs e)
+        {
+            if (showNumbers)
             {
-                if (showNumbers)
-                {
-                    ClearNumbers();
-                    SpawnNumbers();
-                }
-
-
+                ClearNumbers();
+                SpawnNumbers();
             }
 
-            private void ClearNumbers()
+
+        }
+
+        private void ClearNumbers()
+        {
+            for (int i = 0; i < btnNum.Length; i++)
             {
-                for (int i = 0; i < btnNum.Length; i++)
-                {
-                    PA_groupBox.Controls.Clear();
-                }
+                PA_groupBox.Controls.Clear();
+            }
 
 
-                for (int i = 0; i < btnTehe.Length; i++)
-                {
+            for (int i = 0; i < btnTehe.Length; i++)
+            {
                 PA_groupBoxTehed.Controls.Clear();
-                }
             }
+        }
 
 
 
-            private void SpawnNumbers()
-            {
+        private void SpawnNumbers()
+        {
 
             //numbrit
             float dx = PA_groupBox.Width / 4F;
@@ -151,34 +134,46 @@ namespace MainForm29._08._17
             float dyyt = dy / 6;
             for (int i = 0; i < btnTehe.Length; i++)
             {
-                int ix1 = PA_groupBoxTehed.Width * 2 / 3;
-                int ix2 = ix1 / 4;
-                int iy1 = PA_groupBoxTehed.Height / 6;
-                int iy2 = iy1 / 6;
-                int ix = ix2;
-                int iy = 4 * iy1 + 5 * iy2;
-                for (int y = 0; y < btnTehe.Length; y++)
+                btnTehe[i] = new Button();
+                PA_groupBoxTehed.Controls.Add(btnTehe[i]);
+                btnTehe[i].Width = (int)dxt;
+                btnTehe[i].Height = (int)dyt;
+                btnTehe[i].BackColor = Color.Bisque;
+                btnTehe[i].Click += new EventHandler(btnTehe_Click);
+                int rn = 0, vn = 0;
+
+                if (i == 0)
                 {
-                    btnTehe[y] = new Button();
-                    PA_groupBoxTehed.Controls.Add(btnTehe[i]);
-                    btnTehe[y].Left = ix;
-                    btnTehe[y].Width = ix1;
-                    btnTehe[y].Top = iy;
-                    btnTehe[y].Height = iy1;
-                    btnTehe[y].BackColor = Color.Bisque;
-                    btnTehe[y].Click += new EventHandler(btnTehe_Click);
-                    iy = iy - iy1 - iy2;
+                    btnTehe[i].Text = "=";
 
-                    btnTehe[0].Text = "=";
-                    btnTehe[1].Text = "+";
-                    btnTehe[2].Text = "-";
-                    btnTehe[3].Text = "*";
-                    btnTehe[4].Text = "/";
-
-
-
+                    rn = 4;
+                }
+                else if (i == 1)
+                {
+                    btnTehe[i].Text = "+";
+                    rn = 3;
 
                 }
+                else if (i == 2)
+                {
+                    btnTehe[i].Text = "-";
+                    rn = 2;
+                }
+                else if (i == 3)
+                {
+                    btnTehe[i].Text = "*";
+                    rn = 1;
+                }
+                else if (i == 4)
+                {
+                    btnTehe[i].Text = "/";
+                    rn = 0;
+                }
+
+
+                btnTehe[i].Top = (int)(rn * dyt + (rn + 1) * dyyt);
+                btnTehe[i].Left = (int)(vn * dxt + (vn + 1) * dxxt);
+
 
 
 
@@ -205,11 +200,11 @@ namespace MainForm29._08._17
                 btnNum[i].Height = (int)dy;
                 btnNum[i].BackColor = Color.Bisque;
                 btnNum[i].Click += new EventHandler(btnNum_Click);
-                int rn = 3 , vn = 0;
+                int rn = 3, vn = 0;
 
                 if (i == 0 || i > 9)
                 {
-                    
+
                     if (i == 0)
                     {
                         btnNum[i].Text = "0";
@@ -233,10 +228,10 @@ namespace MainForm29._08._17
                     vn = (i - 1) % 3;
 
 
-                    
+
                 }
-                btnNum[i].Top = (int)(rn * dy + (rn+1) * dyy);
-                btnNum[i].Left = (int)(vn * dx + (vn+1) * dxx);
+                btnNum[i].Top = (int)(rn * dy + (rn + 1) * dyy);
+                btnNum[i].Left = (int)(vn * dx + (vn + 1) * dxx);
             }
         }
 
@@ -245,7 +240,7 @@ namespace MainForm29._08._17
         private void btnNum_Click(object sender, EventArgs e)
         {
             int bln = Array.IndexOf(btnNum, (Button)sender);
-            if (btnNum[bln].Text!= "+/-" || btnNum[bln].Text != ",")
+            if (btnNum[bln].Text != "+/-" || btnNum[bln].Text != ",")
             {
 
                 if (PA_Ekraan.Text == "0")
@@ -254,27 +249,27 @@ namespace MainForm29._08._17
 
             }
 
-                if (btnNum[bln].Text == ",")
+            if (btnNum[bln].Text == ",")
+            {
+                if (!PA_Ekraan.Text.Contains(","))
                 {
-                    if (!PA_Ekraan.Text.Contains(","))
-                    {
-                        PA_Ekraan.Text += ",";
-                    }
-
+                    PA_Ekraan.Text += ",";
                 }
 
-
-                else if (btnNum[bln].Text == "+/-")
-                {
-                    double arv = Convert.ToDouble(PA_Ekraan.Text);
-                    PA_Ekraan.Text = (-arv).ToString();
-                }
+            }
 
 
+            else if (btnNum[bln].Text == "+/-")
+            {
+                double arv = Convert.ToDouble(PA_Ekraan.Text);
+                PA_Ekraan.Text = (-arv).ToString();
+            }
 
-            
 
-            
+
+
+
+
 
         }
 
@@ -284,6 +279,8 @@ namespace MainForm29._08._17
             PA_Ekraan.Text = "0";
             arv1 = 0;
             arv2 = 0;
+            arv = 0;
+            tulemus = 0;
         }
 
         private void PA_buttonKust1_Click(object sender, EventArgs e)
@@ -311,29 +308,51 @@ namespace MainForm29._08._17
 
         private void PA_Tehed_Click(object sender, EventArgs e)
         {
-            int ix1 = PA_groupBoxTehed.Width * 2 / 3;
-            int ix2 = ix1 / 4;
-            int iy1 = PA_groupBoxTehed.Height / 6;
-            int iy2 = iy1 / 6;
-            int ix = ix2;
-            int iy = 4 * iy1 + 5 * iy2;
+            float dx = PA_groupBoxTehed.Width / 1.5F;
+            float dxx = dx / 5;
+            float dy = PA_groupBoxTehed.Height / 6F;
+            float dyy = dy / 6;
             for (int i = 0; i < btnTehe.Length; i++)
             {
                 btnTehe[i] = new Button();
                 PA_groupBoxTehed.Controls.Add(btnTehe[i]);
-                btnTehe[i].Left = ix;
-                btnTehe[i].Width = ix1;
-                btnTehe[i].Top = iy;
-                btnTehe[i].Height = iy1;
+                btnTehe[i].Width = (int)dx;
+                btnTehe[i].Height = (int)dy;
                 btnTehe[i].BackColor = Color.Bisque;
                 btnTehe[i].Click += new EventHandler(btnTehe_Click);
-                iy = iy - iy1 - iy2;
+                int rn = 0, vn = 0;
 
-                btnTehe[0].Text = "=";
-                btnTehe[1].Text = "+";
-                btnTehe[2].Text = "-";
-                btnTehe[3].Text = "*";
-                btnTehe[4].Text = "/";
+                if (i == 0)
+                {
+                    btnTehe[i].Text = "=";
+
+                    rn = 4;
+                }
+                else if (i == 1)
+                {
+                    btnTehe[i].Text = "+";
+                    rn = 3;
+
+                }
+                else if (i == 2)
+                {
+                    btnTehe[i].Text = "-";
+                    rn = 2;
+                }
+                else if (i == 3)
+                {
+                    btnTehe[i].Text = "*";
+                    rn = 1;
+                }
+                else if (i == 4)
+                {
+                    btnTehe[i].Text = "/";
+                    rn = 0;
+                }
+
+
+                btnTehe[i].Top = (int)(rn * dy + (rn + 1) * dyy);
+                btnTehe[i].Left = (int)(vn * dx + (vn + 1) * dxx);
 
 
 
@@ -343,13 +362,27 @@ namespace MainForm29._08._17
 
         private void btnTehe_Click(object sender, EventArgs e)
         {
-           
+            double arv = Convert.ToDouble(PA_Ekraan.Text);
+            
+            int bln = Array.IndexOf(btnTehe, (Button)sender);
+            if (btnTehe[bln].Text == "+") tulemus += arv;
+            else if (btnTehe[bln].Text == "-") tulemus -= arv;
+            else if (btnTehe[bln].Text == "/") tulemus /= arv;
+            else if (btnTehe[bln].Text == "*") tulemus *= arv;
+            PA_Ekraan.Text = tulemus.ToString();
+            
+
+
+
+
+
+
         }
 
         private void PA_ON_OF_Click(object sender, EventArgs e)
         {
 
-            
+
 
 
 
