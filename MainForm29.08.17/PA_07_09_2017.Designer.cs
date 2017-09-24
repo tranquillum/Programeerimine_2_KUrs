@@ -30,13 +30,11 @@
         {
             this.PA_groupBox = new System.Windows.Forms.GroupBox();
             this.PA_Numbrit = new System.Windows.Forms.Button();
-            this.Numbrit2 = new System.Windows.Forms.Button();
             this.PA_Ekraan = new System.Windows.Forms.Label();
             this.PA_groupBox1 = new System.Windows.Forms.GroupBox();
             this.PA_buttonKust1 = new System.Windows.Forms.Button();
             this.PA_buttonKustALL = new System.Windows.Forms.Button();
             this.PA_groupBoxTehed = new System.Windows.Forms.GroupBox();
-            this.PA_Tehed = new System.Windows.Forms.Button();
             this.PA_Text = new System.Windows.Forms.Label();
             this.PA_groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,24 +51,13 @@
             // PA_Numbrit
             // 
             this.PA_Numbrit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.PA_Numbrit.Location = new System.Drawing.Point(-2, -2);
+            this.PA_Numbrit.Location = new System.Drawing.Point(4, 2);
             this.PA_Numbrit.Name = "PA_Numbrit";
-            this.PA_Numbrit.Size = new System.Drawing.Size(87, 32);
+            this.PA_Numbrit.Size = new System.Drawing.Size(309, 32);
             this.PA_Numbrit.TabIndex = 0;
             this.PA_Numbrit.Text = "ON/OFF";
             this.PA_Numbrit.UseVisualStyleBackColor = false;
             this.PA_Numbrit.Click += new System.EventHandler(this.PA_Numbrit_Click);
-            // 
-            // Numbrit2
-            // 
-            this.Numbrit2.Location = new System.Drawing.Point(284, 12);
-            this.Numbrit2.Name = "Numbrit2";
-            this.Numbrit2.Size = new System.Drawing.Size(88, 27);
-            this.Numbrit2.TabIndex = 1;
-            this.Numbrit2.Text = "numbrit2";
-            this.Numbrit2.UseVisualStyleBackColor = true;
-            this.Numbrit2.Visible = false;
-            this.Numbrit2.Click += new System.EventHandler(this.Numbrit2_Click);
             // 
             // PA_Ekraan
             // 
@@ -79,7 +66,7 @@
             this.PA_Ekraan.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.PA_Ekraan.Location = new System.Drawing.Point(4, 106);
             this.PA_Ekraan.Name = "PA_Ekraan";
-            this.PA_Ekraan.Size = new System.Drawing.Size(462, 65);
+            this.PA_Ekraan.Size = new System.Drawing.Size(402, 65);
             this.PA_Ekraan.TabIndex = 2;
             this.PA_Ekraan.Text = "0";
             this.PA_Ekraan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,42 +113,28 @@
             this.PA_groupBoxTehed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.PA_groupBoxTehed.Location = new System.Drawing.Point(313, 174);
             this.PA_groupBoxTehed.Name = "PA_groupBoxTehed";
-            this.PA_groupBoxTehed.Size = new System.Drawing.Size(153, 550);
+            this.PA_groupBoxTehed.Size = new System.Drawing.Size(93, 550);
             this.PA_groupBoxTehed.TabIndex = 4;
             this.PA_groupBoxTehed.TabStop = false;
-            // 
-            // PA_Tehed
-            // 
-            this.PA_Tehed.Location = new System.Drawing.Point(378, 12);
-            this.PA_Tehed.Name = "PA_Tehed";
-            this.PA_Tehed.Size = new System.Drawing.Size(88, 27);
-            this.PA_Tehed.TabIndex = 5;
-            this.PA_Tehed.Text = "Tehed";
-            this.PA_Tehed.UseVisualStyleBackColor = true;
-            this.PA_Tehed.Visible = false;
-            this.PA_Tehed.Click += new System.EventHandler(this.PA_Tehed_Click);
             // 
             // PA_Text
             // 
             this.PA_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.PA_Text.Location = new System.Drawing.Point(3, 66);
             this.PA_Text.Name = "PA_Text";
-            this.PA_Text.Size = new System.Drawing.Size(463, 40);
+            this.PA_Text.Size = new System.Drawing.Size(403, 40);
             this.PA_Text.TabIndex = 7;
             this.PA_Text.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.PA_Text.Click += new System.EventHandler(this.label2_Click);
             // 
             // PA_07_09_2017
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 723);
+            this.ClientSize = new System.Drawing.Size(408, 723);
             this.Controls.Add(this.PA_Text);
-            this.Controls.Add(this.PA_Tehed);
             this.Controls.Add(this.PA_groupBoxTehed);
             this.Controls.Add(this.PA_groupBox1);
             this.Controls.Add(this.PA_Ekraan);
-            this.Controls.Add(this.Numbrit2);
             this.Controls.Add(this.PA_Numbrit);
             this.Controls.Add(this.PA_groupBox);
             this.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
@@ -178,13 +151,11 @@
 
         private System.Windows.Forms.GroupBox PA_groupBox;
         private System.Windows.Forms.Button PA_Numbrit;
-        private System.Windows.Forms.Button Numbrit2;
         private System.Windows.Forms.Label PA_Ekraan;
         private System.Windows.Forms.GroupBox PA_groupBox1;
         private System.Windows.Forms.Button PA_buttonKustALL;
         private System.Windows.Forms.Button PA_buttonKust1;
         private System.Windows.Forms.GroupBox PA_groupBoxTehed;
-        private System.Windows.Forms.Button PA_Tehed;
         private System.Windows.Forms.Label PA_Text;
     }
 }
