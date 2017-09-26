@@ -76,6 +76,10 @@ namespace MainForm29._08._17
             {
                 PA_groupBoxTehed.Controls.Clear();
             }
+            for (int i = 0; i < btnMem.Length; i++)
+            {
+                PA_groupBoxMem.Controls.Clear();
+            }
         }
 
 
