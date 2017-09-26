@@ -14,10 +14,13 @@ namespace MainForm29._08._17
     {
         Button[] btnNum = new Button[12];
         Button[] btnTehe = new Button[5];
+        Button[] btnMem = new Button[6];
         byte TeheNumber = 0;
         byte EelmineTeheNumber = 5;
         string TeheMark = "=";
         double tulemus = 0;
+        
+        double M ;
         Boolean uus = true;
 
         public PA_07_09_2017()
@@ -91,7 +94,7 @@ namespace MainForm29._08._17
                 btnNum[i].Width = (int)dx;
                 btnNum[i].Height = (int)dy;
                 btnNum[i].BackColor = Color.Bisque;
-                btnNum[i].Click += new EventHandler(btnNum_Click);
+                btnNum[i].Click += new EventHandler(BtnNum_Click);
                 int rn = 3, vn = 0;
                 if (i == 0 || i > 9)
                 {
@@ -137,7 +140,7 @@ namespace MainForm29._08._17
                 btnTehe[i].Top = iy;
                 btnTehe[i].Height = iy1;
                 btnTehe[i].BackColor = Color.LightSkyBlue;
-                btnTehe[i].Click += new EventHandler(btnTehe_Click);
+                btnTehe[i].Click += new EventHandler(BtnTehe_Click);
                 iy = iy - iy1 - iy2;
             }
             btnTehe[0].Text = "=";
@@ -145,9 +148,60 @@ namespace MainForm29._08._17
             btnTehe[2].Text = "-";
             btnTehe[3].Text = "x";
             btnTehe[4].Text = ":";
+
+
+            //memory
+
+            int ix1m = PA_groupBoxMem.Width / 7;
+            int ix2m = ix1 / 5;
+            int iy1m = PA_groupBoxMem.Height * 2 / 3;
+            int iy2m = iy1 / 4;
+            int ixm = 5 * ix1m + 5 * ix2m;  //ix2;
+            int iym = iy2;      //4 * iy1m + 5 * iy2m;
+            for (int i = 0; i < 6; i++)
+            {
+                btnMem[i] = new Button();
+                PA_groupBoxMem.Controls.Add(btnMem[i]);
+                btnMem[i].Left = ixm;
+                btnMem[i].Width = ix1m;
+                btnMem[i].Top = iym;
+                btnMem[i].Height = iy1m;
+                btnMem[i].BackColor = Color.LightSkyBlue;
+                btnMem[i].Click += new EventHandler(BtnMem_Click);
+                ixm = ixm - ix1m - ix2m;   //iym - iy1m - iy2m;
+            }
+            btnMem[0].Text = "Mˇ";
+            btnMem[1].Text = "MS";
+            btnMem[2].Text = "M-";
+            btnMem[3].Text = "M+";
+            btnMem[4].Text = "MR";
+            btnMem[5].Text = "MC";
+
+
+
+
+        }
+        private void BtnMem_Click(object sender, EventArgs e)
+        {
+
+            int bln = Array.IndexOf(btnMem, (Button)sender);
+            double arv2 = Convert.ToDouble(PA_Ekraan.Text);
+            if (btnMem[bln].Text == "M+") M += arv2;
+            else if (btnMem[bln].Text == "M-") M -= arv2;
+            else if (btnMem[bln].Text == "MC") M = 0;
+           // else if (btnMem[bln].Text == "MS") M = 0;
+            else if (btnMem[bln].Text == "MR")PA_Ekraan.Text = M.ToString();
+            else if (btnMem[bln].Text == "Mˇ") mem.Text = M.ToString();
+
+
+            mem.Text = M.ToString();
+
         }
 
-        private void btnTehe_Click(object sender, EventArgs e)
+
+
+
+        private void BtnTehe_Click(object sender, EventArgs e)
         {
             PA_Text.Text += PA_Ekraan.Text;
 
@@ -167,7 +221,7 @@ namespace MainForm29._08._17
             uus = true;
         }
 
-        private void btnNum_Click(object sender, EventArgs e)
+        private void BtnNum_Click(object sender, EventArgs e)
         {
             if (uus) PA_Ekraan.Text = "";
             int bln = Array.IndexOf(btnNum, (Button)sender);
