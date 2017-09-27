@@ -229,24 +229,23 @@ namespace MainForm29._08._17
         {
             if (uus) PA_Ekraan.Text = "";
             int bln = Array.IndexOf(btnNum, (Button)sender);
-            if (btnNum[bln].Text != "+/-" || btnNum[bln].Text != ",")
+            if (btnNum[bln].Text != "+/-" && btnNum[bln].Text != ",")
             {
                 if (PA_Ekraan.Text == "0")
                     PA_Ekraan.Text = "";
                 PA_Ekraan.Text += btnNum[bln].Text;
             }
-            if (btnNum[bln].Text == ",")
-            {
-                if (!PA_Ekraan.Text.Contains(","))
-                {
+             if (btnNum[bln].Text == "," && !PA_Ekraan.Text.Contains (","))
+             {
+                
                     PA_Ekraan.Text += ",";
-                }
-            }
-            else if (btnNum[bln].Text == "+/-")
-            {
+                
+             }
+             if (btnNum[bln].Text == "+/-")
+             {
                 double arv = Convert.ToDouble(PA_Ekraan.Text);
                 PA_Ekraan.Text = (-arv).ToString();
-            }
+             }
             uus = false;
         }
 
