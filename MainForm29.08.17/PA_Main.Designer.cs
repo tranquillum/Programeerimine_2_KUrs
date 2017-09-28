@@ -32,6 +32,7 @@
             this.PA_button1 = new System.Windows.Forms.Button();
             this.PA_Exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PA_button1
@@ -65,9 +66,21 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(279, 58);
             this.button1.TabIndex = 3;
-            this.button1.Text = "07.09.2017";
+            this.button1.Text = " 07.09.2017\r\nmassiivi kalkulator";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button2.Location = new System.Drawing.Point(14, 145);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(279, 58);
+            this.button2.TabIndex = 4;
+            this.button2.Text = " 28.09.2017\r\n";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AP_mainform
             // 
@@ -75,6 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(307, 509);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PA_Exit);
             this.Controls.Add(this.PA_button1);
@@ -93,6 +107,7 @@
         private System.Windows.Forms.Button PA_button1;
         private System.Windows.Forms.Button PA_Exit;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
