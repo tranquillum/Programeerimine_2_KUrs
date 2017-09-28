@@ -20,7 +20,7 @@ namespace MainForm29._08._17
 
         private void PA_Ruudustik_Click(object sender, EventArgs e)
         {
-            for(float i = 1; i <= nx; i++)
+            for(float i = 0; i <= nx; i++)
             {
                 
                 float t = GBlaius / nx;
@@ -28,10 +28,10 @@ namespace MainForm29._08._17
                 y1 = 0;
                 x2 = t*i;
                 y2 = GBkorgus;
- 
+                Pliiats.Width = 1;
                 g.DrawLine(Pliiats, x1, y1, x2, y2);
             }
-            for (float i = 1; i <= ny; i++)
+            for (float i = 0; i <= ny; i++)
             {
                 
                 float t = GBkorgus / ny;
@@ -39,9 +39,74 @@ namespace MainForm29._08._17
                 y1 = t * i;
                 x2 = GBlaius;
                 y2 = t * i;
+                Pliiats.Width = 1;
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
+            }
+
+        }
+
+        private void PA_Diagonaalid_Click(object sender, EventArgs e)
+        {
+            for (float i = 0; i <= ny; i++)
+            {
+                float t1 = GBlaius / nx;
+                float t2 = GBkorgus / ny;
+                x1 = 0;
+                y1 = t2 * i;
+                x2 = t1 * i;
+                y2 = 0;
 
                 g.DrawLine(Pliiats, x1, y1, x2, y2);
             }
+            
+            for (float i = nx; i >= 0; i--)
+            {
+
+                float t1 = GBlaius / nx;
+                float t2 = GBkorgus / ny;
+                x1 = GBlaius;
+                y1 = t2*i;
+                x2 = t1*i;
+                y2 = GBkorgus;
+
+
+
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
+            }
+
+
+        }
+
+        private void PA_Diagonaalid2_Click(object sender, EventArgs e)
+        {
+            for (float i = 1; i <= nx; i++)
+            {
+
+                float t1 = GBlaius / nx;
+                float t2 = GBkorgus / ny;
+                x1 = t1 * i;
+                y1 = 0;
+                x2 = 0;
+                y2 = t2 * i;
+
+
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
+
+
+            }
+            for (float i = 1; i <= ny; i++)
+            {
+                float t1 = GBlaius / nx;
+                float t2 = GBkorgus / ny;
+                x1 = 0;
+                y1 = t2 * i;
+                x2 = t1 * i;
+                y2 = 0;
+
+
+            }
+
+            g.DrawLine(Pliiats, x1, y1, x2, y2);
 
         }
 
