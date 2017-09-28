@@ -241,7 +241,7 @@ namespace MainForm29._08._17
                     PA_Ekraan.Text += ",";
                 
              }
-             if (btnNum[bln].Text == "+/-" && Convert.ToDouble(PA_Ekraan.Text) != 0)
+             if (btnNum[bln].Text == "+/-" && PA_Ekraan.Text!="0")
              {
                 double arv = Convert.ToDouble(PA_Ekraan.Text);
                 PA_Ekraan.Text = (-arv).ToString();
