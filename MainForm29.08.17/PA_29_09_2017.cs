@@ -13,6 +13,7 @@ namespace MainForm29._08._17
     public partial class PA_29_09_2017 : Form
     {
         float nx = 8, ny = 10;
+        
         float x1, x2, y1, y2, joonLaius;
         Pen Pliiats = new Pen(Color.Black, 1);// (цвет и тощина)
         SolidBrush Pintset = new SolidBrush(Color.Green);
@@ -44,57 +45,33 @@ namespace MainForm29._08._17
             }
 
         }
-
+        
         private void PA_Diagonaalid_Click(object sender, EventArgs e)
         {
-            for (float i = 0; i <= ny; i++)
+            
+            float xt = nx+ny;
+            
+            for (float i = -ny; i <= nx+ny; i++)
             {
                 float t1 = GBlaius / nx;
                 float t2 = GBkorgus / ny;
-                x1 = 0;
-                y1 = t2 * i;
-                x2 = t1 * i;
-                y2 = 0;
+                x1 = t1 * i;
+                y1 = 0;
+                x2 = GBlaius;
+                y2 = t2 * xt;
+                xt--;
 
                 g.DrawLine(Pliiats, x1, y1, x2, y2);
             }
             
-            for (float i = nx; i >= 0; i--)
-            {
-
-                float t1 = GBlaius / nx;
-                float t2 = GBkorgus / ny;
-                x1 = GBlaius;
-                y1 = t2*i;
-                x2 = t1*i;
-                y2 = GBkorgus;
-
-
-
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
-            }
+            
 
 
         }
 
         private void PA_Diagonaalid2_Click(object sender, EventArgs e)
         {
-            for (float i = 1; i <= nx; i++)
-            {
-
-                float t1 = GBlaius / nx;
-                float t2 = GBkorgus / ny;
-                x1 = t1 * i;
-                y1 = 0;
-                x2 = 0;
-                y2 = t2 * i;
-
-
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
-
-
-            }
-            for (float i = 1; i <= ny; i++)
+            for (float i = 0; i <= ny + nx; i++)
             {
                 float t1 = GBlaius / nx;
                 float t2 = GBkorgus / ny;
@@ -103,10 +80,8 @@ namespace MainForm29._08._17
                 x2 = t1 * i;
                 y2 = 0;
 
-
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
             }
-
-            g.DrawLine(Pliiats, x1, y1, x2, y2);
 
         }
 

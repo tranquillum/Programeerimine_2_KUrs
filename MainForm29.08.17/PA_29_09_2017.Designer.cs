@@ -54,7 +54,7 @@
             this.PA_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PA_pictureBox.Location = new System.Drawing.Point(242, 12);
             this.PA_pictureBox.Name = "PA_pictureBox";
-            this.PA_pictureBox.Size = new System.Drawing.Size(527, 498);
+            this.PA_pictureBox.Size = new System.Drawing.Size(691, 576);
             this.PA_pictureBox.TabIndex = 0;
             this.PA_pictureBox.TabStop = false;
             // 
@@ -197,7 +197,7 @@
             this.PA_Diagonaalid.Name = "PA_Diagonaalid";
             this.PA_Diagonaalid.Size = new System.Drawing.Size(175, 45);
             this.PA_Diagonaalid.TabIndex = 13;
-            this.PA_Diagonaalid.Text = "Diagonaalid";
+            this.PA_Diagonaalid.Text = "Diagonaalid \\";
             this.PA_Diagonaalid.UseVisualStyleBackColor = false;
             this.PA_Diagonaalid.Click += new System.EventHandler(this.PA_Diagonaalid_Click);
             // 
@@ -208,7 +208,7 @@
             this.PA_Diagonaalid2.Name = "PA_Diagonaalid2";
             this.PA_Diagonaalid2.Size = new System.Drawing.Size(175, 45);
             this.PA_Diagonaalid2.TabIndex = 14;
-            this.PA_Diagonaalid2.Text = "Diagonaalid2";
+            this.PA_Diagonaalid2.Text = "Diagonaalid /";
             this.PA_Diagonaalid2.UseVisualStyleBackColor = false;
             this.PA_Diagonaalid2.Click += new System.EventHandler(this.PA_Diagonaalid2_Click);
             // 
@@ -218,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(781, 642);
+            this.ClientSize = new System.Drawing.Size(945, 600);
             this.Controls.Add(this.PA_Diagonaalid2);
             this.Controls.Add(this.PA_Diagonaalid);
             this.Controls.Add(this.PA_Ruudustik);
@@ -227,6 +227,7 @@
             this.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "PA_29_09_2017";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PA_29_09_2017";
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
