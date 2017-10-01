@@ -96,13 +96,12 @@ namespace MainForm29._08._17
 
             for (float i = 0; i <= ny+nx ; i++)
             {
-                x1 = 1;
-                x2 = 1;
-                
-                if (x2 >0 && y2 > 0)
+                float t1 = GBlaius / nx;
+                float t2 = GBkorgus / ny;
+
+                if (x2 <=t1*2 && y2 <= t2*2)
                 {
-                    float t1 = GBlaius / nx;
-                    float t2 = GBkorgus / ny;
+                    
                     x1 = t1 * i;
                     y1 = t2 * i;
                     x2 = GBlaius - t1 * 2 * i;
