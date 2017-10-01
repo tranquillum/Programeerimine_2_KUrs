@@ -44,6 +44,7 @@
             this.PA_Ruudustik = new System.Windows.Forms.Button();
             this.PA_Diagonaalid = new System.Windows.Forms.Button();
             this.PA_Diagonaalid2 = new System.Windows.Forms.Button();
+            this.PA_Eelips = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             this.PA_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PA_pictureBox.Location = new System.Drawing.Point(242, 12);
             this.PA_pictureBox.Name = "PA_pictureBox";
-            this.PA_pictureBox.Size = new System.Drawing.Size(691, 576);
+            this.PA_pictureBox.Size = new System.Drawing.Size(690, 730);
             this.PA_pictureBox.TabIndex = 0;
             this.PA_pictureBox.TabStop = false;
             // 
@@ -212,13 +213,25 @@
             this.PA_Diagonaalid2.UseVisualStyleBackColor = false;
             this.PA_Diagonaalid2.Click += new System.EventHandler(this.PA_Diagonaalid2_Click);
             // 
+            // PA_Eelips
+            // 
+            this.PA_Eelips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Eelips.Location = new System.Drawing.Point(42, 357);
+            this.PA_Eelips.Name = "PA_Eelips";
+            this.PA_Eelips.Size = new System.Drawing.Size(175, 45);
+            this.PA_Eelips.TabIndex = 15;
+            this.PA_Eelips.Text = "Eelips";
+            this.PA_Eelips.UseVisualStyleBackColor = false;
+            this.PA_Eelips.Click += new System.EventHandler(this.PA_Eelips_Click);
+            // 
             // PA_29_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(945, 600);
+            this.ClientSize = new System.Drawing.Size(1128, 754);
+            this.Controls.Add(this.PA_Eelips);
             this.Controls.Add(this.PA_Diagonaalid2);
             this.Controls.Add(this.PA_Diagonaalid);
             this.Controls.Add(this.PA_Ruudustik);
@@ -254,5 +267,6 @@
         private System.Windows.Forms.Button PA_Ruudustik;
         private System.Windows.Forms.Button PA_Diagonaalid;
         private System.Windows.Forms.Button PA_Diagonaalid2;
+        private System.Windows.Forms.Button PA_Eelips;
     }
 }

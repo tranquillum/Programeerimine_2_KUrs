@@ -56,6 +56,11 @@ namespace MainForm29._08._17
                 float t1 = GBlaius / nx;
                 float t2 = GBkorgus / ny;
                 x1 = t1 * i;
+                x1 = t1 * i;
+                x1 = t1 * i;
+                x1 = t1 * i;
+                x1 = t1 * i;
+                x1 = t1 * i;
                 y1 = 0;
                 x2 = GBlaius;
                 y2 = t2 * xt;
@@ -82,6 +87,34 @@ namespace MainForm29._08._17
 
                 g.DrawLine(Pliiats, x1, y1, x2, y2);
             }
+
+        }
+
+        private void PA_Eelips_Click(object sender, EventArgs e)
+        {
+            
+
+            for (float i = 0; i <= ny+nx ; i++)
+            {
+                x1 = 1;
+                x2 = 1;
+                
+                if (x2 >0 && y2 > 0)
+                {
+                    float t1 = GBlaius / nx;
+                    float t2 = GBkorgus / ny;
+                    x1 = t1 * i;
+                    y1 = t2 * i;
+                    x2 = GBlaius - t1 * 2 * i;
+                    y2 = GBkorgus - t2 * 2 * i;
+
+
+                    
+                }
+                g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+            }
+
+
 
         }
 
