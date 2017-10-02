@@ -153,12 +153,12 @@ namespace MainForm29._08._17
 
             x2 = GBlaius;
             y2 = GBkorgus;
-            
+
 
             for (float i = 0; i <= ny+nx ; i++)
             {
                 
-                if (x2 > t1 && y2 > t2)
+                if (x2 > t1*2 && y2 > t2*2)
                 {
                     
                     x1 = t1 * i;
