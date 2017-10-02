@@ -45,7 +45,7 @@ namespace MainForm29._08._17
                     y1 = t2*y;
                     x2 = t1;
                     y2 = t2;
-                    g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                    g.DrawEllipse(Pliiats, x1, y1, x2-1, y2-1);
                 } 
             }
 
@@ -57,7 +57,7 @@ namespace MainForm29._08._17
                     y1 = t2 * y;
                     x2 = t1;
                     y2 = t2;
-                    g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                    g.DrawEllipse(Pliiats, x1, y1, x2-1, y2-1);
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace MainForm29._08._17
                     y1 = 0 ;
                     x2 = t1;
                     y2 = GBkorgus;
-                    g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                    g.DrawEllipse(Pliiats, x1, y1, x2-1, y2-1);
                 
             }
         }
@@ -90,7 +90,7 @@ namespace MainForm29._08._17
                 x2 = t*i;
                 y2 = GBkorgus;
                 Pliiats.Width = 1;
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
+                g.DrawLine(Pliiats, x1, y1, x2-1, y2-1);
             }
             for (float i = 0; i <= ny; i++)
             {
@@ -101,7 +101,7 @@ namespace MainForm29._08._17
                 x2 = GBlaius;
                 y2 = t * i;
                 Pliiats.Width = 1;
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
+                g.DrawLine(Pliiats, x1, y1, x2-1, y2-1);
             }
 
         }
@@ -122,7 +122,7 @@ namespace MainForm29._08._17
                 y2 = t2 * xt;
                 xt--;
 
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
+                g.DrawLine(Pliiats, x1, y1, x2-1, y2-1);
             }
             
             
@@ -141,7 +141,7 @@ namespace MainForm29._08._17
                 x2 = t1 * i;
                 y2 = 0;
 
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
+                g.DrawLine(Pliiats, x1, y1, x2-1, y2-1);
             }
 
         }
