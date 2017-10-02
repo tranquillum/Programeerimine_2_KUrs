@@ -19,6 +19,16 @@ namespace MainForm29._08._17
         SolidBrush Pintset = new SolidBrush(Color.Green);
         Graphics g;
 
+
+        Random r = new Random();
+        int GBlaius, GBkorgus;
+        public PA_29_09_2017()
+        {
+            InitializeComponent();
+            GBlaius = PA_pictureBox.Width;
+            GBkorgus = PA_pictureBox.Height;
+            g = Graphics.FromHwnd(PA_pictureBox.Handle);
+        }
         private void PA_Ruudustik_Click(object sender, EventArgs e)
         {
             for(float i = 0; i <= nx; i++)
@@ -55,11 +65,7 @@ namespace MainForm29._08._17
             {
                 float t1 = GBlaius / nx;
                 float t2 = GBkorgus / ny;
-                x1 = t1 * i;
-                x1 = t1 * i;
-                x1 = t1 * i;
-                x1 = t1 * i;
-                x1 = t1 * i;
+                
                 x1 = t1 * i;
                 y1 = 0;
                 x2 = GBlaius;
@@ -92,14 +98,16 @@ namespace MainForm29._08._17
 
         private void PA_Eelips_Click(object sender, EventArgs e)
         {
-            
+            float t1 = GBlaius / nx;
+            float t2 = GBkorgus / ny;
+
+            x2 = GBlaius;
+            y2 = GBkorgus;
 
             for (float i = 0; i <= ny+nx ; i++)
             {
-                float t1 = GBlaius / nx;
-                float t2 = GBkorgus / ny;
-
-                if (x2 <=t1*2 && y2 <= t2*2)
+                
+                if (x2 > t1 && y2 > t2)
                 {
                     
                     x1 = t1 * i;
@@ -117,23 +125,15 @@ namespace MainForm29._08._17
 
         }
 
-        Random r = new Random();
-        int GBlaius, GBkorgus;
-        public PA_29_09_2017()
-        {
-            InitializeComponent();
-            GBlaius = PA_pictureBox.Width; 
-            GBkorgus = PA_pictureBox.Height;
-            g = Graphics.FromHwnd(PA_pictureBox.Handle);
-        }
+
 
         private void Juhuarvud()
         {
-             x1 = r.Next(GBlaius);
-             x2 = r.Next( GBlaius);
-             y1 = r.Next(GBkorgus);
-             y2 = r.Next( GBkorgus);
-             joonLaius = r.Next(1, 10);
+            x1 = r.Next(GBlaius);
+            x2 = r.Next(GBlaius);
+            y1 = r.Next(GBkorgus);
+            y2 = r.Next(GBkorgus);
+            joonLaius = r.Next(1, 10);
 
             PA_X1koordinaat.Text = x1.ToString();
             PA_X2koordinaat.Text = x2.ToString();
