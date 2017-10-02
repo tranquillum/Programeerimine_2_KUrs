@@ -169,7 +169,7 @@ namespace MainForm29._08._17
 
                     
                 }
-                g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                g.DrawEllipse(Pliiats, x1, y1, x2-1, y2-1);
             }
 
 

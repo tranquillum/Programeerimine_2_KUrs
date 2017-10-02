@@ -54,7 +54,6 @@
             // PA_pictureBox
             // 
             this.PA_pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PA_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PA_pictureBox.Location = new System.Drawing.Point(242, 12);
             this.PA_pictureBox.Name = "PA_pictureBox";
             this.PA_pictureBox.Size = new System.Drawing.Size(690, 730);
