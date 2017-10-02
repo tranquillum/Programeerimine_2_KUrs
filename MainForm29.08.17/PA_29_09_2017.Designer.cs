@@ -45,6 +45,8 @@
             this.PA_Diagonaalid = new System.Windows.Forms.Button();
             this.PA_Diagonaalid2 = new System.Windows.Forms.Button();
             this.PA_Eelips = new System.Windows.Forms.Button();
+            this.PA_Eelopsid = new System.Windows.Forms.Button();
+            this.PA_Eelopsid2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             this.PA_X1.AutoSize = true;
             this.PA_X1.Location = new System.Drawing.Point(6, 22);
             this.PA_X1.Name = "PA_X1";
-            this.PA_X1.Size = new System.Drawing.Size(46, 23);
+            this.PA_X1.Size = new System.Drawing.Size(38, 18);
             this.PA_X1.TabIndex = 2;
             this.PA_X1.Text = "X1=";
             // 
@@ -84,7 +86,7 @@
             this.PA_X2.AutoSize = true;
             this.PA_X2.Location = new System.Drawing.Point(103, 21);
             this.PA_X2.Name = "PA_X2";
-            this.PA_X2.Size = new System.Drawing.Size(46, 23);
+            this.PA_X2.Size = new System.Drawing.Size(38, 18);
             this.PA_X2.TabIndex = 3;
             this.PA_X2.Text = "X2=";
             // 
@@ -92,7 +94,7 @@
             // 
             this.PA_X1koordinaat.Location = new System.Drawing.Point(44, 18);
             this.PA_X1koordinaat.Name = "PA_X1koordinaat";
-            this.PA_X1koordinaat.Size = new System.Drawing.Size(53, 30);
+            this.PA_X1koordinaat.Size = new System.Drawing.Size(53, 26);
             this.PA_X1koordinaat.TabIndex = 4;
             this.PA_X1koordinaat.Text = "0";
             this.PA_X1koordinaat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -101,7 +103,7 @@
             // 
             this.PA_X2koordinaat.Location = new System.Drawing.Point(147, 17);
             this.PA_X2koordinaat.Name = "PA_X2koordinaat";
-            this.PA_X2koordinaat.Size = new System.Drawing.Size(50, 30);
+            this.PA_X2koordinaat.Size = new System.Drawing.Size(50, 26);
             this.PA_X2koordinaat.TabIndex = 5;
             this.PA_X2koordinaat.Text = "0";
             this.PA_X2koordinaat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -110,7 +112,7 @@
             // 
             this.PA_Y2koordinaat.Location = new System.Drawing.Point(147, 47);
             this.PA_Y2koordinaat.Name = "PA_Y2koordinaat";
-            this.PA_Y2koordinaat.Size = new System.Drawing.Size(50, 30);
+            this.PA_Y2koordinaat.Size = new System.Drawing.Size(50, 26);
             this.PA_Y2koordinaat.TabIndex = 9;
             this.PA_Y2koordinaat.Text = "0";
             this.PA_Y2koordinaat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -119,7 +121,7 @@
             // 
             this.PA_Y1koordinaat.Location = new System.Drawing.Point(44, 48);
             this.PA_Y1koordinaat.Name = "PA_Y1koordinaat";
-            this.PA_Y1koordinaat.Size = new System.Drawing.Size(53, 30);
+            this.PA_Y1koordinaat.Size = new System.Drawing.Size(53, 26);
             this.PA_Y1koordinaat.TabIndex = 8;
             this.PA_Y1koordinaat.Text = "0";
             this.PA_Y1koordinaat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -129,7 +131,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(103, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 23);
+            this.label2.Size = new System.Drawing.Size(38, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Y1=";
             // 
@@ -138,7 +140,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 23);
+            this.label3.Size = new System.Drawing.Size(38, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Y1=";
             // 
@@ -166,7 +168,7 @@
             // 
             this.PA_JoonLaius.Location = new System.Drawing.Point(100, 82);
             this.PA_JoonLaius.Name = "PA_JoonLaius";
-            this.PA_JoonLaius.Size = new System.Drawing.Size(40, 30);
+            this.PA_JoonLaius.Size = new System.Drawing.Size(40, 26);
             this.PA_JoonLaius.TabIndex = 11;
             this.PA_JoonLaius.Text = "0";
             this.PA_JoonLaius.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -176,7 +178,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
+            this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 10;
             this.label1.Text = "Laius =";
             // 
@@ -224,13 +226,37 @@
             this.PA_Eelips.UseVisualStyleBackColor = false;
             this.PA_Eelips.Click += new System.EventHandler(this.PA_Eelips_Click);
             // 
+            // PA_Eelopsid
+            // 
+            this.PA_Eelopsid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Eelopsid.Location = new System.Drawing.Point(42, 408);
+            this.PA_Eelopsid.Name = "PA_Eelopsid";
+            this.PA_Eelopsid.Size = new System.Drawing.Size(175, 45);
+            this.PA_Eelopsid.TabIndex = 16;
+            this.PA_Eelopsid.Text = "Eelopsid 1";
+            this.PA_Eelopsid.UseVisualStyleBackColor = false;
+            this.PA_Eelopsid.Click += new System.EventHandler(this.PA_Eelopsid_Click);
+            // 
+            // PA_Eelopsid2
+            // 
+            this.PA_Eelopsid2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Eelopsid2.Location = new System.Drawing.Point(42, 459);
+            this.PA_Eelopsid2.Name = "PA_Eelopsid2";
+            this.PA_Eelopsid2.Size = new System.Drawing.Size(175, 45);
+            this.PA_Eelopsid2.TabIndex = 17;
+            this.PA_Eelopsid2.Text = "Eelopsid 2";
+            this.PA_Eelopsid2.UseVisualStyleBackColor = false;
+            this.PA_Eelopsid2.Click += new System.EventHandler(this.PA_Eelopsid2_Click);
+            // 
             // PA_29_09_2017
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 754);
+            this.Controls.Add(this.PA_Eelopsid2);
+            this.Controls.Add(this.PA_Eelopsid);
             this.Controls.Add(this.PA_Eelips);
             this.Controls.Add(this.PA_Diagonaalid2);
             this.Controls.Add(this.PA_Diagonaalid);
@@ -268,5 +294,7 @@
         private System.Windows.Forms.Button PA_Diagonaalid;
         private System.Windows.Forms.Button PA_Diagonaalid2;
         private System.Windows.Forms.Button PA_Eelips;
+        private System.Windows.Forms.Button PA_Eelopsid;
+        private System.Windows.Forms.Button PA_Eelopsid2;
     }
 }

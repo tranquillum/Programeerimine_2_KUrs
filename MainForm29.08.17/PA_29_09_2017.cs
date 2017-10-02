@@ -29,6 +29,56 @@ namespace MainForm29._08._17
             GBkorgus = PA_pictureBox.Height;
             g = Graphics.FromHwnd(PA_pictureBox.Handle);
         }
+
+        private void PA_Eelopsid_Click(object sender, EventArgs e)
+        {
+            float t1 = GBlaius / nx;
+            float t2 = GBkorgus / ny;
+            
+
+            
+            for (int i = 0; i <=  nx; i+=2 )
+            {
+                for (int y = 0; y <=ny; y += 2)
+                {
+                    x1 = t1*i;
+                    y1 = t2*y;
+                    x2 = t1;
+                    y2 = t2;
+                    g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                } 
+            }
+
+            for (int i = 1; i <= nx; i += 2)
+            {
+                for (int y = 1; y <= ny; y += 2)
+                {
+                    x1 = t1 * i;
+                    y1 = t2 * y;
+                    x2 = t1;
+                    y2 = t2;
+                    g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                }
+            }
+        }
+
+        private void PA_Eelopsid2_Click(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i <= nx; i ++)
+            {
+                float t1 = GBlaius / nx;
+                float t2 = GBkorgus / ny;
+
+                    x1 = t1*i;
+                    y1 = 0 ;
+                    x2 = t1;
+                    y2 = GBkorgus;
+                    g.DrawEllipse(Pliiats, x1, y1, x2, y2);
+                
+            }
+        }
+
         private void PA_Ruudustik_Click(object sender, EventArgs e)
         {
             for(float i = 0; i <= nx; i++)
@@ -103,6 +153,7 @@ namespace MainForm29._08._17
 
             x2 = GBlaius;
             y2 = GBkorgus;
+            
 
             for (float i = 0; i <= ny+nx ; i++)
             {
