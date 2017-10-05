@@ -47,6 +47,7 @@
             this.PA_Eelips = new System.Windows.Forms.Button();
             this.PA_Eelopsid = new System.Windows.Forms.Button();
             this.PA_Eelopsid2 = new System.Windows.Forms.Button();
+            this.PA_Puhasta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -247,6 +248,17 @@
             this.PA_Eelopsid2.UseVisualStyleBackColor = false;
             this.PA_Eelopsid2.Click += new System.EventHandler(this.PA_Eelopsid2_Click);
             // 
+            // PA_Puhasta
+            // 
+            this.PA_Puhasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Puhasta.Location = new System.Drawing.Point(31, 697);
+            this.PA_Puhasta.Name = "PA_Puhasta";
+            this.PA_Puhasta.Size = new System.Drawing.Size(175, 45);
+            this.PA_Puhasta.TabIndex = 18;
+            this.PA_Puhasta.Text = "Puhasta";
+            this.PA_Puhasta.UseVisualStyleBackColor = false;
+            this.PA_Puhasta.Click += new System.EventHandler(this.PA_Puhasta_Click);
+            // 
             // PA_29_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -254,6 +266,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 754);
+            this.Controls.Add(this.PA_Puhasta);
             this.Controls.Add(this.PA_Eelopsid2);
             this.Controls.Add(this.PA_Eelopsid);
             this.Controls.Add(this.PA_Eelips);
@@ -295,5 +308,6 @@
         private System.Windows.Forms.Button PA_Eelips;
         private System.Windows.Forms.Button PA_Eelopsid;
         private System.Windows.Forms.Button PA_Eelopsid2;
+        private System.Windows.Forms.Button PA_Puhasta;
     }
 }

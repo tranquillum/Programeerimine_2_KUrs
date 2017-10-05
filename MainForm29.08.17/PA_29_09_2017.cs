@@ -14,6 +14,7 @@ namespace MainForm29._08._17
     {
         float nx = 8, ny = 10;
         
+        
         float x1, x2, y1, y2, joonLaius;
         Pen Pliiats = new Pen(Color.Black, 1);// (цвет и тощина)
         SolidBrush Pintset = new SolidBrush(Color.Green);
@@ -60,6 +61,11 @@ namespace MainForm29._08._17
                     g.DrawEllipse(Pliiats, x1, y1, x2-1, y2-1);
                 }
             }
+        }
+
+        private void PA_Puhasta_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void PA_Eelopsid2_Click(object sender, EventArgs e)
