@@ -65,7 +65,7 @@ namespace MainForm29._08._17
 
         private void PA_Puhasta_Click(object sender, EventArgs e)
         {
-
+            PA_pictureBox.Image = null;
         }
 
         private void PA_Eelopsid2_Click(object sender, EventArgs e)
