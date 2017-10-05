@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PA_pictureBox = new System.Windows.Forms.PictureBox();
             this.PA_Joon = new System.Windows.Forms.Button();
             this.PA_X1 = new System.Windows.Forms.Label();
@@ -48,6 +49,10 @@
             this.PA_Eelopsid = new System.Windows.Forms.Button();
             this.PA_Eelopsid2 = new System.Windows.Forms.Button();
             this.PA_Puhasta = new System.Windows.Forms.Button();
+            this.PA_Eelips4 = new System.Windows.Forms.Button();
+            this.PA_Eelips5 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.NO = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -229,7 +234,7 @@
             // PA_Eelopsid
             // 
             this.PA_Eelopsid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelopsid.Location = new System.Drawing.Point(42, 408);
+            this.PA_Eelopsid.Location = new System.Drawing.Point(42, 510);
             this.PA_Eelopsid.Name = "PA_Eelopsid";
             this.PA_Eelopsid.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelopsid.TabIndex = 16;
@@ -240,7 +245,7 @@
             // PA_Eelopsid2
             // 
             this.PA_Eelopsid2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelopsid2.Location = new System.Drawing.Point(42, 459);
+            this.PA_Eelopsid2.Location = new System.Drawing.Point(42, 561);
             this.PA_Eelopsid2.Name = "PA_Eelopsid2";
             this.PA_Eelopsid2.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelopsid2.TabIndex = 17;
@@ -251,6 +256,7 @@
             // PA_Puhasta
             // 
             this.PA_Puhasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Puhasta.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.PA_Puhasta.Location = new System.Drawing.Point(31, 697);
             this.PA_Puhasta.Name = "PA_Puhasta";
             this.PA_Puhasta.Size = new System.Drawing.Size(175, 45);
@@ -259,13 +265,55 @@
             this.PA_Puhasta.UseVisualStyleBackColor = false;
             this.PA_Puhasta.Click += new System.EventHandler(this.PA_Puhasta_Click);
             // 
+            // PA_Eelips4
+            // 
+            this.PA_Eelips4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Eelips4.Location = new System.Drawing.Point(42, 459);
+            this.PA_Eelips4.Name = "PA_Eelips4";
+            this.PA_Eelips4.Size = new System.Drawing.Size(175, 45);
+            this.PA_Eelips4.TabIndex = 19;
+            this.PA_Eelips4.Text = "Eelips keskel";
+            this.PA_Eelips4.UseVisualStyleBackColor = false;
+            this.PA_Eelips4.Click += new System.EventHandler(this.PA_Eelips4_Click);
+            // 
+            // PA_Eelips5
+            // 
+            this.PA_Eelips5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_Eelips5.Location = new System.Drawing.Point(42, 408);
+            this.PA_Eelips5.Name = "PA_Eelips5";
+            this.PA_Eelips5.Size = new System.Drawing.Size(175, 45);
+            this.PA_Eelips5.TabIndex = 20;
+            this.PA_Eelips5.Text = "Eelips ~keskel";
+            this.PA_Eelips5.UseVisualStyleBackColor = false;
+            this.PA_Eelips5.Click += new System.EventHandler(this.PA_Eelips5_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // NO
+            // 
+            this.NO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.NO.Location = new System.Drawing.Point(941, 674);
+            this.NO.Name = "NO";
+            this.NO.Size = new System.Drawing.Size(175, 45);
+            this.NO.TabIndex = 21;
+            this.NO.Text = "Eelopsid 2";
+            this.NO.UseVisualStyleBackColor = false;
+            this.NO.Click += new System.EventHandler(this.NO_Click);
+            // 
             // PA_29_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.PA_Puhasta;
             this.ClientSize = new System.Drawing.Size(1128, 754);
+            this.Controls.Add(this.NO);
+            this.Controls.Add(this.PA_Eelips5);
+            this.Controls.Add(this.PA_Eelips4);
             this.Controls.Add(this.PA_Puhasta);
             this.Controls.Add(this.PA_Eelopsid2);
             this.Controls.Add(this.PA_Eelopsid);
@@ -309,5 +357,9 @@
         private System.Windows.Forms.Button PA_Eelopsid;
         private System.Windows.Forms.Button PA_Eelopsid2;
         private System.Windows.Forms.Button PA_Puhasta;
+        private System.Windows.Forms.Button PA_Eelips4;
+        private System.Windows.Forms.Button PA_Eelips5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button NO;
     }
 }
