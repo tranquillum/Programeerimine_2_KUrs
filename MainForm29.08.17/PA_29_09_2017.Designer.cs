@@ -53,8 +53,14 @@
             this.PA_Eelips5 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NO = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PA_pictureBox
@@ -190,7 +196,7 @@
             // PA_Ruudustik
             // 
             this.PA_Ruudustik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Ruudustik.Location = new System.Drawing.Point(42, 204);
+            this.PA_Ruudustik.Location = new System.Drawing.Point(28, 72);
             this.PA_Ruudustik.Name = "PA_Ruudustik";
             this.PA_Ruudustik.Size = new System.Drawing.Size(151, 45);
             this.PA_Ruudustik.TabIndex = 12;
@@ -201,7 +207,7 @@
             // PA_Diagonaalid
             // 
             this.PA_Diagonaalid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Diagonaalid.Location = new System.Drawing.Point(42, 255);
+            this.PA_Diagonaalid.Location = new System.Drawing.Point(31, 329);
             this.PA_Diagonaalid.Name = "PA_Diagonaalid";
             this.PA_Diagonaalid.Size = new System.Drawing.Size(175, 45);
             this.PA_Diagonaalid.TabIndex = 13;
@@ -212,7 +218,7 @@
             // PA_Diagonaalid2
             // 
             this.PA_Diagonaalid2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Diagonaalid2.Location = new System.Drawing.Point(42, 306);
+            this.PA_Diagonaalid2.Location = new System.Drawing.Point(31, 380);
             this.PA_Diagonaalid2.Name = "PA_Diagonaalid2";
             this.PA_Diagonaalid2.Size = new System.Drawing.Size(175, 45);
             this.PA_Diagonaalid2.TabIndex = 14;
@@ -223,7 +229,7 @@
             // PA_Eelips
             // 
             this.PA_Eelips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelips.Location = new System.Drawing.Point(42, 357);
+            this.PA_Eelips.Location = new System.Drawing.Point(31, 431);
             this.PA_Eelips.Name = "PA_Eelips";
             this.PA_Eelips.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelips.TabIndex = 15;
@@ -234,7 +240,7 @@
             // PA_Eelopsid
             // 
             this.PA_Eelopsid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelopsid.Location = new System.Drawing.Point(42, 510);
+            this.PA_Eelopsid.Location = new System.Drawing.Point(31, 584);
             this.PA_Eelopsid.Name = "PA_Eelopsid";
             this.PA_Eelopsid.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelopsid.TabIndex = 16;
@@ -245,7 +251,7 @@
             // PA_Eelopsid2
             // 
             this.PA_Eelopsid2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelopsid2.Location = new System.Drawing.Point(42, 561);
+            this.PA_Eelopsid2.Location = new System.Drawing.Point(31, 635);
             this.PA_Eelopsid2.Name = "PA_Eelopsid2";
             this.PA_Eelopsid2.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelopsid2.TabIndex = 17;
@@ -268,7 +274,7 @@
             // PA_Eelips4
             // 
             this.PA_Eelips4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelips4.Location = new System.Drawing.Point(42, 459);
+            this.PA_Eelips4.Location = new System.Drawing.Point(31, 533);
             this.PA_Eelips4.Name = "PA_Eelips4";
             this.PA_Eelips4.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelips4.TabIndex = 19;
@@ -279,7 +285,7 @@
             // PA_Eelips5
             // 
             this.PA_Eelips5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.PA_Eelips5.Location = new System.Drawing.Point(42, 408);
+            this.PA_Eelips5.Location = new System.Drawing.Point(31, 482);
             this.PA_Eelips5.Name = "PA_Eelips5";
             this.PA_Eelips5.Size = new System.Drawing.Size(175, 45);
             this.PA_Eelips5.TabIndex = 20;
@@ -303,6 +309,56 @@
             this.NO.UseVisualStyleBackColor = false;
             this.NO.Click += new System.EventHandler(this.NO_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.PA_Ruudustik);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 200);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(205, 123);
+            this.groupBox2.TabIndex = 22;
+            this.groupBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "X=";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(103, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "X=";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(44, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(53, 26);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "8";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(147, 25);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(50, 26);
+            this.textBox2.TabIndex = 15;
+            this.textBox2.Text = "9";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // PA_29_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -311,6 +367,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.PA_Puhasta;
             this.ClientSize = new System.Drawing.Size(1128, 754);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.NO);
             this.Controls.Add(this.PA_Eelips5);
             this.Controls.Add(this.PA_Eelips4);
@@ -320,7 +377,6 @@
             this.Controls.Add(this.PA_Eelips);
             this.Controls.Add(this.PA_Diagonaalid2);
             this.Controls.Add(this.PA_Diagonaalid);
-            this.Controls.Add(this.PA_Ruudustik);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.PA_pictureBox);
             this.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
@@ -331,6 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +419,10 @@
         private System.Windows.Forms.Button PA_Eelips5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button NO;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -14,7 +14,7 @@ namespace MainForm29._08._17
     {
         float nx = 9, ny = 8;
         
-        
+
         float x1, x2, y1, y2, joonLaius;
         Pen Pliiats = new Pen(Color.Black, 1);// (цвет и тощина)
         SolidBrush Pintset = new SolidBrush(Color.Green);
@@ -172,7 +172,12 @@ namespace MainForm29._08._17
             }
 
         }
-        
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void PA_Diagonaalid_Click(object sender, EventArgs e)
         {
             
