@@ -148,7 +148,10 @@ namespace MainForm29._08._17
 
         private void PA_Ruudustik_Click(object sender, EventArgs e)
         {
-            for(float i = 0; i <= nx; i++)
+            nx = Convert.ToInt16(textBox1.Text);
+            ny = Convert.ToInt16(textBox2.Text);
+
+            for (float i = 0; i <= nx; i++)
             {
                 
                 float t = GBlaius / nx;
@@ -175,6 +178,23 @@ namespace MainForm29._08._17
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float t1 = GBlaius / nx;
+            float t2 = GBkorgus / ny;
+            x1 = GBlaius;
+            y1 = 3;
+            x2 = GBlaius;
+            y2 = 0;
+            while (y1 < (ny + nx))
+            {
+                g.DrawLine(Pliiats, x1* t1,y1*t2,x2*t1,y2*t2 );
+                y1++;
+                x2--;
+            }
 
         }
 

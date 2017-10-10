@@ -56,8 +56,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -341,15 +342,6 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "X=";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(44, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 26);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "8";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(147, 25);
@@ -359,6 +351,25 @@
             this.textBox2.Text = "9";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(44, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(53, 26);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "8";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(978, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 71);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PA_29_09_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -367,6 +378,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.PA_Puhasta;
             this.ClientSize = new System.Drawing.Size(1128, 754);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.NO);
             this.Controls.Add(this.PA_Eelips5);
@@ -424,5 +436,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
