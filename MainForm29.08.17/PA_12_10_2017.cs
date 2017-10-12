@@ -37,26 +37,9 @@ namespace MainForm29._08._17
 
         private void PA_drawbtn_Click(object sender, EventArgs e)
         {
-
-            g.DrawLine(Pliiats, 0, GBkorgus / 2, GBlaius, GBkorgus / 2);
-            float x1get = Convert.ToInt32(PA_x1.Text);
-            float x2get = Convert.ToInt32(PA_x2.Text);
-
-
-            float xt = Math.Abs(x1get) + Math.Abs( x2get);
-
-            for (float i = -1; i <= xt; i++)
-            {
-
-                float t = GBlaius / xt;
-                x1 = t * i;
-                y1 = 0;
-                x2 = t * i;
-                y2 = GBkorgus;
-                Pliiats.Width = 1;
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
-            }
-
+            Teljed();
+            F1(Convert.ToInt32(PA_x1.Text));
+            F1(Convert.ToInt32(PA_x2.Text));
 
 
 
@@ -85,15 +68,67 @@ namespace MainForm29._08._17
         private float F1 (float x)
         {
             float y = 0;
-
-
-
+            int a4 = Convert.ToInt32(PA_arv4.Text);
+            if (PA_m4.Text == "-") a4 = -a4;
+            y += a4 * x * x * x;
+            
+            int a3 = Convert.ToInt32(PA_arv3.Text);
+            if (PA_m3.Text == "-") a3 = -a3;
+            y += a3 * x *x * x;
+            
+            int a2= Convert.ToInt32(PA_arv2.Text);
+            if (PA_m2.Text == "-") a2 = -a2;
+            y += a4 * x * x * x;
+            
+            int a1 = Convert.ToInt32(PA_arv1.Text);
+            if (PA_m1.Text == "-") a1 = -a1;
+            y += a1 * x * x * x;
 
 
 
             return y;
         }
+        private void Teljed()
+        {
+            g.DrawLine(Pliiats, 0, GBkorgus / 2, GBlaius, GBkorgus / 2);
+            g.DrawLine(Pliiats, GBlaius / 2, 0, GBlaius / 2, GBkorgus);
 
+            float x1get = Math.Abs(Convert.ToInt32(PA_x2.Text));
+            float x2get = Math.Abs(Convert.ToInt32(PA_x1.Text));
+             
+
+
+
+
+            float tget = x1get + x2get + 1;
+            float t = GBlaius / tget;
+            x1 = GBlaius / 2;
+            y1 = (GBkorgus / 2) + 5;
+            x2 = GBlaius / 2;
+            y2 = (GBkorgus / 2) - 5;
+
+
+
+            for (float i = 0; i <= x1get; i++)
+            {
+                x1 = (GBlaius / 2) + (t * i);
+                y1 = (GBkorgus / 2) + 5;
+                x2 = (GBlaius / 2) + (t * i);
+                y2 = (GBkorgus / 2) - 5;
+
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
+
+            }
+            for (float i = 0; i <= x2get; i++)
+            {
+                x1 = (GBlaius / 2) - (t * i);
+                y1 = (GBkorgus / 2) + 5;
+                x2 = (GBlaius / 2) - (t * i);
+                y2 = (GBkorgus / 2) - 5;
+
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
+            }
+        }
 
     }
 }
