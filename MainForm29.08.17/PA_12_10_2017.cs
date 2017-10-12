@@ -74,20 +74,22 @@ namespace MainForm29._08._17
             
             int a3 = Convert.ToInt32(PA_arv3.Text);
             if (PA_m3.Text == "-") a3 = -a3;
-            y += a3 * x *x * x;
+            y += a3 * x *x ;
             
             int a2= Convert.ToInt32(PA_arv2.Text);
             if (PA_m2.Text == "-") a2 = -a2;
-            y += a4 * x * x * x;
+            y += a4 * x  ;
             
             int a1 = Convert.ToInt32(PA_arv1.Text);
             if (PA_m1.Text == "-") a1 = -a1;
-            y += a1 * x * x * x;
+            y += a1;
 
 
 
             return y;
         }
+
+
         private void Teljed()
         {
             g.DrawLine(Pliiats, 0, GBkorgus / 2, GBlaius, GBkorgus / 2);
@@ -100,7 +102,7 @@ namespace MainForm29._08._17
 
 
 
-            float tget = x1get + x2get + 1;
+            float tget = x1get + x2get;
             float t = GBlaius / tget;
             x1 = GBlaius / 2;
             y1 = (GBkorgus / 2) + 5;
