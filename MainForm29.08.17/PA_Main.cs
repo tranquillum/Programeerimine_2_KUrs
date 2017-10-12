@@ -16,6 +16,7 @@ namespace MainForm29._08._17
         Form f1 = new PA_29_08_17();
         Form f2 = new PA_07_09_2017();
         Form f3 = new PA_29_09_2017();
+        Form f4 = new PA_12_10_2017();
 
         public AP_mainform()
         {
@@ -55,6 +56,16 @@ namespace MainForm29._08._17
             }
             f3.Visible = true;
             f3.Activate();
+        }
+
+        private void PA_12_10_2017_Click(object sender, EventArgs e)
+        {
+            if (f4.Visible == false) // проверка: видна ли форма / если нет то показать
+            {
+                f4 = new PA_12_10_2017();
+            }
+            f4.Visible = true;
+            f4.Activate();
         }
     }
     

@@ -33,6 +33,7 @@
             this.PA_Exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.PA_12_10_2017 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PA_button1
@@ -82,12 +83,25 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // PA_12_10_2017
+            // 
+            this.PA_12_10_2017.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.PA_12_10_2017.Location = new System.Drawing.Point(14, 225);
+            this.PA_12_10_2017.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.PA_12_10_2017.Name = "PA_12_10_2017";
+            this.PA_12_10_2017.Size = new System.Drawing.Size(279, 58);
+            this.PA_12_10_2017.TabIndex = 5;
+            this.PA_12_10_2017.Text = "12.10.2017\r\n";
+            this.PA_12_10_2017.UseVisualStyleBackColor = false;
+            this.PA_12_10_2017.Click += new System.EventHandler(this.PA_12_10_2017_Click);
+            // 
             // AP_mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(307, 509);
+            this.Controls.Add(this.PA_12_10_2017);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PA_Exit);
@@ -108,6 +122,7 @@
         private System.Windows.Forms.Button PA_Exit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button PA_12_10_2017;
     }
 }
 
