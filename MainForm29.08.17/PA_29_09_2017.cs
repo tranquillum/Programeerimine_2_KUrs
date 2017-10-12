@@ -148,6 +148,7 @@ namespace MainForm29._08._17
 
         private void PA_Ruudustik_Click(object sender, EventArgs e)
         {
+
             nx = Convert.ToInt16(textBox1.Text);
             ny = Convert.ToInt16(textBox2.Text);
 
