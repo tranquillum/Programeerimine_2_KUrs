@@ -51,6 +51,10 @@
             this.PA_Claen = new System.Windows.Forms.Button();
             this.PA_ZeroRight = new System.Windows.Forms.Label();
             this.PA_ZeroLeft = new System.Windows.Forms.Label();
+            this.PA_y1 = new System.Windows.Forms.Label();
+            this.PA_y2 = new System.Windows.Forms.Label();
+            this.PA_ZeroUP = new System.Windows.Forms.Label();
+            this.PA_ZeroDown = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PA_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,7 +233,7 @@
             // 
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label10.Location = new System.Drawing.Point(67, 99);
+            this.label10.Location = new System.Drawing.Point(26, 99);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 39);
             this.label10.TabIndex = 15;
@@ -251,10 +255,10 @@
             // 
             this.PA_x1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_x1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_x1.Location = new System.Drawing.Point(146, 99);
+            this.PA_x1.Location = new System.Drawing.Point(105, 99);
             this.PA_x1.Multiline = true;
             this.PA_x1.Name = "PA_x1";
-            this.PA_x1.Size = new System.Drawing.Size(50, 39);
+            this.PA_x1.Size = new System.Drawing.Size(113, 39);
             this.PA_x1.TabIndex = 17;
             this.PA_x1.Text = "-3";
             this.PA_x1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -263,17 +267,17 @@
             // 
             this.PA_x2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_x2.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_x2.Location = new System.Drawing.Point(315, 96);
+            this.PA_x2.Location = new System.Drawing.Point(315, 99);
             this.PA_x2.Multiline = true;
             this.PA_x2.Name = "PA_x2";
-            this.PA_x2.Size = new System.Drawing.Size(50, 39);
+            this.PA_x2.Size = new System.Drawing.Size(92, 39);
             this.PA_x2.TabIndex = 18;
             this.PA_x2.Text = "+3";
             this.PA_x2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PA_drawbtn
             // 
-            this.PA_drawbtn.Location = new System.Drawing.Point(371, 100);
+            this.PA_drawbtn.Location = new System.Drawing.Point(413, 99);
             this.PA_drawbtn.Name = "PA_drawbtn";
             this.PA_drawbtn.Size = new System.Drawing.Size(351, 37);
             this.PA_drawbtn.TabIndex = 19;
@@ -309,11 +313,53 @@
             this.PA_ZeroLeft.Text = "<-- X=0";
             this.PA_ZeroLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PA_y1
+            // 
+            this.PA_y1.Location = new System.Drawing.Point(770, 102);
+            this.PA_y1.Name = "PA_y1";
+            this.PA_y1.Size = new System.Drawing.Size(66, 39);
+            this.PA_y1.TabIndex = 23;
+            this.PA_y1.Text = "0";
+            this.PA_y1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PA_y2
+            // 
+            this.PA_y2.Location = new System.Drawing.Point(851, 102);
+            this.PA_y2.Name = "PA_y2";
+            this.PA_y2.Size = new System.Drawing.Size(66, 39);
+            this.PA_y2.TabIndex = 24;
+            this.PA_y2.Text = "0";
+            this.PA_y2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PA_ZeroUP
+            // 
+            this.PA_ZeroUP.Location = new System.Drawing.Point(745, 218);
+            this.PA_ZeroUP.Name = "PA_ZeroUP";
+            this.PA_ZeroUP.Size = new System.Drawing.Size(108, 39);
+            this.PA_ZeroUP.TabIndex = 25;
+            this.PA_ZeroUP.Text = "ZeroUP";
+            this.PA_ZeroUP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PA_ZeroUP.Visible = false;
+            // 
+            // PA_ZeroDown
+            // 
+            this.PA_ZeroDown.Location = new System.Drawing.Point(745, 478);
+            this.PA_ZeroDown.Name = "PA_ZeroDown";
+            this.PA_ZeroDown.Size = new System.Drawing.Size(108, 39);
+            this.PA_ZeroDown.TabIndex = 26;
+            this.PA_ZeroDown.Text = "ZeroDown";
+            this.PA_ZeroDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PA_ZeroDown.Visible = false;
+            // 
             // PA_12_10_2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 722);
+            this.Controls.Add(this.PA_ZeroDown);
+            this.Controls.Add(this.PA_ZeroUP);
+            this.Controls.Add(this.PA_y2);
+            this.Controls.Add(this.PA_y1);
             this.Controls.Add(this.PA_ZeroLeft);
             this.Controls.Add(this.PA_ZeroRight);
             this.Controls.Add(this.PA_Claen);
@@ -373,5 +419,9 @@
         private System.Windows.Forms.Button PA_Claen;
         private System.Windows.Forms.Label PA_ZeroRight;
         private System.Windows.Forms.Label PA_ZeroLeft;
+        private System.Windows.Forms.Label PA_y1;
+        private System.Windows.Forms.Label PA_y2;
+        private System.Windows.Forms.Label PA_ZeroUP;
+        private System.Windows.Forms.Label PA_ZeroDown;
     }
 }
