@@ -42,7 +42,7 @@ namespace MainForm29._08._17
         {
             XTeljed();
             YTeljed();
-            Graafik();
+            //Graafik();
 
         }
 
