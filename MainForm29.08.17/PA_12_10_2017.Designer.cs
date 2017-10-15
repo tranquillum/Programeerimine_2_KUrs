@@ -48,6 +48,9 @@
             this.PA_x1 = new System.Windows.Forms.TextBox();
             this.PA_x2 = new System.Windows.Forms.TextBox();
             this.PA_drawbtn = new System.Windows.Forms.Button();
+            this.PA_Claen = new System.Windows.Forms.Button();
+            this.PA_ZeroRight = new System.Windows.Forms.Label();
+            this.PA_ZeroLeft = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PA_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +110,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-           
             // 
             // PA_arv2
             // 
@@ -240,7 +242,7 @@
             this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label11.Location = new System.Drawing.Point(224, 99);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 39);
+            this.label11.Size = new System.Drawing.Size(85, 39);
             this.label11.TabIndex = 16;
             this.label11.Text = "Xlopp=";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -261,7 +263,7 @@
             // 
             this.PA_x2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_x2.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_x2.Location = new System.Drawing.Point(303, 99);
+            this.PA_x2.Location = new System.Drawing.Point(315, 96);
             this.PA_x2.Multiline = true;
             this.PA_x2.Name = "PA_x2";
             this.PA_x2.Size = new System.Drawing.Size(50, 39);
@@ -279,11 +281,42 @@
             this.PA_drawbtn.UseVisualStyleBackColor = true;
             this.PA_drawbtn.Click += new System.EventHandler(this.PA_drawbtn_Click);
             // 
+            // PA_Claen
+            // 
+            this.PA_Claen.Location = new System.Drawing.Point(779, 48);
+            this.PA_Claen.Name = "PA_Claen";
+            this.PA_Claen.Size = new System.Drawing.Size(138, 32);
+            this.PA_Claen.TabIndex = 20;
+            this.PA_Claen.Text = "Clean";
+            this.PA_Claen.UseVisualStyleBackColor = true;
+            this.PA_Claen.Click += new System.EventHandler(this.PA_Claen_Click);
+            // 
+            // PA_ZeroRight
+            // 
+            this.PA_ZeroRight.Location = new System.Drawing.Point(505, 654);
+            this.PA_ZeroRight.Name = "PA_ZeroRight";
+            this.PA_ZeroRight.Size = new System.Drawing.Size(120, 39);
+            this.PA_ZeroRight.TabIndex = 21;
+            this.PA_ZeroRight.Text = "X=0 -->";
+            this.PA_ZeroRight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PA_ZeroLeft
+            // 
+            this.PA_ZeroLeft.Location = new System.Drawing.Point(142, 654);
+            this.PA_ZeroLeft.Name = "PA_ZeroLeft";
+            this.PA_ZeroLeft.Size = new System.Drawing.Size(120, 39);
+            this.PA_ZeroLeft.TabIndex = 22;
+            this.PA_ZeroLeft.Text = "<-- X=0";
+            this.PA_ZeroLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PA_12_10_2017
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 664);
+            this.ClientSize = new System.Drawing.Size(969, 722);
+            this.Controls.Add(this.PA_ZeroLeft);
+            this.Controls.Add(this.PA_ZeroRight);
+            this.Controls.Add(this.PA_Claen);
             this.Controls.Add(this.PA_drawbtn);
             this.Controls.Add(this.PA_x2);
             this.Controls.Add(this.PA_x1);
@@ -337,5 +370,8 @@
         private System.Windows.Forms.TextBox PA_x1;
         private System.Windows.Forms.TextBox PA_x2;
         private System.Windows.Forms.Button PA_drawbtn;
+        private System.Windows.Forms.Button PA_Claen;
+        private System.Windows.Forms.Label PA_ZeroRight;
+        private System.Windows.Forms.Label PA_ZeroLeft;
     }
 }

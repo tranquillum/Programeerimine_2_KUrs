@@ -14,7 +14,8 @@ namespace MainForm29._08._17
     {
 
         float x1, x2, y1, y2;
-        Pen Pliiats = new Pen(Color.Black, 1);
+        Pen Pliiats = new Pen(Color.Black, 2);
+        Pen Pliiats2 = new Pen(Color.Gray, 1);
         SolidBrush Pintset = new SolidBrush(Color.Green);
         Graphics g;
         int GBlaius, GBkorgus;
@@ -23,9 +24,11 @@ namespace MainForm29._08._17
         public PA_12_10_2017()
         {
             InitializeComponent();
-            GBlaius = PA_PictureBox.Width;
-            GBkorgus = PA_PictureBox.Height;
+            GBlaius = PA_PictureBox.Width-1;
+            GBkorgus = PA_PictureBox.Height-1;
             g = Graphics.FromHwnd(PA_PictureBox.Handle);
+            PA_ZeroLeft.Visible = false;
+            PA_ZeroRight.Visible = false;
         }
 
         private void PA_12_10_2017_Load(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace MainForm29._08._17
 
         private void PA_drawbtn_Click(object sender, EventArgs e)
         {
-            Teljed();
+            XTeljed();
             F1(Convert.ToInt32(PA_x1.Text));
             F1(Convert.ToInt32(PA_x2.Text));
 
@@ -53,6 +56,13 @@ namespace MainForm29._08._17
         private void PA_m2_Click(object sender, EventArgs e)
         {
             if (PA_m2.Text == "+") PA_m2.Text = "-"; else PA_m2.Text = "+";
+        }
+
+        private void PA_Claen_Click(object sender, EventArgs e)
+        {
+            PA_PictureBox.Image = null;
+            PA_ZeroLeft.Visible = false;
+            PA_ZeroRight.Visible = false;
         }
 
         private void PA_m3_Click(object sender, EventArgs e)
@@ -90,47 +100,87 @@ namespace MainForm29._08._17
         }
 
 
-        private void Teljed()
+        private void XTeljed()
         {
-            g.DrawLine(Pliiats, 0, GBkorgus / 2, GBlaius, GBkorgus / 2);
-            g.DrawLine(Pliiats, GBlaius / 2, 0, GBlaius / 2, GBkorgus);
 
-            float x1get = Math.Abs(Convert.ToInt32(PA_x2.Text));
-            float x2get = Math.Abs(Convert.ToInt32(PA_x1.Text));
-             
-
-
-
-
-            float tget = x1get + x2get;
-            float t = GBlaius / tget;
-            x1 = GBlaius / 2;
-            y1 = (GBkorgus / 2) + 5;
-            x2 = GBlaius / 2;
-            y2 = (GBkorgus / 2) - 5;
-
-
-
-            for (float i = 0; i <= x1get; i++)
+            float x1get = Math.Abs(Convert.ToInt32(PA_x1.Text));
+            float x2get = Math.Abs(Convert.ToInt32(PA_x2.Text));
+            
+            if (Convert.ToInt32(PA_x1.Text) < 0 && Convert.ToInt32(PA_x2.Text) > 0)
             {
-                x1 = (GBlaius / 2) + (t * i);
-                y1 = (GBkorgus / 2) + 5;
-                x2 = (GBlaius / 2) + (t * i);
-                y2 = (GBkorgus / 2) - 5;
+                float tget = x1get + x2get;
+                float t = GBlaius / tget;
 
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
+                x1 = 0;        
+                x2 = 0;
 
+                for (float i = 0; i <= x1get; i++)
+                {
+                    x1 = t * i;
+                    x2 = t * i;
+                    if (i < x1get)
+                    {
+                        g.DrawLine(Pliiats2, x1, 0, x2, GBkorgus);
+                    }
+
+                    if (i == x1get)
+                    {
+                        g.DrawLine(Pliiats, x1, 0, x2, GBkorgus);
+
+                        for (float y = x1get + 1; y <= x1get + x2get; y++)
+                        {
+                            x1 = t * y;
+                            x2 = t * y;
+                            g.DrawLine(Pliiats2, x1, 0, x2, GBkorgus);
+                        }
+                    }
+                }
             }
-            for (float i = 0; i <= x2get; i++)
+            else if(Convert.ToInt32(PA_x1.Text) >= 0 && Convert.ToInt32(PA_x2.Text) > 0)
             {
-                x1 = (GBlaius / 2) - (t * i);
-                y1 = (GBkorgus / 2) + 5;
-                x2 = (GBlaius / 2) - (t * i);
-                y2 = (GBkorgus / 2) - 5;
-
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
+                float tget = x2get-x1get;
+                float t = GBlaius / x2get;
+                if (Convert.ToInt32(PA_x1.Text)==0)
+                {
+                    g.DrawLine(Pliiats, 1, 0, 1, GBkorgus);
+                }
+                else
+                {
+                    PA_ZeroLeft.Visible = true;
+                }
+                for (float y = 0; y <=  x2get; y++)
+                {
+                    x1 = t * y;
+                    x2 = t * y;
+                    g.DrawLine(Pliiats2, x1, 0, x2, GBkorgus);
+                }
             }
+            else if (Convert.ToInt32(PA_x2.Text) <= 0 && Convert.ToInt32(PA_x1.Text) < 0)
+            {
+                float tget = x1get + x2get;
+                float t = GBlaius / x1get;
+
+                if (Convert.ToInt32(PA_x2.Text) == 0)
+                {
+                    g.DrawLine(Pliiats, GBlaius, 0, GBlaius, GBkorgus);
+                }
+                else
+                {
+                    PA_ZeroRight.Visible = true;
+                }
+
+                for (float y = 0; y <= x1get; y++)
+                {
+                    x1 = t * y;
+                    x2 = t * y;
+                    g.DrawLine(Pliiats2, x1, 0, x2, GBkorgus);
+                }
+            }  
         }
+
+
+
+
 
     }
 }
