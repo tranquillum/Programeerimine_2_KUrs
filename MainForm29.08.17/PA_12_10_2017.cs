@@ -42,7 +42,7 @@ namespace MainForm29._08._17
         {
             XTeljed();
             YTeljed();
-            //Graafik();
+            Graafik();
 
         }
 
@@ -73,7 +73,10 @@ namespace MainForm29._08._17
             if (PA_m4.Text == "+") PA_m4.Text = "-"; else PA_m4.Text = "+";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+        }
 
         private float F1 (float x)
         {
@@ -108,6 +111,7 @@ namespace MainForm29._08._17
             
             if (Convert.ToInt32(PA_x1.Text) < 0 && Convert.ToInt32(PA_x2.Text) > 0)
             {
+
                 float tget = x1get + x2get;
                 float t = GBlaius / tget;
 
@@ -195,6 +199,7 @@ namespace MainForm29._08._17
 
             if (y1counted < 0 && y2counted > 0)
             {
+
                 float tget = y1get + y2get;
                 float t = GBkorgus / tget;
 
@@ -282,21 +287,58 @@ namespace MainForm29._08._17
             float t = GBlaius / tget;
             float tt = GBkorgus / ttget;
             x2 = 0;
-            y2 = ttget;
+            y2 = GBkorgus;
             for (float i = x1t; i <= x2t;  i++)
             {
                 x1 = x2;
-                y1 = F1(x1t)*tt;
+                y1 = y2;
                 x2 = x1+t;
-                y2 = F1(x2);
                 
+                y2 = F1(i+1);
+                if (y2 < 0)
+                {
+                    y2 = GBkorgus/2 + Math.Abs(y2);
+                }
+                else y2 = GBkorgus/2 - Math.Abs(y2);
 
-                g.DrawLine(Pliiats2, x1, y1, x2, y2);
+                g.DrawLine(Pliiats, x1, y1, x2, y2);
 
             }
 
 
         }
+
+        private void Graafik2()
+        {
+            float x1get = Math.Abs(Convert.ToInt32(PA_x1.Text));
+            float x2get = Math.Abs(Convert.ToInt32(PA_x2.Text));
+            float txget = x1get + x2get;
+
+            float y1get = Math.Abs(F1(Convert.ToInt32(PA_x1.Text)));
+            float y2get = Math.Abs(F1(Convert.ToInt32(PA_x2.Text)));
+            float tyget = y1get + y2get;
+            float dx = (float)PA_PictureBox.Width / txget;
+            float dy = (float)PA_PictureBox.Height / tyget;
+
+            Pliiats.Width = 1;
+            Pliiats.Color = Color.Gray;
+            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            for (int ix = 0; ix <= txget; ix++)
+                g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);//!!!!!
+            for (int iy = 0; iy <= tyget; iy++)
+                g.DrawLine(Pliiats, 0,iy*dy,GBlaius,iy*dy);//!!!!!
+
+            Pliiats.Width = 3;
+            Pliiats.Color = Color.Black;
+            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            int nx0 = nx / 2;
+            int ny0 = ny / 2;
+            
+
+
+
+        }
+
 
 
 

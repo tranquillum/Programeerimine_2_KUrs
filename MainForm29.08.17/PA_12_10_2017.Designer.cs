@@ -55,6 +55,7 @@
             this.PA_y2 = new System.Windows.Forms.Label();
             this.PA_ZeroUP = new System.Windows.Forms.Label();
             this.PA_ZeroDown = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -315,7 +316,7 @@
             // 
             // PA_y1
             // 
-            this.PA_y1.Location = new System.Drawing.Point(770, 102);
+            this.PA_y1.Location = new System.Drawing.Point(729, 607);
             this.PA_y1.Name = "PA_y1";
             this.PA_y1.Size = new System.Drawing.Size(66, 39);
             this.PA_y1.TabIndex = 23;
@@ -324,7 +325,7 @@
             // 
             // PA_y2
             // 
-            this.PA_y2.Location = new System.Drawing.Point(851, 102);
+            this.PA_y2.Location = new System.Drawing.Point(729, 154);
             this.PA_y2.Name = "PA_y2";
             this.PA_y2.Size = new System.Drawing.Size(66, 39);
             this.PA_y2.TabIndex = 24;
@@ -351,11 +352,22 @@
             this.PA_ZeroDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.PA_ZeroDown.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(779, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 37);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "DO IT";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PA_12_10_2017
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 722);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.PA_ZeroDown);
             this.Controls.Add(this.PA_ZeroUP);
             this.Controls.Add(this.PA_y2);
@@ -423,5 +435,6 @@
         private System.Windows.Forms.Label PA_y2;
         private System.Windows.Forms.Label PA_ZeroUP;
         private System.Windows.Forms.Label PA_ZeroDown;
+        private System.Windows.Forms.Button button1;
     }
 }
