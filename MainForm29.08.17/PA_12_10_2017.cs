@@ -75,7 +75,7 @@ namespace MainForm29._08._17
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Graafik2();
         }
 
         private float F1 (float x)
@@ -102,6 +102,8 @@ namespace MainForm29._08._17
             return y;
         }
 
+        float x0 = 0;
+        float y0 = 0;
 
         private void XTeljed()
         {
@@ -131,7 +133,7 @@ namespace MainForm29._08._17
                     if (i == x1get)
                     {
                         g.DrawLine(Pliiats, x1, 0, x2, GBkorgus);
-                        
+                        x0 =t* i;
 
                         for (float y = x1get + 1; y <= x1get + x2get; y++)
                         {
@@ -149,6 +151,7 @@ namespace MainForm29._08._17
                 if (Convert.ToInt32(PA_x1.Text)==0)
                 {
                     g.DrawLine(Pliiats, 1, 0, 1, GBkorgus);
+                    x0 = 1;
                 }
                 else
                 {
@@ -169,6 +172,7 @@ namespace MainForm29._08._17
                 if (Convert.ToInt32(PA_x2.Text) == 0)
                 {
                     g.DrawLine(Pliiats, GBlaius, 0, GBlaius, GBkorgus);
+                    x0 = GBlaius;
                 }
                 else
                 {
@@ -218,7 +222,7 @@ namespace MainForm29._08._17
                     if (i == y2get)
                     {
                         g.DrawLine(Pliiats, 0, y1, GBlaius, y2);
-
+                         y0 = t* i;
                         for (float y = y1get + 1; y <= y1get + y2get; y++)
                         {
                             y1 = t * y;
@@ -236,6 +240,7 @@ namespace MainForm29._08._17
                 if (y1counted == 0)
                 {
                     g.DrawLine(Pliiats, 0, GBkorgus-1, GBlaius, GBkorgus - 1);
+                    y0 = GBkorgus - 1;
                 }
                 else
                 {
@@ -256,6 +261,7 @@ namespace MainForm29._08._17
                 if (y2counted == 0)
                 {
                     g.DrawLine(Pliiats, 0, 0, GBlaius, 0);
+                    y0 = 0;
                 }
                 else
                 {
@@ -284,25 +290,23 @@ namespace MainForm29._08._17
             float tget = x1get + x2get;
             float ttget = y1get + y2get;
 
+            Pliiats.Width = 3;
+            Pliiats.Color = Color.Red;
+
             float t = GBlaius / tget;
             float tt = GBkorgus / ttget;
-            x2 = 0;
-            y2 = GBkorgus;
-            for (float i = x1t; i <= x2t;  i++)
+            x1 = x1t;
+            y1 = F1(x1);
+            for (float i = x1t; i <= x2t;  i+=0.1f)
             {
+
+                x2 = i;
+                y2 = F1(x2);
+                
+
+                g.DrawLine(Pliiats, (x1*t+x0), (y0-y1*tt), (x2*t+x0), (y0-y2*tt));
                 x1 = x2;
                 y1 = y2;
-                x2 = x1+t;
-                
-                y2 = F1(i+1);
-                if (y2 < 0)
-                {
-                    y2 = GBkorgus/2 + Math.Abs(y2);
-                }
-                else y2 = GBkorgus/2 - Math.Abs(y2);
-
-                g.DrawLine(Pliiats, x1, y1, x2, y2);
-
             }
 
 
@@ -331,11 +335,25 @@ namespace MainForm29._08._17
             Pliiats.Width = 3;
             Pliiats.Color = Color.Black;
             Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            int nx0 = nx / 2;
-            int ny0 = ny / 2;
-            
+            int nx0 = GBlaius / 2;
+            int ny0 = GBkorgus / 2;
+            g.DrawLine(Pliiats, nx0 , 0, nx0 , GBkorgus);
+            g.DrawLine(Pliiats, 0, ny0 , GBlaius, ny0 );
 
-
+            Pliiats.Width = 5;
+            Pliiats.Color = Color.Red;
+            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            float xalg = Convert.ToSingle(PA_x1.Text);
+            float xlopp = Convert.ToSingle(PA_x2.Text);
+            x1 = xalg;
+            y1 = F1(x1);
+            for (float x2 = xalg; x2 <= xlopp; x2+=0.1f)
+            {
+                y2 = F1(x2);
+                g.DrawLine(Pliiats, (x1 * dx + nx0) , (ny0 - y1 * dy) ,  (x2 * dx + nx0) , (ny0 - y2 * dy));
+                x1 = x2;
+                y1 = y2;
+            }
 
         }
 
