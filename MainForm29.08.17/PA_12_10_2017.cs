@@ -13,9 +13,10 @@ namespace MainForm29._08._17
     public partial class PA_12_10_2017 : Form
     {
 
-        float x1, x2, y1, y2;
+        float x1, x2, y1, y2, x0, y0;
         Pen Pliiats = new Pen(Color.Black, 2);
         Pen Pliiats2 = new Pen(Color.Gray, 1);
+        Pen Pliiats3 = new Pen(Color.Red, 3);
         SolidBrush Pintset = new SolidBrush(Color.Green);
         Graphics g;
         int GBlaius, GBkorgus;
@@ -61,6 +62,9 @@ namespace MainForm29._08._17
             PA_PictureBox.Image = null;
             PA_ZeroLeft.Visible = false;
             PA_ZeroRight.Visible = false;
+            
+            
+
         }
 
         private void PA_m3_Click(object sender, EventArgs e)
@@ -102,8 +106,7 @@ namespace MainForm29._08._17
             return y;
         }
 
-        float x0 = 0;
-        float y0 = 0;
+        
 
         private void XTeljed()
         {
@@ -194,12 +197,32 @@ namespace MainForm29._08._17
         private void YTeljed()
         {
             
-            PA_y2.Text = Convert.ToString(F1(Convert.ToInt32(PA_x2.Text)));
-            PA_y1.Text = Convert.ToString(F1(Convert.ToInt32(PA_x1.Text)));
+           
             float y1counted = F1(Convert.ToInt32(PA_x1.Text));
             float y2counted = F1(Convert.ToInt32(PA_x2.Text));
-            float y1get = Math.Abs(F1(Convert.ToInt32(PA_x1.Text)));
-            float y2get = Math.Abs(F1(Convert.ToInt32(PA_x2.Text)));
+
+            
+            for (int i = Convert.ToInt32(PA_x1.Text);i<= Convert.ToInt32(PA_x2.Text); i++)
+            {
+
+                if (F1(i)< y1counted)
+                {
+                    y1counted = F1(i);
+                }
+
+                if (F1(i) > y2counted)
+                {
+                    y2counted = F1(i);
+                }
+
+            }
+
+
+            PA_y2.Text = Convert.ToString(y2counted);
+            PA_y1.Text = Convert.ToString(y1counted);
+
+            float y1get = Math.Abs(y1counted);
+            float y2get = Math.Abs(y2counted);
 
             if (y1counted < 0 && y2counted > 0)
             {
@@ -279,10 +302,36 @@ namespace MainForm29._08._17
 
         private void Graafik()
         {
+
+            float y1counted = F1(Convert.ToInt32(PA_x1.Text));
+            float y2counted = F1(Convert.ToInt32(PA_x2.Text));
+
+
+            for (int i = Convert.ToInt32(PA_x1.Text); i <= Convert.ToInt32(PA_x2.Text); i++)
+            {
+
+                if (F1(i) < y1counted)
+                {
+                    y1counted = F1(i);
+                }
+
+                if (F1(i) > y2counted)
+                {
+                    y2counted = F1(i);
+                }
+
+            }
+            PA_y2.Text = Convert.ToString(y2counted);
+            PA_y1.Text = Convert.ToString(y1counted);
+
+            float y1get = Math.Abs(y1counted);
+            float y2get = Math.Abs(y2counted);
+
+
+
             float x1get = Math.Abs(Convert.ToInt32(PA_x1.Text));
             float x2get = Math.Abs(Convert.ToInt32(PA_x2.Text));
-            float y1get = Math.Abs(F1(Convert.ToInt32(PA_x1.Text)));
-            float y2get = Math.Abs(F1(Convert.ToInt32(PA_x2.Text)));
+            
 
             float x1t = Convert.ToInt32(PA_x1.Text);
             float x2t = Convert.ToInt32(PA_x2.Text);
@@ -290,8 +339,8 @@ namespace MainForm29._08._17
             float tget = x1get + x2get;
             float ttget = y1get + y2get;
 
-            Pliiats.Width = 3;
-            Pliiats.Color = Color.Red;
+
+            
 
             float t = GBlaius / tget;
             float tt = GBkorgus / ttget;
@@ -304,7 +353,7 @@ namespace MainForm29._08._17
                 y2 = F1(x2);
                 
 
-                g.DrawLine(Pliiats, (x1*t+x0), (y0-y1*tt), (x2*t+x0), (y0-y2*tt));
+                g.DrawLine(Pliiats3, (x1*t+x0), (y0-y1*tt), (x2*t+x0), (y0-y2*tt));
                 x1 = x2;
                 y1 = y2;
             }
@@ -357,6 +406,12 @@ namespace MainForm29._08._17
 
         }
 
+
+        private void Graafik3()
+        {
+           
+
+        }
 
 
 
