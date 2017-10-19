@@ -369,13 +369,7 @@ namespace MainForm29._08._17
 
         private void Graafik2()
         {
-            float x1get = Math.Abs(Convert.ToInt32(PA_x1.Text));
-            float x2get = Math.Abs(Convert.ToInt32(PA_x2.Text));
-            float txget = x1get + x2get;
-
-            float y1get = Math.Abs(F1(Convert.ToInt32(PA_x1.Text)));
-            float y2get = Math.Abs(F1(Convert.ToInt32(PA_x2.Text)));
-            float tyget = y1get + y2get;
+           
             float dx = (float)PA_PictureBox.Width /20;
             float dy = (float)PA_PictureBox.Height / 20;
 
@@ -383,9 +377,9 @@ namespace MainForm29._08._17
             Pliiats.Color = Color.Gray;
             Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             for (int ix = 0; ix <= 20; ix++)
-                g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);//!!!!!
+                g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);
             for (int iy = 0; iy <= 20; iy++)
-                g.DrawLine(Pliiats, 0,iy*dy,GBlaius,iy*dy);//!!!!!
+                g.DrawLine(Pliiats, 0,iy*dy,GBlaius,iy*dy);
 
             Pliiats.Width = 3;
             Pliiats.Color = Color.Black;

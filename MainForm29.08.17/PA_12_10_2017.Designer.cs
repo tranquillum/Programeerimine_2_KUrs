@@ -63,7 +63,7 @@
             // 
             this.PA_arv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_arv1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_arv1.Location = new System.Drawing.Point(175, 42);
+            this.PA_arv1.Location = new System.Drawing.Point(131, 45);
             this.PA_arv1.Multiline = true;
             this.PA_arv1.Name = "PA_arv1";
             this.PA_arv1.Size = new System.Drawing.Size(50, 39);
@@ -75,7 +75,7 @@
             // 
             this.PA_m2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_m2.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_m2.Location = new System.Drawing.Point(286, 42);
+            this.PA_m2.Location = new System.Drawing.Point(242, 45);
             this.PA_m2.Name = "PA_m2";
             this.PA_m2.Size = new System.Drawing.Size(49, 39);
             this.PA_m2.TabIndex = 1;
@@ -87,7 +87,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label1.Location = new System.Drawing.Point(67, 42);
+            this.label1.Location = new System.Drawing.Point(23, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 39);
             this.label1.TabIndex = 2;
@@ -98,7 +98,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label2.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label2.Location = new System.Drawing.Point(231, 42);
+            this.label2.Location = new System.Drawing.Point(187, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 39);
             this.label2.TabIndex = 3;
@@ -109,7 +109,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label3.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label3.Location = new System.Drawing.Point(266, 42);
+            this.label3.Location = new System.Drawing.Point(222, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 13);
             this.label3.TabIndex = 4;
@@ -120,7 +120,7 @@
             // 
             this.PA_arv2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_arv2.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_arv2.Location = new System.Drawing.Point(341, 42);
+            this.PA_arv2.Location = new System.Drawing.Point(297, 45);
             this.PA_arv2.Multiline = true;
             this.PA_arv2.Name = "PA_arv2";
             this.PA_arv2.Size = new System.Drawing.Size(50, 39);
@@ -132,7 +132,7 @@
             // 
             this.PA_arv3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_arv3.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_arv3.Location = new System.Drawing.Point(507, 42);
+            this.PA_arv3.Location = new System.Drawing.Point(463, 45);
             this.PA_arv3.Multiline = true;
             this.PA_arv3.Name = "PA_arv3";
             this.PA_arv3.Size = new System.Drawing.Size(50, 39);
@@ -144,7 +144,7 @@
             // 
             this.PA_arv4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_arv4.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_arv4.Location = new System.Drawing.Point(673, 42);
+            this.PA_arv4.Location = new System.Drawing.Point(629, 45);
             this.PA_arv4.Multiline = true;
             this.PA_arv4.Name = "PA_arv4";
             this.PA_arv4.Size = new System.Drawing.Size(50, 39);
@@ -156,7 +156,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label4.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label4.Location = new System.Drawing.Point(427, 42);
+            this.label4.Location = new System.Drawing.Point(383, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 13);
             this.label4.TabIndex = 9;
@@ -167,7 +167,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label5.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label5.Location = new System.Drawing.Point(397, 42);
+            this.label5.Location = new System.Drawing.Point(353, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 39);
             this.label5.TabIndex = 8;
@@ -178,7 +178,7 @@
             // 
             this.PA_m3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_m3.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_m3.Location = new System.Drawing.Point(452, 42);
+            this.PA_m3.Location = new System.Drawing.Point(408, 45);
             this.PA_m3.Name = "PA_m3";
             this.PA_m3.Size = new System.Drawing.Size(49, 39);
             this.PA_m3.TabIndex = 10;
@@ -190,7 +190,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label7.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label7.Location = new System.Drawing.Point(563, 42);
+            this.label7.Location = new System.Drawing.Point(519, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 39);
             this.label7.TabIndex = 11;
@@ -201,7 +201,7 @@
             // 
             this.PA_m4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_m4.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_m4.Location = new System.Drawing.Point(618, 42);
+            this.PA_m4.Location = new System.Drawing.Point(574, 45);
             this.PA_m4.Name = "PA_m4";
             this.PA_m4.Size = new System.Drawing.Size(49, 39);
             this.PA_m4.TabIndex = 12;
@@ -213,7 +213,7 @@
             // 
             this.PA_m1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PA_m1.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_m1.Location = new System.Drawing.Point(120, 42);
+            this.PA_m1.Location = new System.Drawing.Point(76, 45);
             this.PA_m1.Name = "PA_m1";
             this.PA_m1.Size = new System.Drawing.Size(49, 39);
             this.PA_m1.TabIndex = 13;
