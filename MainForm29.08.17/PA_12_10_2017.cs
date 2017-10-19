@@ -17,6 +17,7 @@ namespace MainForm29._08._17
         Pen Pliiats = new Pen(Color.Black, 2);
         Pen Pliiats2 = new Pen(Color.Gray, 1);
         Pen Pliiats3 = new Pen(Color.Red, 3);
+         
         SolidBrush Pintset = new SolidBrush(Color.Green);
         Graphics g;
         int GBlaius, GBkorgus;
@@ -302,7 +303,7 @@ namespace MainForm29._08._17
 
         private void Graafik()
         {
-
+            Pliiats3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             float y1counted = F1(Convert.ToInt32(PA_x1.Text));
             float y2counted = F1(Convert.ToInt32(PA_x2.Text));
 
