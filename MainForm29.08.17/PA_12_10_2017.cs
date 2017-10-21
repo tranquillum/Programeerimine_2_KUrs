@@ -252,7 +252,7 @@ namespace MainForm29._08._17
                     {
                         g.DrawLine(Pliiats, 0, y1, GBlaius, y2);
                          y0 = t* i;
-                        for (float y = y1get + 1; y <= y1get + y2get; y++)
+                        for (float y = y2get ; y <= y1get + y2get; y++)
                         {
                             y1 = t * y;
                             y2 = t * y;
