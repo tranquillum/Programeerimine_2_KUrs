@@ -42,9 +42,10 @@ namespace MainForm29._08._17
 
         private void PA_drawbtn_Click(object sender, EventArgs e)
         {
-            XTeljed();
-            YTeljed();
-            Graafik();
+            //XTeljed();
+            //YTeljed();
+            //Graafik();
+            Graafik3();
 
         }
 
@@ -315,7 +316,6 @@ namespace MainForm29._08._17
 
             for (int i = Convert.ToInt32(PA_x1.Text); i <= Convert.ToInt32(PA_x2.Text); i++)
             {
-
                 if (F1(i) < y1counted)
                 {
                     y1counted = F1(i);
@@ -409,7 +409,82 @@ namespace MainForm29._08._17
 
         private void Graafik3()
         {
-           
+            float xalg = Convert.ToSingle(PA_x1.Text);
+            float xlopp = Convert.ToSingle(PA_x2.Text);
+            float ymax = 1;
+            float ymin = -1;
+            
+
+
+            for (float x = xalg; x <= xlopp; x += 0.01f)
+            {
+                
+                    float yy = F1(x);
+                    if (yy > ymax) ymax = yy;
+                    if (yy < ymin) ymin = yy;
+
+
+            }
+
+            int y1 = (int)(ymax + 0.99);
+            int y2 = (int)(ymin - 0.99);
+            int x1 = (int)xalg;
+            if (x1 > 0) x1 = 0;
+            int x2 = (int)xlopp;
+            if (x2 < 0) x2 = 0;
+            int nxx = x2 - x1;
+            int nyy = y1 - y2;
+            PA_y2.Text = y1.ToString();
+            PA_y1.Text = y2.ToString();
+            float dx = (float)GBlaius / nxx;
+            float dy = (float)GBkorgus / nyy;
+
+            Pliiats.Width = 1;
+            Pliiats.Color = Color.Gray;
+            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            for (int ix = 0; ix <= nxx; ix++)
+                g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);
+            for (int iy = 0; iy <= nyy; iy++)
+                g.DrawLine(Pliiats, 0, iy * dy, GBlaius, iy * dy);
+
+            Pliiats.Width = 3;
+            Pliiats.Color = Color.Black;
+            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            int nx0 = -x1;
+            int ny0 = y1;
+            g.DrawLine(Pliiats, nx0 * dx, 0, nx0 * dx, GBkorgus);
+            g.DrawLine(Pliiats, 0, ny0 * dy, GBlaius, ny0 * dy);
+
+
+            Pliiats.Width = 5;
+            Pliiats.Color = Color.Red;
+            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+
+            float xx1 = xalg;
+            float yy1 = 0;
+            
+                yy1 = F1(xx1);
+            
+
+            for (float xx2 = xalg; xx2 <= xlopp; xx2 += 0.01f)
+            {
+                
+                  float  yy2 = F1(xx2);
+               
+                g.DrawLine(Pliiats, (xx1 + nx0) * dx, (ny0 - yy1) * dy, (xx2 + nx0) * dx, (ny0 - yy2) * dy);
+                xx1 = xx2;
+                yy1 = yy2;
+
+            }
+
+
+
+
+
+
+
+
+
 
         }
 
