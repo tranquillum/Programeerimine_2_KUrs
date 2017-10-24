@@ -477,7 +477,7 @@ namespace MainForm29._08._17
 
             }
 
-
+           
 
 
 
@@ -488,7 +488,29 @@ namespace MainForm29._08._17
 
         }
 
+        private float FTuletis(float x)
+        {
+            float y = 0;
+            int a1 = Convert.ToInt32(PA_arv1.Text);
+            if (PA_m1.Text == "-") a1 = -a1;
+            y += a1 * 3 * x * x;
 
+            int a2 = Convert.ToInt32(PA_arv2.Text);
+            if (PA_m2.Text == "-") a2 = -a2;
+            y += a2 * 2 * x;
+
+            int a3 = Convert.ToInt32(PA_arv3.Text);
+            if (PA_m3.Text == "-") a3 = -a3;
+            y += a3 * 1;
+
+            int a4 = Convert.ToInt32(PA_arv4.Text);
+            if (PA_m4.Text == "-") a4 = -a4;
+            y += 0;
+
+
+
+            return y;
+        }
 
     }
 }
