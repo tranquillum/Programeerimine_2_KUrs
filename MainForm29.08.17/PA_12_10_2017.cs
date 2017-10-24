@@ -507,10 +507,10 @@ namespace MainForm29._08._17
             if (PA_m4.Text == "-") a4 = -a4;
             y += 0;
 
-
-
             return y;
         }
+
+
 
     }
 }
