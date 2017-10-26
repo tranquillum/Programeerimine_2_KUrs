@@ -472,9 +472,15 @@ namespace MainForm29._08._17
                   float  yy2 = F1(xx2);
                
                 g.DrawLine(Pliiats, (xx1 + nx0) * dx, (ny0 - yy1) * dy, (xx2 + nx0) * dx, (ny0 - yy2) * dy);
+                
+                float yy3 = FTuletis(xx2);
+                if (Math.Abs(yy3) < 0.01)
+                {
+                    Pliiats.Color = Color.Blue;
+                    g.DrawEllipse(Pliiats, (xx1 + nx0) * dx - 5, (ny0 - yy1) * dy - 5, 10, 10);
+                }
                 xx1 = xx2;
                 yy1 = yy2;
-
             }
 
            
