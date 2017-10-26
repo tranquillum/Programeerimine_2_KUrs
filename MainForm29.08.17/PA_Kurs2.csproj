@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="26_10_2017_Trigonom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="26_10_2017_Trigonom.Designer.cs">
+      <DependentUpon>26_10_2017_Trigonom.cs</DependentUpon>
+    </Compile>
     <Compile Include="PA_07_09_2017.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="26_10_2017_Trigonom.resx">
+      <DependentUpon>26_10_2017_Trigonom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PA_07_09_2017.resx">
       <DependentUpon>PA_07_09_2017.cs</DependentUpon>
     </EmbeddedResource>

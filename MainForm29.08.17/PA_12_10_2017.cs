@@ -478,18 +478,11 @@ namespace MainForm29._08._17
                 {
                     Pliiats.Color = Color.Blue;
                     g.DrawEllipse(Pliiats, (xx1 + nx0) * dx - 5, (ny0 - yy1) * dy - 5, 10, 10);
+                    Pliiats.Color = Color.Red;
                 }
                 xx1 = xx2;
                 yy1 = yy2;
             }
-
-           
-
-
-
-
-
-
 
 
         }
