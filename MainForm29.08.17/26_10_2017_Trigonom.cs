@@ -13,14 +13,28 @@ namespace MainForm29._08._17
     public partial class _26_10_2017_Trigonom : Form
     {
 
-        Pen Pliiats = new Pen(Color.Black, 2);
+        Pen Pliiats1 = new Pen(Color.Gray, 1);
+        Pen Pliiats3 = new Pen(Color.Black, 3);
+        Pen Pliiats2 = new Pen(Color.Black, 2);
+
         int GBlaius, GBkorgus;
         Graphics g;
         double xalg, xlopp, yalg, ylopp,dy,dx,xpoint,ypoint;
+
+        private void PA_PictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
         int nx, ny;
         public _26_10_2017_Trigonom()
         {
             InitializeComponent();
+
+            Pliiats1.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            Pliiats3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            Pliiats2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+
             GBlaius = PA_PictureBox.Width - 1;
             GBkorgus = PA_PictureBox.Height - 1;
             g = Graphics.FromHwnd(PA_PictureBox.Handle);
@@ -44,55 +58,47 @@ namespace MainForm29._08._17
 
         private void PA_Teljed_Click(object sender, EventArgs e)
         {
-            int countx = 0;
-            int county = 0;
-            float dx = (float)PA_PictureBox.Width / 6;
-            float dy = (float)PA_PictureBox.Height / 4;
+ 
+            int x1 = (int)xalg;
+            int x2 = (int)xlopp;
+            if (x1 > 0) x1 = 0;       
+            if (x2 < 0) x2 = 0;
 
+            int y1 = (int)yalg;
+            int y2 = (int)ylopp;
+            if (y1 > 0) y1 = 0;        
+            if (y2 < 0) y2 = 0;
+
+            int nxx = x2 - x1;
+            int nyy = y2 - y1;
            
+            float dx = (float)GBlaius / nxx;
+            float dy = (float)GBkorgus / nyy;
+            int nx0 = -x1;
+            int ny0 = -y1;
 
-
-
-            Pliiats.Width = 3;
-            Pliiats.Color = Color.Black;
-            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            float nx0 = GBlaius / 2;
-            float ny0 = GBkorgus / 2;
-            g.DrawLine(Pliiats, nx0, 0, nx0, GBkorgus);
-            g.DrawLine(Pliiats, 0, ny0, GBlaius, ny0);
-
-
-
-            Pliiats.Width = 1;
-            Pliiats.Color = Color.Black;
-            Pliiats.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            for (float ix = 0; ix <= dx; ix++)
+            for (int ix = 0; ix <= nxx; ix++)
             {
-                for (float i = 0; i <= dx ;i +=dx/4)
-                {
-                    g.DrawLine(Pliiats, nx0 - 3, (ny0 - ix) * dy / 5, nx0 + 3, (ny0 - ix) * dy / 5);
-                }
-
-
+                g.DrawLine(Pliiats1, ix * dx, 0, ix * dx, GBkorgus);
+                g.DrawLine(Pliiats3, ix * dx, (ny0 * dy) - 15, ix * dx, (ny0 * dy) + 15);              
             }
-            for (int iy =-3 ; iy <= 3; iy++)
+            for (int ix = 0; ix <= nxx*10; ix++)
+            {              
+                g.DrawLine(Pliiats2, ix * dx/5, (ny0 * dy) - 6, ix * dx/5, (ny0 * dy) + 6);
+            }
+            for (int iy = 0; iy <= nyy; iy++)
             {
-                if (county <= 3)
-                {
-                    g.DrawLine(Pliiats, nx0 - 3, (ny0-iy) * dy/5,nx0 + 3, (ny0 - iy) * dy/5);
-
-                    county++;
-                }
-                else
-                {
-                    county = 0;
-                    g.DrawLine(Pliiats, nx0 - 6, (ny0 - iy) * dy/5, nx0 + 6, (ny0 - iy) * dy/5);
-                }
+                g.DrawLine(Pliiats1, 0, iy * dy, GBlaius, iy * dy);
+                g.DrawLine(Pliiats3, (nx0 * dx) - 15, iy * dy, (nx0 * dx) + 15, iy * dy);
             }
-            for (int ix = 0; ix <= dx; ix++)
-                g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);
-            for (int iy = 0; iy <= dy; iy++)
-                g.DrawLine(Pliiats, 0, iy * dy, GBlaius, iy * dy);
+            for (int iy = 0; iy <= nyy*10; iy++)
+            {                
+                g.DrawLine(Pliiats3, (nx0 * dx) - 6, iy * dy/5, (nx0 * dx) + 6, iy * dy/5);
+            }
+
+
+            g.DrawLine(Pliiats3, nx0 * dx, 0, nx0 * dx, GBkorgus);
+            g.DrawLine(Pliiats3, 0, ny0 * dy, GBlaius, ny0 * dy);
 
 
         }

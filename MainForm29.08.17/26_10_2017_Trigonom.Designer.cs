@@ -40,9 +40,10 @@
             this.PA_PictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.PA_PictureBox.Location = new System.Drawing.Point(74, 115);
             this.PA_PictureBox.Name = "PA_PictureBox";
-            this.PA_PictureBox.Size = new System.Drawing.Size(1083, 561);
+            this.PA_PictureBox.Size = new System.Drawing.Size(1138, 561);
             this.PA_PictureBox.TabIndex = 15;
             this.PA_PictureBox.TabStop = false;
+            this.PA_PictureBox.Click += new System.EventHandler(this.PA_PictureBox_Click);
             // 
             // PA_Teljed
             // 
@@ -60,22 +61,22 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.Size = new System.Drawing.Size(58, 23);
             this.label1.TabIndex = 17;
             this.label1.Text = "-2PI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1125, 94);
+            this.label2.Location = new System.Drawing.Point(1207, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 18;
             this.label2.Text = "+2PI";
             // 
             // _26_10_2017_Trigonom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1277, 857);
