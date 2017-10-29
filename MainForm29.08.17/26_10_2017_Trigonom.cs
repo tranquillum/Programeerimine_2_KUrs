@@ -70,7 +70,7 @@ namespace MainForm29._08._17
             {
                 for (float i = 0; i <= dx ;i +=dx/4)
                 {
-                    g.DrawLine(Pliiats, nx0 - 3, (ny0 - iy) * dy / 5, nx0 + 3, (ny0 - iy) * dy / 5);
+                    g.DrawLine(Pliiats, nx0 - 3, (ny0 - ix) * dy / 5, nx0 + 3, (ny0 - ix) * dy / 5);
                 }
 
 
@@ -89,10 +89,10 @@ namespace MainForm29._08._17
                     g.DrawLine(Pliiats, nx0 - 6, (ny0 - iy) * dy/5, nx0 + 6, (ny0 - iy) * dy/5);
                 }
             }
-            //for (int ix = 0; ix <= dx; ix++)
-            //    g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);
-            //for (int iy = 0; iy <= dy; iy++)
-            //    g.DrawLine(Pliiats, 0, iy * dy, GBlaius, iy * dy);
+            for (int ix = 0; ix <= dx; ix++)
+                g.DrawLine(Pliiats, ix * dx, 0, ix * dx, GBkorgus);
+            for (int iy = 0; iy <= dy; iy++)
+                g.DrawLine(Pliiats, 0, iy * dy, GBlaius, iy * dy);
 
 
         }
