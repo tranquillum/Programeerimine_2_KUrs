@@ -15,6 +15,7 @@ namespace MainForm29._08._17
 
         Pen Pliiats1 = new Pen(Color.Gray, 1);
         Pen Pliiats3 = new Pen(Color.Black, 3);
+        Pen Pliiats2_2 = new Pen(Color.Blue, 2);
         Pen Pliiats2 = new Pen(Color.Black, 2);
         Pen Pliiats5 = new Pen(Color.Red, 5);
 
@@ -38,6 +39,7 @@ namespace MainForm29._08._17
             Pliiats1.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             Pliiats3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             Pliiats2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            Pliiats2_2.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             Pliiats5.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
 
             GBlaius = PA_PictureBox.Width - 1;
@@ -133,20 +135,20 @@ namespace MainForm29._08._17
         {
             double y = 0;
             double a1 = Convert.ToInt32(PA_SinArv.Text);
-            if (PA_SinArv.Text == "-") a1 = -a1;
+            if (PA_SinM.Text == "-") a1 = -a1;
             y += a1*Math.Sin(x);
 
             double a2 = Convert.ToInt32(PA_CosArv.Text);
-            if (PA_CosArv.Text == "-") a2 = -a2;
+            if (PA_CosM.Text == "-") a2 = -a2;
             y += a2*Math.Cos(x);
 
             double a3 = Convert.ToInt32(PA_TgArv.Text);
-            if (PA_TgArv.Text == "-") a3 = -a3;
+            if (PA_TgM.Text == "-") a3 = -a3;
             y += a3*Math.Tan(x);
 
-            //double a4 = Convert.ToInt32(PA_CtgM.Text);
-            //if (PA_CtgM.Text == "-") a4 = -a4;
-            //y += a4 * (Math.Cos(x) / Math.Sin(x));
+            double a4 = Convert.ToInt32(PA_CTgArv.Text);
+            if (PA_CtgM.Text == "-") a4 = -a4;
+            y += a4 * Math.Cos(x) / Math.Sin(x);
 
 
 
@@ -155,7 +157,22 @@ namespace MainForm29._08._17
 
         private void PA_Graafik_Click(object sender, EventArgs e)
         {
-
+            if (PA_SinArv.Text == "")
+            {
+                PA_SinArv.Text = "0";
+            }
+            if (PA_CosArv.Text == "")
+            {
+                PA_CosArv.Text = "0";
+            }
+            if (PA_TgArv.Text == "")
+            {
+                PA_TgArv.Text = "0";
+            }
+            if (PA_CTgArv.Text == "")
+            {
+                PA_CTgArv.Text = "0";
+            }
 
             float nxx = (float)xlopp - (float)xalg;
             float nyy = (float)ylopp - (float)yalg;
@@ -165,18 +182,30 @@ namespace MainForm29._08._17
 
             int nx0 = GBlaius / 2;
             int ny0 = GBkorgus / 2;
-
+            
 
 
 
             float x1 =(float) xalg;
             float y1 = (float)F1(x1);
-            for (float x2 = (float)xalg; x2 <= xlopp; x2 += 0.1f)
+            
+            for (float x2 = (float)xalg; x2 <= xlopp; x2 += 0.01f)
             {
                 float y2 = (float)F1(x2);
-                g.DrawLine(Pliiats5, (x1 * dx + nx0), (ny0 - y1 * dy), (x2 * dx + nx0), (ny0 - y2 * dy));
-                x1 = x2;
-                y1 = y2;
+                float y2y1 = Math.Abs(y1*dy) + Math.Abs(y2*dy);
+                if (y2y1 < GBkorgus )
+                {
+                    g.DrawLine(Pliiats5, (x1 * dx + nx0), (ny0 - y1 * dy), (x2 * dx + nx0), (ny0 - y2 * dy));
+                    x1 = x2;
+                    y1 = y2;
+                    
+                }
+                else
+                {
+                    g.DrawLine(Pliiats2_2, (x1 * dx + nx0), (ny0 - y1 * dy), (x2 * dx + nx0), (ny0 - y2 * dy));
+                    x1 = x2;
+                    y1 = y2;
+                }
             }
 
 
