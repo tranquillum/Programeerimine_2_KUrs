@@ -28,8 +28,8 @@ namespace MainForm29._08._17
         float nx, ny;
 
         private void PA_Clean_Click(object sender, EventArgs e)
-        {
-            PA_PictureBox.Image = null;
+        {            
+            PA_PictureBox.Image = null;   
         }
 
         public _26_10_2017_Trigonom()
@@ -86,20 +86,26 @@ namespace MainForm29._08._17
 
         private void PA_Teljed_Click(object sender, EventArgs e)
         {
- 
+
+            Teljed();
+
+        }
+
+        private void Teljed()
+        {
             int x1 = (int)xalg;
             int x2 = (int)xlopp;
-            if (x1 > 0) x1 = 0;       
+            if (x1 > 0) x1 = 0;
             if (x2 < 0) x2 = 0;
 
             int y1 = (int)yalg;
             int y2 = (int)ylopp;
-            if (y1 > 0) y1 = 0;        
+            if (y1 > 0) y1 = 0;
             if (y2 < 0) y2 = 0;
 
             int nxx = x2 - x1;
             int nyy = y2 - y1;
-           
+
             float dx = (float)GBlaius / nxx;
             float dy = (float)GBkorgus / nyy;
             int nx0 = -x1;
@@ -108,26 +114,25 @@ namespace MainForm29._08._17
             for (int ix = 0; ix <= nxx; ix++)
             {
                 g.DrawLine(Pliiats1, ix * dx, 0, ix * dx, GBkorgus);
-                g.DrawLine(Pliiats3, ix * dx, (ny0 * dy) - 15, ix * dx, (ny0 * dy) + 15);              
+                g.DrawLine(Pliiats3, ix * dx, (ny0 * dy) - 15, ix * dx, (ny0 * dy) + 15);
             }
-            for (int ix = 0; ix <= nxx*10; ix++)
-            {              
-                g.DrawLine(Pliiats2, ix * dx/5, (ny0 * dy) - 6, ix * dx/5, (ny0 * dy) + 6);
+            for (int ix = 0; ix <= nxx * 10; ix++)
+            {
+                g.DrawLine(Pliiats2, ix * dx / 5, (ny0 * dy) - 6, ix * dx / 5, (ny0 * dy) + 6);
             }
             for (int iy = 0; iy <= nyy; iy++)
             {
                 g.DrawLine(Pliiats1, 0, iy * dy, GBlaius, iy * dy);
                 g.DrawLine(Pliiats3, (nx0 * dx) - 15, iy * dy, (nx0 * dx) + 15, iy * dy);
             }
-            for (int iy = 0; iy <= nyy*10; iy++)
-            {                
-                g.DrawLine(Pliiats3, (nx0 * dx) - 6, iy * dy/5, (nx0 * dx) + 6, iy * dy/5);
+            for (int iy = 0; iy <= nyy * 10; iy++)
+            {
+                g.DrawLine(Pliiats3, (nx0 * dx) - 6, iy * dy / 5, (nx0 * dx) + 6, iy * dy / 5);
             }
 
 
             g.DrawLine(Pliiats3, nx0 * dx, 0, nx0 * dx, GBkorgus);
             g.DrawLine(Pliiats3, 0, ny0 * dy, GBlaius, ny0 * dy);
-
 
         }
 
@@ -149,8 +154,6 @@ namespace MainForm29._08._17
             double a4 = Convert.ToInt32(PA_CTgArv.Text);
             if (PA_CtgM.Text == "-") a4 = -a4;
             y += a4 * Math.Cos(x) / Math.Sin(x);
-
-
 
             return y;
         }
