@@ -47,6 +47,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.PA_Graafik = new System.Windows.Forms.Button();
             this.PA_Clean = new System.Windows.Forms.Button();
+            this.PA_Save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.Size = new System.Drawing.Size(48, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "-2PI";
             // 
@@ -84,7 +85,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1207, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 23);
+            this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 18;
             this.label2.Text = "+2PI";
             // 
@@ -244,12 +245,23 @@
             this.PA_Clean.UseVisualStyleBackColor = true;
             this.PA_Clean.Click += new System.EventHandler(this.PA_Clean_Click);
             // 
+            // PA_Save
+            // 
+            this.PA_Save.Location = new System.Drawing.Point(1159, 13);
+            this.PA_Save.Name = "PA_Save";
+            this.PA_Save.Size = new System.Drawing.Size(96, 42);
+            this.PA_Save.TabIndex = 34;
+            this.PA_Save.Text = "Save";
+            this.PA_Save.UseVisualStyleBackColor = true;
+            this.PA_Save.Click += new System.EventHandler(this.PA_Save_Click);
+            // 
             // _26_10_2017_Trigonom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1277, 857);
+            this.Controls.Add(this.PA_Save);
             this.Controls.Add(this.PA_Clean);
             this.Controls.Add(this.PA_Graafik);
             this.Controls.Add(this.label11);
@@ -301,5 +313,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button PA_Graafik;
         private System.Windows.Forms.Button PA_Clean;
+        private System.Windows.Forms.Button PA_Save;
     }
 }

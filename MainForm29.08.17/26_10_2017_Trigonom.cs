@@ -58,6 +58,13 @@ namespace MainForm29._08._17
             ypoint = PA_PictureBox.Height / (ylopp - yalg);
         }
 
+        private void PA_Save_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
         private void PA_CtgM_Click(object sender, EventArgs e)
         {
             if (PA_CtgM.Text == "+") PA_CtgM.Text = "-"; else PA_CtgM.Text = "+";
