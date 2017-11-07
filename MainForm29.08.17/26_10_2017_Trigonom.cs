@@ -22,14 +22,18 @@ namespace MainForm29._08._17
         int GBlaius, GBkorgus;
         Graphics g;
         double xalg, xlopp, yalg, ylopp,dy,dx,xpoint,ypoint;
-
+        Bitmap bmp;
         
 
         float nx, ny;
 
         private void PA_Clean_Click(object sender, EventArgs e)
         {            
-            PA_PictureBox.Image = null;   
+            PA_PictureBox.Image = null;
+            bmp = null;
+            PA_PictureBox.Image = bmp;
+            bmp = new Bitmap(PA_PictureBox.Width, PA_PictureBox.Height);
+            g = Graphics.FromImage(bmp);
         }
 
         public _26_10_2017_Trigonom()
@@ -54,15 +58,71 @@ namespace MainForm29._08._17
             dy = 1;
             ny = 10;
             PA_PictureBox.Height =(int)((ylopp-yalg) /(xlopp - xalg)*PA_PictureBox.Width);
+            bmp = new Bitmap(PA_PictureBox.Width, PA_PictureBox.Height);
+            g = Graphics.FromImage(bmp);
             xpoint = PA_PictureBox.Width / (xlopp - xalg);
             ypoint = PA_PictureBox.Height / (ylopp - yalg);
         }
 
         private void PA_Save_Click(object sender, EventArgs e)
         {
-            
+            SaveFileDialog sfdlg = new SaveFileDialog();
+            sfdlg.Title = "Save Dialog";
+            sfdlg.Filter = "Bitmap Image (*.bmp)|*.bmp|All files(*.*)|*.*";
+            sfdlg.ShowDialog();
+            bmp.Save(sfdlg.FileName);
+            MessageBox.Show("Saved Successfully...");
 
 
+        }
+
+        private void PA_Teljed2_Click(object sender, EventArgs e)
+        {
+            Pliiats1.Color = Color.Black;
+            Pliiats1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            Pliiats1.Width = 4;
+            int x0 = (int)(-xalg * xpoint);
+            int y0 = (int)(ylopp * ypoint);
+            g.DrawLine(Pliiats1, 0, y0, PA_PictureBox.Width, y0);
+            g.DrawLine(Pliiats1, x0, 0, x0, PA_PictureBox.Height);
+            Pliiats1.Width = 3;
+            for (double x = 0; x < PA_PictureBox.Width; x += dx)
+                g.DrawLine(Pliiats1, (int)(x * xpoint), y0 - 10, (int)(x * xpoint), y0 + 10);
+            for (double y = 0; y < PA_PictureBox.Height; y += dy)
+                g.DrawLine(Pliiats1, x0 - 10, (int)(y * ypoint), x0 + 10, (int)(y * ypoint));
+            Pliiats1.Width = 2;
+            for (double x = 0; x < PA_PictureBox.Width; x += (dx / nx))
+                g.DrawLine(Pliiats1, (int)(x * xpoint), y0 - 5, (int)(x * xpoint), y0 + 5);
+            for (double y = 0; y < PA_PictureBox.Height; y += (dy / ny))
+                g.DrawLine(Pliiats1, x0 - 5, (int)(y * ypoint), x0 + 5, (int)(y * ypoint));
+
+            Pliiats1.Color = Color.Gray;
+            Pliiats1.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            Pliiats1.Width = 1;
+            for (double x = 0; x < PA_PictureBox.Width; x += dx)
+                g.DrawLine(Pliiats1, (int)(x * xpoint), 0, (int)(x * xpoint),PA_PictureBox.Height);
+            for (double y = 0; y < PA_PictureBox.Height; y += dy)
+                g.DrawLine(Pliiats1, 0,(int)(y*ypoint),PA_PictureBox.Width, (int)(y * ypoint));
+            PA_PictureBox.Image = bmp;
+        }
+
+        private void PA_Graafik2_Click(object sender, EventArgs e)
+        {
+            Pliiats1.Color = Color.Red;
+            Pliiats1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            Pliiats1.Width = 5;
+
+            float x1 = (float)xalg;
+            float y1 = (float)F1(x1);
+            for(float x2 = (float)xalg; x2 <= xlopp; x2 += 0.01f)
+            {
+                float y2 = (float)F1(x2);
+                if (Math.Abs(y2 - y1) < (ylopp - yalg))
+                    g.DrawLine(Pliiats1, ((float)x1 - (float)xalg) * (float)xpoint, (float)(ylopp - y1) * (float)ypoint, (float)(x2 - xalg) * (float)xpoint, (float)(ylopp - y2) * (float)ypoint);
+                x1 = x2;
+                y1 = y2;
+            }
+            PA_PictureBox.Image = bmp;
         }
 
         private void PA_CtgM_Click(object sender, EventArgs e)

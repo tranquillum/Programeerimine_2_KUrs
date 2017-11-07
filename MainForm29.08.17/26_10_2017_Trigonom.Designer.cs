@@ -48,6 +48,8 @@
             this.PA_Graafik = new System.Windows.Forms.Button();
             this.PA_Clean = new System.Windows.Forms.Button();
             this.PA_Save = new System.Windows.Forms.Button();
+            this.PA_Teljed2 = new System.Windows.Forms.Button();
+            this.PA_Graafik2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PA_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,7 +229,7 @@
             // 
             // PA_Graafik
             // 
-            this.PA_Graafik.Location = new System.Drawing.Point(141, 12);
+            this.PA_Graafik.Location = new System.Drawing.Point(130, 12);
             this.PA_Graafik.Name = "PA_Graafik";
             this.PA_Graafik.Size = new System.Drawing.Size(96, 42);
             this.PA_Graafik.TabIndex = 32;
@@ -237,7 +239,7 @@
             // 
             // PA_Clean
             // 
-            this.PA_Clean.Location = new System.Drawing.Point(243, 12);
+            this.PA_Clean.Location = new System.Drawing.Point(232, 12);
             this.PA_Clean.Name = "PA_Clean";
             this.PA_Clean.Size = new System.Drawing.Size(96, 42);
             this.PA_Clean.TabIndex = 33;
@@ -255,12 +257,35 @@
             this.PA_Save.UseVisualStyleBackColor = true;
             this.PA_Save.Click += new System.EventHandler(this.PA_Save_Click);
             // 
+            // PA_Teljed2
+            // 
+            this.PA_Teljed2.BackColor = System.Drawing.SystemColors.Window;
+            this.PA_Teljed2.Location = new System.Drawing.Point(74, 682);
+            this.PA_Teljed2.Name = "PA_Teljed2";
+            this.PA_Teljed2.Size = new System.Drawing.Size(112, 43);
+            this.PA_Teljed2.TabIndex = 35;
+            this.PA_Teljed2.Text = "Teljed";
+            this.PA_Teljed2.UseVisualStyleBackColor = false;
+            this.PA_Teljed2.Click += new System.EventHandler(this.PA_Teljed2_Click);
+            // 
+            // PA_Graafik2
+            // 
+            this.PA_Graafik2.Location = new System.Drawing.Point(192, 682);
+            this.PA_Graafik2.Name = "PA_Graafik2";
+            this.PA_Graafik2.Size = new System.Drawing.Size(96, 42);
+            this.PA_Graafik2.TabIndex = 36;
+            this.PA_Graafik2.Text = "Graafik";
+            this.PA_Graafik2.UseVisualStyleBackColor = true;
+            this.PA_Graafik2.Click += new System.EventHandler(this.PA_Graafik2_Click);
+            // 
             // _26_10_2017_Trigonom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1277, 857);
+            this.Controls.Add(this.PA_Graafik2);
+            this.Controls.Add(this.PA_Teljed2);
             this.Controls.Add(this.PA_Save);
             this.Controls.Add(this.PA_Clean);
             this.Controls.Add(this.PA_Graafik);
@@ -314,5 +339,7 @@
         private System.Windows.Forms.Button PA_Graafik;
         private System.Windows.Forms.Button PA_Clean;
         private System.Windows.Forms.Button PA_Save;
+        private System.Windows.Forms.Button PA_Teljed2;
+        private System.Windows.Forms.Button PA_Graafik2;
     }
 }
