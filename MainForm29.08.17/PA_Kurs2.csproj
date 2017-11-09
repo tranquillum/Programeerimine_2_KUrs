@@ -58,6 +58,12 @@
     <Compile Include="PA_07_09_2017.Designer.cs">
       <DependentUpon>PA_07_09_2017.cs</DependentUpon>
     </Compile>
+    <Compile Include="PA_09_11_17_File.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_09_11_17_File.Designer.cs">
+      <DependentUpon>PA_09_11_17_File.cs</DependentUpon>
+    </Compile>
     <Compile Include="PA_12_10_2017.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PA_07_09_2017.resx">
       <DependentUpon>PA_07_09_2017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_09_11_17_File.resx">
+      <DependentUpon>PA_09_11_17_File.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PA_12_10_2017.resx">
       <DependentUpon>PA_12_10_2017.cs</DependentUpon>

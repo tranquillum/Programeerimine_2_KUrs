@@ -18,7 +18,7 @@ namespace MainForm29._08._17
         Form f3 = new PA_29_09_2017();
         Form f4 = new PA_12_10_2017();
         Form f5 = new _26_10_2017_Trigonom();
-
+        Form f6 = new PA_09_11_17_File();
         public AP_mainform()
         {
             InitializeComponent();
@@ -77,6 +77,16 @@ namespace MainForm29._08._17
             }
             f5.Visible = true;
             f5.Activate();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (f6.Visible == false) // проверка: видна ли форма / если нет то показать
+            {
+                f6 = new PA_09_11_17_File();
+            }
+            f6.Visible = true;
+            f6.Activate();
         }
     }
     
