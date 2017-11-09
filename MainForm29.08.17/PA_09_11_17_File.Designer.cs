@@ -39,13 +39,16 @@
             this.PA_CentralIMG = new System.Windows.Forms.RadioButton();
             this.PA_ZoomIMG = new System.Windows.Forms.RadioButton();
             this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.PA_IMGBox2 = new System.Windows.Forms.PictureBox();
             this.PA_groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // PA_groupBox1
             // 
             this.PA_groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PA_groupBox1.Controls.Add(this.PA_IMGBox2);
             this.PA_groupBox1.Controls.Add(this.PA_ZoomIMG);
             this.PA_groupBox1.Controls.Add(this.PA_CentralIMG);
             this.PA_groupBox1.Controls.Add(this.PA_AutoSizeIMG);
@@ -87,11 +90,13 @@
             // PA_IMGBox
             // 
             this.PA_IMGBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PA_IMGBox.Location = new System.Drawing.Point(248, 51);
+            this.PA_IMGBox.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.PA_IMGBox.Location = new System.Drawing.Point(220, 25);
             this.PA_IMGBox.Name = "PA_IMGBox";
-            this.PA_IMGBox.Size = new System.Drawing.Size(554, 402);
+            this.PA_IMGBox.Size = new System.Drawing.Size(628, 312);
             this.PA_IMGBox.TabIndex = 2;
             this.PA_IMGBox.TabStop = false;
+            this.PA_IMGBox.Click += new System.EventHandler(this.PA_IMGBox_Click);
             // 
             // PA_Resolution
             // 
@@ -122,7 +127,6 @@
             this.PA_StrethIMG.Name = "PA_StrethIMG";
             this.PA_StrethIMG.Size = new System.Drawing.Size(146, 22);
             this.PA_StrethIMG.TabIndex = 5;
-            this.PA_StrethIMG.TabStop = true;
             this.PA_StrethIMG.Text = "StretchImage";
             this.PA_StrethIMG.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +137,6 @@
             this.PA_AutoSizeIMG.Name = "PA_AutoSizeIMG";
             this.PA_AutoSizeIMG.Size = new System.Drawing.Size(106, 22);
             this.PA_AutoSizeIMG.TabIndex = 6;
-            this.PA_AutoSizeIMG.TabStop = true;
             this.PA_AutoSizeIMG.Text = "AutoSize";
             this.PA_AutoSizeIMG.UseVisualStyleBackColor = true;
             // 
@@ -144,7 +147,6 @@
             this.PA_CentralIMG.Name = "PA_CentralIMG";
             this.PA_CentralIMG.Size = new System.Drawing.Size(136, 22);
             this.PA_CentralIMG.TabIndex = 7;
-            this.PA_CentralIMG.TabStop = true;
             this.PA_CentralIMG.Text = "CenterImage";
             this.PA_CentralIMG.UseVisualStyleBackColor = true;
             // 
@@ -155,13 +157,22 @@
             this.PA_ZoomIMG.Name = "PA_ZoomIMG";
             this.PA_ZoomIMG.Size = new System.Drawing.Size(66, 22);
             this.PA_ZoomIMG.TabIndex = 8;
-            this.PA_ZoomIMG.TabStop = true;
             this.PA_ZoomIMG.Text = "Zoom";
             this.PA_ZoomIMG.UseVisualStyleBackColor = true;
             // 
             // PA_openFileDialog1
             // 
             this.PA_openFileDialog1.FileName = "PA_openFileDialog1";
+            // 
+            // PA_IMGBox2
+            // 
+            this.PA_IMGBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PA_IMGBox2.Location = new System.Drawing.Point(220, 343);
+            this.PA_IMGBox2.Name = "PA_IMGBox2";
+            this.PA_IMGBox2.Size = new System.Drawing.Size(628, 245);
+            this.PA_IMGBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PA_IMGBox2.TabIndex = 9;
+            this.PA_IMGBox2.TabStop = false;
             // 
             // PA_09_11_17_File
             // 
@@ -174,9 +185,11 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "PA_09_11_17_File";
             this.Text = "PA_09_11_17_File";
+            this.Load += new System.EventHandler(this.PA_09_11_17_File_Load);
             this.PA_groupBox1.ResumeLayout(false);
             this.PA_groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button PA_FileValik;
         private System.Windows.Forms.OpenFileDialog PA_openFileDialog1;
+        private System.Windows.Forms.PictureBox PA_IMGBox2;
     }
 }
