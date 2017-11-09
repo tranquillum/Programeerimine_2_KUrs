@@ -36,7 +36,7 @@ namespace MainForm29._08._17
             PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg|All files(*.*)|*.*";
             PA_openFileDialog1.FileName = "";//чтобы при отмене выбора переменная пути оставалаь пустой
             PA_openFileDialog1.ShowDialog(); // открыть эесплорер фаилов
-             filenimi = PA_openFileDialog1.FileName; //сохрать путь к фаилу в переменную    
+            filenimi = PA_openFileDialog1.FileName; //сохрать путь к фаилу в переменную    
             
 
 
@@ -73,6 +73,7 @@ namespace MainForm29._08._17
             {
                 return;
             }
+
             Image pilt = Image.FromFile(filenimi);
             int w = pilt.Width;
             int h = pilt.Height;

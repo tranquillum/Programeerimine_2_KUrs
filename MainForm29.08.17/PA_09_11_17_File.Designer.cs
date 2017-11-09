@@ -91,6 +91,7 @@
             // 
             this.PA_IMGBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PA_IMGBox.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.PA_IMGBox.ErrorImage = null;
             this.PA_IMGBox.Location = new System.Drawing.Point(220, 25);
             this.PA_IMGBox.Name = "PA_IMGBox";
             this.PA_IMGBox.Size = new System.Drawing.Size(628, 312);
