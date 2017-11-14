@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.PA_groupBox1 = new System.Windows.Forms.GroupBox();
-            this.PA_FileValik = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PA_IMGBox = new System.Windows.Forms.PictureBox();
-            this.PA_Resolution = new System.Windows.Forms.Label();
-            this.PA_NormalIMG = new System.Windows.Forms.RadioButton();
-            this.PA_StrethIMG = new System.Windows.Forms.RadioButton();
-            this.PA_AutoSizeIMG = new System.Windows.Forms.RadioButton();
-            this.PA_CentralIMG = new System.Windows.Forms.RadioButton();
-            this.PA_ZoomIMG = new System.Windows.Forms.RadioButton();
-            this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.PA_IMGBox2 = new System.Windows.Forms.PictureBox();
+            this.PA_ZoomIMG = new System.Windows.Forms.RadioButton();
+            this.PA_CentralIMG = new System.Windows.Forms.RadioButton();
+            this.PA_AutoSizeIMG = new System.Windows.Forms.RadioButton();
+            this.PA_StrethIMG = new System.Windows.Forms.RadioButton();
+            this.PA_NormalIMG = new System.Windows.Forms.RadioButton();
+            this.PA_Resolution = new System.Windows.Forms.Label();
+            this.PA_IMGBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PA_FileValik = new System.Windows.Forms.Button();
+            this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.PA_groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox)).BeginInit();
             this.SuspendLayout();
             // 
             // PA_groupBox1
@@ -65,49 +65,56 @@
             this.PA_groupBox1.TabStop = false;
             this.PA_groupBox1.Text = "Uksik fail";
             // 
-            // PA_FileValik
+            // PA_IMGBox2
             // 
-            this.PA_FileValik.BackColor = System.Drawing.Color.Maroon;
-            this.PA_FileValik.Location = new System.Drawing.Point(45, 40);
-            this.PA_FileValik.Name = "PA_FileValik";
-            this.PA_FileValik.Size = new System.Drawing.Size(152, 46);
-            this.PA_FileValik.TabIndex = 0;
-            this.PA_FileValik.Text = "Gaili valik";
-            this.PA_FileValik.UseVisualStyleBackColor = false;
-            this.PA_FileValik.Click += new System.EventHandler(this.PA_FileValik_Click);
+            this.PA_IMGBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PA_IMGBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PA_IMGBox2.Location = new System.Drawing.Point(220, 343);
+            this.PA_IMGBox2.Name = "PA_IMGBox2";
+            this.PA_IMGBox2.Size = new System.Drawing.Size(628, 245);
+            this.PA_IMGBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PA_IMGBox2.TabIndex = 9;
+            this.PA_IMGBox2.TabStop = false;
             // 
-            // label1
+            // PA_ZoomIMG
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(40, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SizeMode";
+            this.PA_ZoomIMG.AutoSize = true;
+            this.PA_ZoomIMG.Location = new System.Drawing.Point(45, 240);
+            this.PA_ZoomIMG.Name = "PA_ZoomIMG";
+            this.PA_ZoomIMG.Size = new System.Drawing.Size(66, 22);
+            this.PA_ZoomIMG.TabIndex = 8;
+            this.PA_ZoomIMG.Text = "Zoom";
+            this.PA_ZoomIMG.UseVisualStyleBackColor = true;
             // 
-            // PA_IMGBox
+            // PA_CentralIMG
             // 
-            this.PA_IMGBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PA_IMGBox.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.PA_IMGBox.ErrorImage = null;
-            this.PA_IMGBox.Location = new System.Drawing.Point(220, 25);
-            this.PA_IMGBox.Name = "PA_IMGBox";
-            this.PA_IMGBox.Size = new System.Drawing.Size(628, 312);
-            this.PA_IMGBox.TabIndex = 2;
-            this.PA_IMGBox.TabStop = false;
-            this.PA_IMGBox.Click += new System.EventHandler(this.PA_IMGBox_Click);
+            this.PA_CentralIMG.AutoSize = true;
+            this.PA_CentralIMG.Location = new System.Drawing.Point(45, 212);
+            this.PA_CentralIMG.Name = "PA_CentralIMG";
+            this.PA_CentralIMG.Size = new System.Drawing.Size(136, 22);
+            this.PA_CentralIMG.TabIndex = 7;
+            this.PA_CentralIMG.Text = "CenterImage";
+            this.PA_CentralIMG.UseVisualStyleBackColor = true;
             // 
-            // PA_Resolution
+            // PA_AutoSizeIMG
             // 
-            this.PA_Resolution.AutoSize = true;
-            this.PA_Resolution.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PA_Resolution.ForeColor = System.Drawing.Color.Red;
-            this.PA_Resolution.Location = new System.Drawing.Point(270, 488);
-            this.PA_Resolution.Name = "PA_Resolution";
-            this.PA_Resolution.Size = new System.Drawing.Size(0, 27);
-            this.PA_Resolution.TabIndex = 3;
+            this.PA_AutoSizeIMG.AutoSize = true;
+            this.PA_AutoSizeIMG.Location = new System.Drawing.Point(45, 184);
+            this.PA_AutoSizeIMG.Name = "PA_AutoSizeIMG";
+            this.PA_AutoSizeIMG.Size = new System.Drawing.Size(106, 22);
+            this.PA_AutoSizeIMG.TabIndex = 6;
+            this.PA_AutoSizeIMG.Text = "AutoSize";
+            this.PA_AutoSizeIMG.UseVisualStyleBackColor = true;
+            // 
+            // PA_StrethIMG
+            // 
+            this.PA_StrethIMG.AutoSize = true;
+            this.PA_StrethIMG.Location = new System.Drawing.Point(45, 156);
+            this.PA_StrethIMG.Name = "PA_StrethIMG";
+            this.PA_StrethIMG.Size = new System.Drawing.Size(146, 22);
+            this.PA_StrethIMG.TabIndex = 5;
+            this.PA_StrethIMG.Text = "StretchImage";
+            this.PA_StrethIMG.UseVisualStyleBackColor = true;
             // 
             // PA_NormalIMG
             // 
@@ -121,59 +128,56 @@
             this.PA_NormalIMG.Text = "Normal";
             this.PA_NormalIMG.UseVisualStyleBackColor = true;
             // 
-            // PA_StrethIMG
+            // PA_Resolution
             // 
-            this.PA_StrethIMG.AutoSize = true;
-            this.PA_StrethIMG.Location = new System.Drawing.Point(45, 156);
-            this.PA_StrethIMG.Name = "PA_StrethIMG";
-            this.PA_StrethIMG.Size = new System.Drawing.Size(146, 22);
-            this.PA_StrethIMG.TabIndex = 5;
-            this.PA_StrethIMG.Text = "StretchImage";
-            this.PA_StrethIMG.UseVisualStyleBackColor = true;
+            this.PA_Resolution.AutoSize = true;
+            this.PA_Resolution.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.PA_Resolution.ForeColor = System.Drawing.Color.Red;
+            this.PA_Resolution.Location = new System.Drawing.Point(270, 488);
+            this.PA_Resolution.Name = "PA_Resolution";
+            this.PA_Resolution.Size = new System.Drawing.Size(0, 27);
+            this.PA_Resolution.TabIndex = 3;
             // 
-            // PA_AutoSizeIMG
+            // PA_IMGBox
             // 
-            this.PA_AutoSizeIMG.AutoSize = true;
-            this.PA_AutoSizeIMG.Location = new System.Drawing.Point(45, 184);
-            this.PA_AutoSizeIMG.Name = "PA_AutoSizeIMG";
-            this.PA_AutoSizeIMG.Size = new System.Drawing.Size(106, 22);
-            this.PA_AutoSizeIMG.TabIndex = 6;
-            this.PA_AutoSizeIMG.Text = "AutoSize";
-            this.PA_AutoSizeIMG.UseVisualStyleBackColor = true;
+            this.PA_IMGBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PA_IMGBox.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.PA_IMGBox.ErrorImage = null;
+            this.PA_IMGBox.Location = new System.Drawing.Point(220, 25);
+            this.PA_IMGBox.Name = "PA_IMGBox";
+            this.PA_IMGBox.Size = new System.Drawing.Size(628, 312);
+            this.PA_IMGBox.TabIndex = 2;
+            this.PA_IMGBox.TabStop = false;
+            this.PA_IMGBox.Click += new System.EventHandler(this.PA_IMGBox_Click);
+            this.PA_IMGBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PA_IMGBox_MouseDown);
+            this.PA_IMGBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PA_IMGBox_MouseMove);
+            this.PA_IMGBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PA_IMGBox_MouseUp);
             // 
-            // PA_CentralIMG
+            // label1
             // 
-            this.PA_CentralIMG.AutoSize = true;
-            this.PA_CentralIMG.Location = new System.Drawing.Point(45, 212);
-            this.PA_CentralIMG.Name = "PA_CentralIMG";
-            this.PA_CentralIMG.Size = new System.Drawing.Size(136, 22);
-            this.PA_CentralIMG.TabIndex = 7;
-            this.PA_CentralIMG.Text = "CenterImage";
-            this.PA_CentralIMG.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(40, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SizeMode";
             // 
-            // PA_ZoomIMG
+            // PA_FileValik
             // 
-            this.PA_ZoomIMG.AutoSize = true;
-            this.PA_ZoomIMG.Location = new System.Drawing.Point(45, 240);
-            this.PA_ZoomIMG.Name = "PA_ZoomIMG";
-            this.PA_ZoomIMG.Size = new System.Drawing.Size(66, 22);
-            this.PA_ZoomIMG.TabIndex = 8;
-            this.PA_ZoomIMG.Text = "Zoom";
-            this.PA_ZoomIMG.UseVisualStyleBackColor = true;
+            this.PA_FileValik.BackColor = System.Drawing.Color.Maroon;
+            this.PA_FileValik.Location = new System.Drawing.Point(45, 40);
+            this.PA_FileValik.Name = "PA_FileValik";
+            this.PA_FileValik.Size = new System.Drawing.Size(152, 46);
+            this.PA_FileValik.TabIndex = 0;
+            this.PA_FileValik.Text = "Gaili valik";
+            this.PA_FileValik.UseVisualStyleBackColor = false;
+            this.PA_FileValik.Click += new System.EventHandler(this.PA_FileValik_Click);
             // 
             // PA_openFileDialog1
             // 
             this.PA_openFileDialog1.FileName = "PA_openFileDialog1";
-            // 
-            // PA_IMGBox2
-            // 
-            this.PA_IMGBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PA_IMGBox2.Location = new System.Drawing.Point(220, 343);
-            this.PA_IMGBox2.Name = "PA_IMGBox2";
-            this.PA_IMGBox2.Size = new System.Drawing.Size(628, 245);
-            this.PA_IMGBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PA_IMGBox2.TabIndex = 9;
-            this.PA_IMGBox2.TabStop = false;
             // 
             // PA_09_11_17_File
             // 
@@ -189,8 +193,8 @@
             this.Load += new System.EventHandler(this.PA_09_11_17_File_Load);
             this.PA_groupBox1.ResumeLayout(false);
             this.PA_groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PA_IMGBox)).EndInit();
             this.ResumeLayout(false);
 
         }

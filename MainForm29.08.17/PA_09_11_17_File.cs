@@ -18,7 +18,7 @@ namespace MainForm29._08._17
         Bitmap OriginalImage;
 
          bool IsSelecting = false;
-        int x0, y0, x1, y1;
+        int X0, Y0, X1, Y1;
 
         public PA_09_11_17_File()
         {
@@ -26,10 +26,6 @@ namespace MainForm29._08._17
             
         }
         
-
-
-
-
 
         private void PA_FileValik_Click(object sender, EventArgs e)
         {
@@ -98,8 +94,8 @@ namespace MainForm29._08._17
             IsSelecting = true;
 
             
-            x0 = e.X;
-            y0 = e.Y;
+            X0 = e.X;
+            Y0 = e.Y;
         }
 
         private void PA_IMGBox_MouseMove(object sender, MouseEventArgs e)
@@ -107,8 +103,8 @@ namespace MainForm29._08._17
             
             if (!IsSelecting) return;
 
-            x1 = e.X;
-            y1 = e.Y;
+            X1 = e.X;
+            Y1 = e.Y;
 
             // Make a Bitmap to display the selection rectangle.
             Bitmap bm = new Bitmap(OriginalImage);
@@ -117,8 +113,8 @@ namespace MainForm29._08._17
             using (Graphics gr = Graphics.FromImage(bm))
             {
                 gr.DrawRectangle(Pens.Red,
-                    Math.Min(x0, x1), Math.Min(y0, y1),
-                    Math.Abs(x0 - x1), Math.Abs(y0 - y1));
+                    Math.Min(X0, X1), Math.Min(Y0, Y1),
+                    Math.Abs(X0 - X1), Math.Abs(Y0 - Y1));
             }
 
             // Display the temporary bitmap.
@@ -135,15 +131,15 @@ namespace MainForm29._08._17
             PA_IMGBox.Image = OriginalImage;
 
             // Copy the selected part of the image.
-            int wid = Math.Abs(x0 - x1);
-            int hgt = Math.Abs(y0 - y1);
+            int wid = Math.Abs(X0 - X1);
+            int hgt = Math.Abs(Y0 - Y1);
             if ((wid < 1) || (hgt < 1)) return;
 
             Bitmap area = new Bitmap(wid, hgt);
             using (Graphics gr = Graphics.FromImage(area))
             {
                 Rectangle source_rectangle =
-                    new Rectangle(Math.Min(x0, x1), Math.Min(y0, y1), wid, hgt);
+                    new Rectangle(Math.Min(X0, X1), Math.Min(Y0, Y1), wid, hgt);
                 Rectangle dest_rectangle =
                     new Rectangle(0, 0, wid, hgt);
                 gr.DrawImage(OriginalImage, dest_rectangle,
