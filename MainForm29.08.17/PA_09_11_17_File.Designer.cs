@@ -145,7 +145,7 @@
             this.PA_IMGBox.ErrorImage = null;
             this.PA_IMGBox.Location = new System.Drawing.Point(220, 25);
             this.PA_IMGBox.Name = "PA_IMGBox";
-            this.PA_IMGBox.Size = new System.Drawing.Size(628, 312);
+            this.PA_IMGBox.Size = new System.Drawing.Size(486, 312);
             this.PA_IMGBox.TabIndex = 2;
             this.PA_IMGBox.TabStop = false;
             this.PA_IMGBox.Click += new System.EventHandler(this.PA_IMGBox_Click);
