@@ -63,7 +63,7 @@ namespace MainForm29._08._17
             }
             else if (PA_ZoomIMG.Checked == true)
             {
-                PA_IMGBox.SizeMode = PictureBoxSizeMode.Normal;
+                PA_IMGBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
             else 
             {
