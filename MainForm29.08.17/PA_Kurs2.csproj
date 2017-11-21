@@ -70,6 +70,12 @@
     <Compile Include="PA_12_10_2017.Designer.cs">
       <DependentUpon>PA_12_10_2017.cs</DependentUpon>
     </Compile>
+    <Compile Include="PA_26_10_17_filebrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_26_10_17_filebrowser.Designer.cs">
+      <DependentUpon>PA_26_10_17_filebrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="PA_29_08_17.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PA_12_10_2017.resx">
       <DependentUpon>PA_12_10_2017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_26_10_17_filebrowser.resx">
+      <DependentUpon>PA_26_10_17_filebrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PA_29_08_17.resx">
       <DependentUpon>PA_29_08_17.cs</DependentUpon>
