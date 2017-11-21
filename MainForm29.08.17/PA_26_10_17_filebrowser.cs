@@ -25,14 +25,20 @@ namespace MainForm29._08._17
             picMas = new PictureBox[kx * ky];
             int ww = PA_FileBox.Width / kx; //разделить ширину гроупбокса на количество обьектов по горизонтали получить размер одной ячкйки по горизонтали
             int hh = PA_FileBox.Height / ky;// разделить высоту гроупбокаса на количество обьектов по вертикали получить рамер одной ячейки по вертикали
-            for (int i = 0; i <= 11; i++)
+
+            for (int i = 0; i <= ky; i++)
             {
-                picMas[i] = new PictureBox();
-                PA_FileBox.Controls.Add(picMas[i]);
-                picMas[i].Width = ww;
-                picMas[i].Height = hh;
-                picMas[i].BackColor = Color.Black;
-                picMas[i].Top = kx * hh + (kx + 1) * hh;
+                for (int y = 0; y < kx; y++)
+                {
+                    picMas[i] = new PictureBox();
+                    PA_FileBox.Controls.Add(picMas[i]);
+                    picMas[i].Width = ww;
+                    picMas[i].Height = hh;
+                    picMas[i].BackColor = Color.Black;
+                    picMas[i].Top = hh * i;
+                    picMas[i].Left = ww * y;
+                }
+                
 
             }
 
