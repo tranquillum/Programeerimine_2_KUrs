@@ -37,6 +37,7 @@ namespace MainForm29._08._17
                     picMas[i].BackColor = Color.Black;
                     picMas[i].Top = hh * i;
                     picMas[i].Left = ww * y;
+                    picMas[i].BorderStyle = BorderStyle.FixedSingle;
                 }
                 
 
