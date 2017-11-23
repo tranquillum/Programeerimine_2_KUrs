@@ -38,7 +38,7 @@
             this.PA_FileBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.PA_FileBox.Location = new System.Drawing.Point(296, 48);
             this.PA_FileBox.Name = "PA_FileBox";
-            this.PA_FileBox.Size = new System.Drawing.Size(994, 604);
+            this.PA_FileBox.Size = new System.Drawing.Size(699, 604);
             this.PA_FileBox.TabIndex = 0;
             this.PA_FileBox.TabStop = false;
             // 
