@@ -19,7 +19,7 @@ namespace MainForm29._08._17
         public PA_26_10_17_filebrowser()
         {
             InitializeComponent();
-            
+            PA_File.Enabled = false;
         }
 
         private void PA_ButtonMassiiv_Click(object sender, EventArgs e)
@@ -69,8 +69,8 @@ namespace MainForm29._08._17
                     
                 }
 
-                //PA_File.Enable = true;
-                //PA_Massiiv.Enable = false;
+                PA_File.Enabled = true;
+                PA_ButtonMassiiv.Enabled = false;
 
 
             }

@@ -31,6 +31,7 @@
             this.PA_FileBox = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.PA_ButtonMassiiv = new System.Windows.Forms.Button();
+            this.PA_File = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PA_FileBox
@@ -52,12 +53,22 @@
             this.PA_ButtonMassiiv.UseVisualStyleBackColor = true;
             this.PA_ButtonMassiiv.Click += new System.EventHandler(this.PA_ButtonMassiiv_Click);
             // 
+            // PA_File
+            // 
+            this.PA_File.Location = new System.Drawing.Point(12, 110);
+            this.PA_File.Name = "PA_File";
+            this.PA_File.Size = new System.Drawing.Size(211, 56);
+            this.PA_File.TabIndex = 2;
+            this.PA_File.Text = "Massiiv";
+            this.PA_File.UseVisualStyleBackColor = true;
+            // 
             // PA_26_10_17_filebrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1381, 777);
+            this.Controls.Add(this.PA_File);
             this.Controls.Add(this.PA_ButtonMassiiv);
             this.Controls.Add(this.PA_FileBox);
             this.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
@@ -74,5 +85,6 @@
         private System.Windows.Forms.GroupBox PA_FileBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button PA_ButtonMassiiv;
+        private System.Windows.Forms.Button PA_File;
     }
 }
