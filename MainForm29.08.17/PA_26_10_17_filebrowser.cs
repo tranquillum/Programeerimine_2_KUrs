@@ -13,6 +13,8 @@ namespace MainForm29._08._17
     public partial class PA_26_10_17_filebrowser : Form
     {
 
+        int piccounter = 0;
+        string filenimi = "";
         int kx = 3, ky = 4;
         PictureBox[] picMas;
         Label[] lableMas;
@@ -20,6 +22,32 @@ namespace MainForm29._08._17
         {
             InitializeComponent();
             PA_File.Enabled = false;
+        }
+
+        private void PA_File_Click(object sender, EventArgs e)
+        {
+            PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg|All files(*.*)|*.*";
+            PA_openFileDialog1.FileName = "";//чтобы при отмене выбора переменная пути оставалаь пустой
+            PA_openFileDialog1.ShowDialog(); // открыть эесплорер фаилов
+            filenimi = PA_openFileDialog1.FileName; //сохрать путь к фаилу в переменную  
+
+            if (filenimi == "")
+            {
+                return;//остановится если не сохранен не какой путь к фаилу
+            }
+
+
+            if (piccounter < kx * ky)
+            {
+                picMas[piccounter].Image = Image.FromFile(filenimi); //втавить картинку в пикчер бокс в пичербоес.
+                piccounter++;
+            }
+            else
+            {
+                MessageBox.Show("Kõik kohad on kinni", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void PA_ButtonMassiiv_Click(object sender, EventArgs e)
@@ -64,6 +92,7 @@ namespace MainForm29._08._17
                     picMas[k].Top = (hh) * i + hh2;
                     picMas[k].Left = (ww) * y+ww2;                  
                     picMas[k].BorderStyle = BorderStyle.FixedSingle;
+                    picMas[k].SizeMode = PictureBoxSizeMode.StretchImage;
 
 
                     

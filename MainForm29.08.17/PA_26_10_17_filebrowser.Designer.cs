@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.PA_FileBox = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.PA_ButtonMassiiv = new System.Windows.Forms.Button();
             this.PA_File = new System.Windows.Forms.Button();
+            this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // PA_FileBox
@@ -59,12 +59,17 @@
             this.PA_File.Name = "PA_File";
             this.PA_File.Size = new System.Drawing.Size(211, 56);
             this.PA_File.TabIndex = 2;
-            this.PA_File.Text = "Massiiv";
+            this.PA_File.Text = "File";
             this.PA_File.UseVisualStyleBackColor = true;
+            this.PA_File.Click += new System.EventHandler(this.PA_File_Click);
+            // 
+            // PA_openFileDialog1
+            // 
+            this.PA_openFileDialog1.FileName = "openFileDialog1";
             // 
             // PA_26_10_17_filebrowser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1381, 777);
@@ -83,8 +88,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox PA_FileBox;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button PA_ButtonMassiiv;
         private System.Windows.Forms.Button PA_File;
+        private System.Windows.Forms.OpenFileDialog PA_openFileDialog1;
     }
 }
