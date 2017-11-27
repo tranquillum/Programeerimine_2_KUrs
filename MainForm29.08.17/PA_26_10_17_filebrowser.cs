@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace MainForm29._08._17
     {
 
         int piccounter = 0;
-        string filenimi = "";
+        string filepath = "";
         int kx = 3, ky = 4;
         PictureBox[] picMas;
         Label[] lableMas;
@@ -29,9 +30,11 @@ namespace MainForm29._08._17
             PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg|All files(*.*)|*.*";
             PA_openFileDialog1.FileName = "";//чтобы при отмене выбора переменная пути оставалаь пустой
             PA_openFileDialog1.ShowDialog(); // открыть эесплорер фаилов
-            filenimi = PA_openFileDialog1.FileName; //сохрать путь к фаилу в переменную  
+            filepath = PA_openFileDialog1.FileName; //сохрать путь к фаилу в переменную 
+            string filename = Path.GetFileName(filepath);
+            
 
-            if (filenimi == "")
+            if (filepath == "")
             {
                 return;//остановится если не сохранен не какой путь к фаилу
             }
@@ -39,7 +42,8 @@ namespace MainForm29._08._17
 
             if (piccounter < kx * ky)
             {
-                picMas[piccounter].Image = Image.FromFile(filenimi); //втавить картинку в пикчер бокс в пичербоес.
+                picMas[piccounter].Image = Image.FromFile(filepath); //втавить картинку в пикчер бокс в пичербоес.
+                lableMas[piccounter].Text = filename;
                 piccounter++;
             }
             else
