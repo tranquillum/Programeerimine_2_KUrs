@@ -23,6 +23,7 @@ namespace MainForm29._08._17
         {
             InitializeComponent();
             PA_File.Enabled = false;
+            PA_Files.Enabled = false;
         }
 
         private void PA_File_Click(object sender, EventArgs e)
@@ -45,10 +46,34 @@ namespace MainForm29._08._17
                 picMas[piccounter].Image = Image.FromFile(filepath); //втавить картинку в пикчер бокс в пичербоес.
                 lableMas[piccounter].Text = filename;
                 piccounter++;
-            }
+            } 
             else
             {
                 MessageBox.Show("Kõik kohad on kinni", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void PA_Files_Click(object sender, EventArgs e)
+        {
+
+
+
+            PA_openFileDialog1.Multiselect = true;
+            PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg|All files(*.*)|*.*";
+            PA_openFileDialog1.FileName = "";//чтобы при отмене выбора переменная пути оставалаь пустой
+            PA_openFileDialog1.ShowDialog(); // открыть эесплорер фаилов
+            string [] filepaths = PA_openFileDialog1.FileNames; //сохрать путь к фаилу в переменную 
+            string[] filenames=new string[filepaths.Length];
+
+            
+
+            for(int i =0; i < filepaths.Length; i++)
+            {
+                filenames[i] = Path.GetFileName(filepaths[i]);
+                picMas[i].Image = Image.FromFile(filepaths[i]);
+                lableMas[i].Text = filenames[i];
             }
 
 
@@ -101,7 +126,7 @@ namespace MainForm29._08._17
 
                     
                 }
-
+                PA_Files.Enabled = true;
                 PA_File.Enabled = true;
                 PA_ButtonMassiiv.Enabled = false;
 

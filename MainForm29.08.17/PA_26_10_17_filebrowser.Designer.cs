@@ -32,6 +32,7 @@
             this.PA_ButtonMassiiv = new System.Windows.Forms.Button();
             this.PA_File = new System.Windows.Forms.Button();
             this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.PA_Files = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PA_FileBox
@@ -67,12 +68,23 @@
             // 
             this.PA_openFileDialog1.FileName = "openFileDialog1";
             // 
+            // PA_Files
+            // 
+            this.PA_Files.Location = new System.Drawing.Point(12, 172);
+            this.PA_Files.Name = "PA_Files";
+            this.PA_Files.Size = new System.Drawing.Size(211, 56);
+            this.PA_Files.TabIndex = 3;
+            this.PA_Files.Text = "Files";
+            this.PA_Files.UseVisualStyleBackColor = true;
+            this.PA_Files.Click += new System.EventHandler(this.PA_Files_Click);
+            // 
             // PA_26_10_17_filebrowser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1381, 777);
+            this.Controls.Add(this.PA_Files);
             this.Controls.Add(this.PA_File);
             this.Controls.Add(this.PA_ButtonMassiiv);
             this.Controls.Add(this.PA_FileBox);
@@ -91,5 +103,6 @@
         private System.Windows.Forms.Button PA_ButtonMassiiv;
         private System.Windows.Forms.Button PA_File;
         private System.Windows.Forms.OpenFileDialog PA_openFileDialog1;
+        private System.Windows.Forms.Button PA_Files;
     }
 }
