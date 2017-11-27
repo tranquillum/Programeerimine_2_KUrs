@@ -24,6 +24,7 @@ namespace MainForm29._08._17
             InitializeComponent();
             PA_File.Enabled = false;
             PA_Files.Enabled = false;
+            PA_Folder.Enabled = false;
         }
 
         private void PA_File_Click(object sender, EventArgs e)
@@ -57,24 +58,61 @@ namespace MainForm29._08._17
 
         private void PA_Files_Click(object sender, EventArgs e)
         {
-
-
-
             PA_openFileDialog1.Multiselect = true;
             PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg|All files(*.*)|*.*";
             PA_openFileDialog1.FileName = "";//чтобы при отмене выбора переменная пути оставалаь пустой
             PA_openFileDialog1.ShowDialog(); // открыть эесплорер фаилов
             string [] filepaths = PA_openFileDialog1.FileNames; //сохрать путь к фаилу в переменную 
             string[] filenames=new string[filepaths.Length];
-
+            
             
 
-            for(int i =0; i < filepaths.Length; i++)
+            for(int i = 0; i < filepaths.Length; i++)
             {
                 filenames[i] = Path.GetFileName(filepaths[i]);
-                picMas[i].Image = Image.FromFile(filepaths[i]);
-                lableMas[i].Text = filenames[i];
+                picMas[piccounter].Image = Image.FromFile(filepaths[i]);
+                lableMas[piccounter].Text = filenames[i];
+                piccounter++;
+                
+                
             }
+
+
+        }
+
+        private void PA_Clean_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < ky*kx; i++)
+            {
+                picMas[i].Image = null;
+                lableMas[i].Text = "XXX";
+                piccounter = 0;
+            }
+
+
+
+
+        }
+
+        private void PA_Folder_Click(object sender, EventArgs e)
+        {
+            PA_folderBrowserDialog1.ShowDialog();
+            string folderpath = PA_folderBrowserDialog1.SelectedPath;
+            string[] filenames = Directory.GetFiles(folderpath, "*.jpg");
+            folderpath += (" " + filepath.Length.ToString());
+
+
+            for (int i = 0; i < filenames.Length; i++)
+            {
+                string filename = Path.GetFileName(filenames[i]);
+                picMas[piccounter].Image = Image.FromFile(filenames[i]);
+                lableMas[piccounter].Text = filename;
+                piccounter++;
+
+
+            }
+
+
 
 
         }
@@ -126,6 +164,7 @@ namespace MainForm29._08._17
 
                     
                 }
+                PA_Folder.Enabled = true;
                 PA_Files.Enabled = true;
                 PA_File.Enabled = true;
                 PA_ButtonMassiiv.Enabled = false;

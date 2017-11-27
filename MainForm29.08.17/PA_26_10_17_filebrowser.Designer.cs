@@ -33,6 +33,9 @@
             this.PA_File = new System.Windows.Forms.Button();
             this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.PA_Files = new System.Windows.Forms.Button();
+            this.PA_Clean = new System.Windows.Forms.Button();
+            this.PA_Folder = new System.Windows.Forms.Button();
+            this.PA_folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // PA_FileBox
@@ -78,12 +81,34 @@
             this.PA_Files.UseVisualStyleBackColor = true;
             this.PA_Files.Click += new System.EventHandler(this.PA_Files_Click);
             // 
+            // PA_Clean
+            // 
+            this.PA_Clean.Location = new System.Drawing.Point(12, 331);
+            this.PA_Clean.Name = "PA_Clean";
+            this.PA_Clean.Size = new System.Drawing.Size(211, 56);
+            this.PA_Clean.TabIndex = 4;
+            this.PA_Clean.Text = "Clean";
+            this.PA_Clean.UseVisualStyleBackColor = true;
+            this.PA_Clean.Click += new System.EventHandler(this.PA_Clean_Click);
+            // 
+            // PA_Folder
+            // 
+            this.PA_Folder.Location = new System.Drawing.Point(12, 234);
+            this.PA_Folder.Name = "PA_Folder";
+            this.PA_Folder.Size = new System.Drawing.Size(211, 56);
+            this.PA_Folder.TabIndex = 5;
+            this.PA_Folder.Text = "Folder";
+            this.PA_Folder.UseVisualStyleBackColor = true;
+            this.PA_Folder.Click += new System.EventHandler(this.PA_Folder_Click);
+            // 
             // PA_26_10_17_filebrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1381, 777);
+            this.Controls.Add(this.PA_Folder);
+            this.Controls.Add(this.PA_Clean);
             this.Controls.Add(this.PA_Files);
             this.Controls.Add(this.PA_File);
             this.Controls.Add(this.PA_ButtonMassiiv);
@@ -104,5 +129,8 @@
         private System.Windows.Forms.Button PA_File;
         private System.Windows.Forms.OpenFileDialog PA_openFileDialog1;
         private System.Windows.Forms.Button PA_Files;
+        private System.Windows.Forms.Button PA_Clean;
+        private System.Windows.Forms.Button PA_Folder;
+        private System.Windows.Forms.FolderBrowserDialog PA_folderBrowserDialog1;
     }
 }
