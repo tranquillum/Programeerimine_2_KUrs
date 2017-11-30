@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +47,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="26_10_2017_Trigonom.cs">
@@ -88,6 +94,12 @@
     <Compile Include="PA_29_09_2017.Designer.cs">
       <DependentUpon>PA_29_09_2017.cs</DependentUpon>
     </Compile>
+    <Compile Include="PA_30_11_17_Puzzle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_30_11_17_Puzzle.Designer.cs">
+      <DependentUpon>PA_30_11_17_Puzzle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PA_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PA_29_09_2017.resx">
       <DependentUpon>PA_29_09_2017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_30_11_17_Puzzle.resx">
+      <DependentUpon>PA_30_11_17_Puzzle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PA_Main.resx">
       <DependentUpon>PA_Main.cs</DependentUpon>

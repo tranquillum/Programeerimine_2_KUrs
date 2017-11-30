@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PA_button1
@@ -54,7 +55,7 @@
             // PA_Exit
             // 
             this.PA_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PA_Exit.Location = new System.Drawing.Point(14, 540);
+            this.PA_Exit.Location = new System.Drawing.Point(12, 645);
             this.PA_Exit.Name = "PA_Exit";
             this.PA_Exit.Size = new System.Drawing.Size(279, 49);
             this.PA_Exit.TabIndex = 2;
@@ -134,12 +135,25 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button6.Location = new System.Drawing.Point(14, 475);
+            this.button6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(279, 58);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "30.11.2017 \r\nPUZZLE";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // AP_mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(307, 601);
+            this.ClientSize = new System.Drawing.Size(307, 706);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -168,6 +182,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

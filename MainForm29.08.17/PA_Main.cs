@@ -20,6 +20,7 @@ namespace MainForm29._08._17
         Form f5 = new _26_10_2017_Trigonom();
         Form f6 = new PA_09_11_17_File();
         Form f7 = new PA_26_10_17_filebrowser();
+        Form f8 = new PA_30_11_17_Puzzle();
         public AP_mainform()
         {
             InitializeComponent();
@@ -98,6 +99,16 @@ namespace MainForm29._08._17
             }
             f7.Visible = true;
             f7.Activate();
+        }
+        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (f8.Visible == false) // проверка: видна ли форма / если нет то показать
+            {
+                f8 = new PA_30_11_17_Puzzle();
+            }
+            f8.Visible = true;
+            f8.Activate();
         }
     }
     
