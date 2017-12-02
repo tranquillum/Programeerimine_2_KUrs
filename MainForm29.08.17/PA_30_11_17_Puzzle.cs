@@ -13,19 +13,29 @@ namespace MainForm29._08._17
 {
     public partial class PA_30_11_17_Puzzle : Form
     {
-        PictureBox[] picMas;
+        PictureBox[] picMasPBox;
+        PictureBox[] picMasGBox;
+        int select = -1;
 
         public PA_30_11_17_Puzzle()
         {
             InitializeComponent();
             PA_Samm2.Enabled = false;
             PA_Samm3.Enabled = false;
+            
         }
 
         private void PA_Samm1_Click(object sender, EventArgs e)
         {
+            PA_pictureBox1.Image = null;
+            PA_pictureBox1.Width = 564;
+            PA_pictureBox1.Height = 570;
+
+            PA_groupBox1.Width = 564;
+            PA_groupBox1.Height = 570;
+
             string filepath = "";
-            PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg|All files(*.*)|*.*";
+            PA_openFileDialog1.Filter = " Image |*.bmp; *.jpg;*.png|All files(*.*)|*.*";
             PA_openFileDialog1.FileName = "";//чтобы при отмене выбора переменная пути оставалаь пустой
             PA_openFileDialog1.ShowDialog(); // открыть эесплорер фаилов
             filepath = PA_openFileDialog1.FileName; //сохрать путь к фаилу в переменную 
@@ -38,31 +48,33 @@ namespace MainForm29._08._17
             {
                 return;//остановится если не сохранен не какой путь к фаилу
             }
-            Image pilt = Image.FromFile(filepath);
-            int picH = pilt.Height;
-            int picW = pilt.Width;
+            Image img = Image.FromFile(filepath);
+            int PicBoxH = PA_pictureBox1.Height;
+            int PicBoxW = PA_pictureBox1.Width;
+            int imgH = img.Height;
+            int imgW = img.Width;
+            float imgSuhe = (float)imgW / imgH;
 
-            if (picH > picW)
+            if (imgH < imgW)
             {
-                var suhe = picH/ PA_pictureBox1.Height;
-                picH = PA_pictureBox1.Height;
-                PA_pictureBox1.Width  = picW * suhe;
-
+                imgW = PicBoxW;
+                imgH = (int)(imgW/imgSuhe);
             }
-            else if (picH < picW)
+            else
             {
-                var suhe = picW / PA_pictureBox1.Width;
-                picW = PA_pictureBox1.Width;
-                PA_pictureBox1.Height = picH * suhe;
+                imgH = PicBoxH;
+                imgW = (int)(imgH *imgSuhe);
             }
 
-            //PA_pictureBox1.Width = picW;
-            //PA_pictureBox1.Height = picH;
 
-            //PA_groupBox1.Width = picW;
-            //PA_groupBox1.Height = picH;
 
-            PA_pictureBox1.Image = Image.FromFile(filepath);
+            PA_pictureBox1.Width = imgW;
+            PA_pictureBox1.Height = imgH;
+
+            PA_groupBox1.Width = imgW;
+            PA_groupBox1.Height = imgH;
+
+            PA_pictureBox1.Image = img;
 
 
             PA_Samm2.Enabled =true;
@@ -72,13 +84,15 @@ namespace MainForm29._08._17
         {
             int kx = 3, ky = 4;
 
-            picMas = new PictureBox[kx * ky];
+            picMasPBox = new PictureBox[kx * ky];
+            picMasGBox = new PictureBox[kx * ky];
 
-            int Pww = PA_pictureBox1.Width/kx;
-            int Phh = PA_pictureBox1.Height/ky;
+            int PW = PA_pictureBox1.Width/kx;
+            int PH = PA_pictureBox1.Height/ky;
 
-            int Gww = PA_groupBox1.Width;
-            int Ghh = PA_groupBox1.Height;
+            Image img = PA_pictureBox1.Image;
+            int imgH = img.Height / ky;
+            int imgW = img.Width / kx;
 
 
             for (int i = 0; i < ky; i++)
@@ -87,18 +101,45 @@ namespace MainForm29._08._17
                 {
                     int k = i * kx + y;
 
-                    picMas[k] = new PictureBox();
-                    picMas[k].Image = null;
-                    PA_pictureBox1.Controls.Add(picMas[k]);
-                    PA_groupBox1.Controls.Add(picMas[k]);
-                    picMas[k].Width = Pww;
-                    picMas[k].Height = Phh;                   
-                    picMas[k].Top = (Phh) * i;
-                    picMas[k].Left = (Pww) * y;
-                    picMas[k].BorderStyle = BorderStyle.FixedSingle;
-                    picMas[k].SizeMode = PictureBoxSizeMode.StretchImage;
+                    picMasPBox[k] = new PictureBox();                                    
+                    PA_pictureBox1.Controls.Add(picMasPBox[k]);
+                    picMasPBox[k].Width = PW;
+                    picMasPBox[k].Height = PH;                   
+                    picMasPBox[k].Top = (PH) * i;
+                    picMasPBox[k].Left = (PW) * y;
+                    picMasPBox[k].BorderStyle = BorderStyle.FixedSingle;
+                    picMasPBox[k].SizeMode = PictureBoxSizeMode.Zoom;
+                    picMasPBox[k].Click += new EventHandler(picMasPBoxPic_Click);
+                    picMasPBox[k].Enabled = false;
 
 
+                    int FomTop = imgH * i;
+                    int FromLeft = imgW * y;
+                    Bitmap BitmapSourseIMG = new Bitmap(img);
+                    Bitmap CutFromIMG = new Bitmap(imgW, imgH);
+                    using (Graphics gr = Graphics.FromImage(CutFromIMG))
+                    {
+                        Rectangle SoureseRectangle = new Rectangle(FromLeft, FomTop, imgW, imgH);
+                        Rectangle DestRectangle = new Rectangle(0, 0, imgW, imgH);
+                        gr.DrawImage(BitmapSourseIMG, DestRectangle, SoureseRectangle, GraphicsUnit.Pixel);
+                    }
+                    picMasPBox[k].Image = CutFromIMG;
+                   
+
+
+
+
+
+                    picMasGBox[k] = new PictureBox();                               
+                    PA_groupBox1.Controls.Add(picMasGBox[k]);
+                    picMasGBox[k].Width = PW;
+                    picMasGBox[k].Height = PH;
+                    picMasGBox[k].Top = (PH) * i;
+                    picMasGBox[k].Left = (PW) * y;
+                    picMasGBox[k].BorderStyle = BorderStyle.FixedSingle;
+                    picMasGBox[k].SizeMode = PictureBoxSizeMode.Zoom;
+                    picMasGBox[k].Click += new EventHandler(picMasGBoxPic_Click);
+                    picMasGBox[k].Enabled = false;
                 }
                
 
@@ -108,6 +149,46 @@ namespace MainForm29._08._17
 
 
             PA_Samm3.Enabled = true;
+            PA_Samm2.Enabled = false;
+        }
+
+
+
+
+        private void PA_Samm3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < picMasGBox.Length; i++)
+            {
+                picMasGBox[i].Image = picMasPBox[i].Image;
+                picMasGBox[i].Enabled = true;
+                picMasPBox[i].Enabled = true;
+                picMasPBox[i].Image = null;
+            }
+
+
+
+
+        }
+
+
+
+        private void picMasGBoxPic_Click(object sender, EventArgs e)
+        {
+            select = Array.IndexOf(picMasGBox, (PictureBox)sender);
+        }
+
+
+
+
+        private void picMasPBoxPic_Click(object sender, EventArgs e)
+        {
+            //if (select < 0) return;
+            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
     }
 }

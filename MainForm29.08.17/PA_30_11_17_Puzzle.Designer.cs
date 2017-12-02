@@ -38,6 +38,7 @@
             this.PA_pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PA_groupBox1 = new System.Windows.Forms.GroupBox();
             this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.PA_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,15 +47,17 @@
             // 
             this.PA_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.PA_Menu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.PA_Menu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.PA_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PA_Samm1,
             this.toolStripSeparator1,
             this.PA_Samm2,
             this.toolStripSeparator2,
-            this.PA_Samm3});
+            this.PA_Samm3,
+            this.toolStripButton1});
             this.PA_Menu.Location = new System.Drawing.Point(0, 0);
             this.PA_Menu.Name = "PA_Menu";
-            this.PA_Menu.Size = new System.Drawing.Size(1214, 25);
+            this.PA_Menu.Size = new System.Drawing.Size(1214, 27);
             this.PA_Menu.TabIndex = 0;
             this.PA_Menu.Text = "toolStrip1";
             // 
@@ -64,14 +67,14 @@
             this.PA_Samm1.Image = ((System.Drawing.Image)(resources.GetObject("PA_Samm1.Image")));
             this.PA_Samm1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PA_Samm1.Name = "PA_Samm1";
-            this.PA_Samm1.Size = new System.Drawing.Size(51, 22);
+            this.PA_Samm1.Size = new System.Drawing.Size(63, 24);
             this.PA_Samm1.Text = "Samm1";
             this.PA_Samm1.Click += new System.EventHandler(this.PA_Samm1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // PA_Samm2
             // 
@@ -79,14 +82,14 @@
             this.PA_Samm2.Image = ((System.Drawing.Image)(resources.GetObject("PA_Samm2.Image")));
             this.PA_Samm2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PA_Samm2.Name = "PA_Samm2";
-            this.PA_Samm2.Size = new System.Drawing.Size(51, 22);
+            this.PA_Samm2.Size = new System.Drawing.Size(63, 24);
             this.PA_Samm2.Text = "Samm2";
             this.PA_Samm2.Click += new System.EventHandler(this.PA_Samm2_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // PA_Samm3
             // 
@@ -94,8 +97,9 @@
             this.PA_Samm3.Image = ((System.Drawing.Image)(resources.GetObject("PA_Samm3.Image")));
             this.PA_Samm3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PA_Samm3.Name = "PA_Samm3";
-            this.PA_Samm3.Size = new System.Drawing.Size(51, 22);
+            this.PA_Samm3.Size = new System.Drawing.Size(63, 24);
             this.PA_Samm3.Text = "Samm3";
+            this.PA_Samm3.Click += new System.EventHandler(this.PA_Samm3_Click);
             // 
             // PA_pictureBox1
             // 
@@ -122,9 +126,19 @@
             // 
             this.PA_openFileDialog1.FileName = "openFileDialog1";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // PA_30_11_17_Puzzle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1214, 737);
@@ -154,5 +168,6 @@
         private System.Windows.Forms.PictureBox PA_pictureBox1;
         private System.Windows.Forms.GroupBox PA_groupBox1;
         private System.Windows.Forms.OpenFileDialog PA_openFileDialog1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
