@@ -38,7 +38,6 @@
             this.PA_pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PA_groupBox1 = new System.Windows.Forms.GroupBox();
             this.PA_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.PA_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PA_pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,8 +52,7 @@
             this.toolStripSeparator1,
             this.PA_Samm2,
             this.toolStripSeparator2,
-            this.PA_Samm3,
-            this.toolStripButton1});
+            this.PA_Samm3});
             this.PA_Menu.Location = new System.Drawing.Point(0, 0);
             this.PA_Menu.Name = "PA_Menu";
             this.PA_Menu.Size = new System.Drawing.Size(1214, 27);
@@ -126,16 +124,6 @@
             // 
             this.PA_openFileDialog1.FileName = "openFileDialog1";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // PA_30_11_17_Puzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -168,6 +156,5 @@
         private System.Windows.Forms.PictureBox PA_pictureBox1;
         private System.Windows.Forms.GroupBox PA_groupBox1;
         private System.Windows.Forms.OpenFileDialog PA_openFileDialog1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

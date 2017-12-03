@@ -91,8 +91,8 @@ namespace MainForm29._08._17
             int PH = PA_pictureBox1.Height/ky;
 
             Image img = PA_pictureBox1.Image;
-            int imgH = img.Height / ky;
-            int imgW = img.Width / kx;
+            int RecH = img.Height / ky;
+            int RecW = img.Width / kx;
 
 
             for (int i = 0; i < ky; i++)
@@ -113,14 +113,14 @@ namespace MainForm29._08._17
                     picMasPBox[k].Enabled = false;
 
 
-                    int FomTop = imgH * i;
-                    int FromLeft = imgW * y;
+                    int FomTop = RecH * i;
+                    int FromLeft = RecW * y;
                     Bitmap BitmapSourseIMG = new Bitmap(img);
-                    Bitmap CutFromIMG = new Bitmap(imgW, imgH);
+                    Bitmap CutFromIMG = new Bitmap(RecW, RecH);
                     using (Graphics gr = Graphics.FromImage(CutFromIMG))
                     {
-                        Rectangle SoureseRectangle = new Rectangle(FromLeft, FomTop, imgW, imgH);
-                        Rectangle DestRectangle = new Rectangle(0, 0, imgW, imgH);
+                        Rectangle SoureseRectangle = new Rectangle(FromLeft, FomTop, RecW, RecH);
+                        Rectangle DestRectangle = new Rectangle(0, 0, RecW, RecH);
                         gr.DrawImage(BitmapSourseIMG, DestRectangle, SoureseRectangle, GraphicsUnit.Pixel);
                     }
                     picMasPBox[k].Image = CutFromIMG;
@@ -186,9 +186,6 @@ namespace MainForm29._08._17
             
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            this.Refresh();
-        }
+        
     }
 }
