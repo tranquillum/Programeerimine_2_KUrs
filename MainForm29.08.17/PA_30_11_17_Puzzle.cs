@@ -16,6 +16,7 @@ namespace MainForm29._08._17
         PictureBox[] picMasPBox;
         PictureBox[] picMasGBox;
         int select = -1;
+        int kx = 3, ky = 4;
 
         public PA_30_11_17_Puzzle()
         {
@@ -76,13 +77,13 @@ namespace MainForm29._08._17
 
             PA_pictureBox1.Image = img;
 
-
+            
             PA_Samm2.Enabled =true;
         }
 
         private void PA_Samm2_Click(object sender, EventArgs e)
         {
-            int kx = 3, ky = 4;
+            
 
             picMasPBox = new PictureBox[kx * ky];
             picMasGBox = new PictureBox[kx * ky];
@@ -150,6 +151,7 @@ namespace MainForm29._08._17
 
             PA_Samm3.Enabled = true;
             PA_Samm2.Enabled = false;
+            PA_Samm1.Enabled = false;
         }
 
 
@@ -157,17 +159,27 @@ namespace MainForm29._08._17
 
         private void PA_Samm3_Click(object sender, EventArgs e)
         {
+            Random Random = new Random();
+            int[] n=new int[kx*ky];
+            for (int i = 0; i<= (kx * ky)-1; i++)
+            {
+                n[i] = i;
+            }
+           
+
+
             for (int i = 0; i < picMasGBox.Length; i++)
             {
-                picMasGBox[i].Image = picMasPBox[i].Image;
+                int RandomPlase = Random.Next(kx * ky);
+                picMasGBox[i].Image = picMasPBox[RandomPlase].Image;
                 picMasGBox[i].Enabled = true;
                 picMasPBox[i].Enabled = true;
                 picMasPBox[i].Image = null;
             }
+            
 
 
-
-
+            PA_Samm3.Enabled = false;
         }
 
 
