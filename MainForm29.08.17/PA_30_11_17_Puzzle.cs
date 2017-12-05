@@ -160,23 +160,27 @@ namespace MainForm29._08._17
         private void PA_Samm3_Click(object sender, EventArgs e)
         {
             Random Random = new Random();
-            int[] n=new int[kx*ky];
-            for (int i = 0; i<= (kx * ky)-1; i++)
+            int[] num=new int[kx*ky];
+            for (int i = 0; i < kx * ky; i++) num[i] = -1;
+            for (int i = 0; i< kx * ky; i++)
             {
-                n[i] = i;
+                int n;
+                do
+                {
+                    n = Random.Next(kx * ky);
+                } while (num[n] >= 0);
+                num[n] = i;
+
+                picMasGBox[i].Image = picMasPBox[n].Image;
+                picMasPBox[n].Image = null;
+                picMasGBox[i].Enabled = true;
+                picMasPBox[i].Enabled = true;
+
             }
            
 
 
-            for (int i = 0; i < picMasGBox.Length; i++)
-            {
-                int RandomPlase = Random.Next(kx * ky);
-                picMasGBox[i].Image = picMasPBox[RandomPlase].Image;
-                picMasGBox[i].Enabled = true;
-                picMasPBox[i].Enabled = true;
-                picMasPBox[i].Image = null;
-            }
-            
+           
 
 
             PA_Samm3.Enabled = false;
