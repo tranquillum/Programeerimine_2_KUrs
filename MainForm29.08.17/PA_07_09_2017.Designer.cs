@@ -49,6 +49,7 @@
             this.PA_groupBox.Size = new System.Drawing.Size(309, 453);
             this.PA_groupBox.TabIndex = 0;
             this.PA_groupBox.TabStop = false;
+            this.PA_groupBox.Enter += new System.EventHandler(this.PA_groupBox_Enter);
             // 
             // PA_Numbrit
             // 

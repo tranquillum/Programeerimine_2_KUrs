@@ -172,7 +172,7 @@ namespace MainForm29._08._17
                 num[n] = i;
 
                 picMasGBox[i].Image = picMasPBox[n].Image;
-                picMasPBox[n].Image = null;
+                //picMasPBox[n].Image = null;
                 picMasGBox[i].Enabled = true;
                 picMasPBox[i].Enabled = true;
 
@@ -186,20 +186,41 @@ namespace MainForm29._08._17
             PA_Samm3.Enabled = false;
         }
 
-
-
+        int n = 0;
         private void picMasGBoxPic_Click(object sender, EventArgs e)
         {
+
             select = Array.IndexOf(picMasGBox, (PictureBox)sender);
+            
+            if (PA_vaheBox.Image == null)
+            {
+
+                PA_vaheBox.Image = picMasGBox[select].Image;
+                n = select;
+                
+            }
+            else
+            {
+                picMasGBox[n].Image = picMasGBox[select].Image;
+                picMasGBox[select].Image = PA_vaheBox.Image;
+                PA_vaheBox.Image = null;
+            }
+
         }
 
+        private void PA_groupBox1_Enter(object sender, EventArgs e)
+        {
 
-
+        }
 
         private void picMasPBoxPic_Click(object sender, EventArgs e)
         {
             //if (select < 0) return;
-            
+            //int n = (int)(Array.IndexOf(picMasPBox,(PictureBox)sender));
+            //picMasPBox[n].Image = picMasGBox[select].Image;
+            //select = 0;
+
+
         }
 
         

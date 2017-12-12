@@ -279,6 +279,11 @@ namespace MainForm29._08._17
                     PA_Ekraan.Text = "0";
                 }
             }
-        } 
+        }
+
+        private void PA_groupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
